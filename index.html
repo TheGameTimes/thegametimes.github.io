@@ -361,36 +361,52 @@
         0 18px 45px rgba(0, 0, 0, 0.35);
     }
 
-    .thumbnail {
-      position: relative;
+.thumbnail {
+  position: relative;
+  height: 215px;
+  overflow: hidden;
 
-      height: 215px;
+  display: flex;
+  align-items: flex-end;
 
-      background:
-        linear-gradient(
-          135deg,
-          #17244e,
-          #080b15
-        );
+  background:
+    linear-gradient(
+      135deg,
+      #17244e,
+      #080b15
+    );
+}
 
-      overflow: hidden;
-    }
+.thumbnail::before {
+  content: "GTA VI";
 
-    .thumbnail::after {
-      content: "THE GAME TIMES";
+  position: absolute;
+  right: -10px;
+  bottom: -35px;
 
-      position: absolute;
+  font-size: 90px;
+  font-weight: 900;
+  letter-spacing: -6px;
 
-      right: 14px;
-      bottom: 12px;
+  color: rgba(254,0,0,0.08);
+}
 
-      color: rgba(255, 255, 255, 0.15);
+.thumbnail-label {
+  position: relative;
+  z-index: 2;
 
-      font-size: 9px;
-      font-weight: 900;
+  margin: 15px;
 
-      letter-spacing: 2px;
-    }
+  padding: 6px 10px;
+
+  background: var(--red);
+
+  color: white;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
 
     .card-content {
       padding: 21px;
@@ -848,33 +864,32 @@
 
         <!-- GTA VI -->
 
-        <a
-          href="news/gta-6.html"
-          class="card"
-        >
+        <a href="news/gta-6.html" class="card">
 
-          <div class="thumbnail"></div>
+  <div class="thumbnail">
+    <span class="thumbnail-label">GTA VI</span>
+  </div>
 
-          <div class="card-content">
+  <div class="card-content">
 
-            <span class="category">
-              Grand Theft Auto VI
-            </span>
+    <span class="category">
+      GRAND THEFT AUTO VI
+    </span>
 
-            <h3>
-              GTA 6 Is Getting an Extended Look on August 27
-            </h3>
+    <h3>
+      GTA 6 Is Getting an Extended Look on August 27
+    </h3>
 
-            <p>
-              Rockstar Games is preparing another major look
-              at Grand Theft Auto VI ahead of its November release.
-            </p>
+    <p>
+      Rockstar Games is preparing another major look at
+      Grand Theft Auto VI ahead of its November release.
+    </p>
 
-            <span class="date">
-              AUGUST 11, 2026
-            </span>
+    <span class="date">
+      AUGUST 11, 2026
+    </span>
 
-          </div>
+  </div>
 
         </a>
 
