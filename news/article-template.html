@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ARTICLE TITLE — The Game Times</title>
+
+  <meta name="description" content="ARTICLE DESCRIPTION">
+
+  <style>
+    :root {
+      --red: #FE0000;
+      --navy: #060F30;
+      --black: #03050d;
+      --white: #f7f7f7;
+      --muted: #9da4b7;
+      --border: rgba(255,255,255,0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(
+          circle at 85% 0%,
+          rgba(254,0,0,0.07),
+          transparent 25%
+        ),
+        var(--black);
+      color: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+
+      background: rgba(3,5,13,0.94);
+      backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar {
+      max-width: 1280px;
+      margin: auto;
+
+      min-height: 78px;
+      padding: 12px 24px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      height: 54px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    nav a {
+      color: #dfe3ee;
+      transition: color .2s ease;
+    }
+
+    nav a:hover {
+      color: var(--red);
+    }
+
+    /* =========================
+       ARTICLE HEADER
+    ========================== */
+
+    .article-header {
+      max-width: 1050px;
+      margin: 0 auto;
+
+      padding: 80px 24px 35px;
+    }
+
+    .category {
+      display: inline-block;
+
+      background: var(--red);
+      color: white;
+
+      padding: 6px 11px;
+
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+
+      margin-bottom: 20px;
+    }
+
+    .article-header h1 {
+      max-width: 1000px;
+
+      font-size: clamp(40px, 7vw, 76px);
+      line-height: 1;
+
+      letter-spacing: -3px;
+
+      margin-bottom: 24px;
+    }
+
+    .dek {
+      max-width: 850px;
+
+      color: #b7bfce;
+
+      font-size: 19px;
+      line-height: 1.6;
+
+      margin-bottom: 25px;
+    }
+
+    .meta {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+
+      color: #6f7890;
+
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .meta strong {
+      color: #e6e9ef;
+    }
+
+    /* =========================
+       HERO IMAGE
+    ========================== */
+
+    .article-image {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      padding: 0 24px;
+    }
+
+    .article-image-placeholder {
+      height: 600px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #17244e,
+          #080b15
+        );
+
+      border: 1px solid var(--border);
+
+      color: rgba(255,255,255,0.25);
+
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    /* =========================
+       ARTICLE BODY
+    ========================== */
+
+    .article-layout {
+      max-width: 1200px;
+      margin: 60px auto;
+
+      padding: 0 24px;
+
+      display: grid;
+      grid-template-columns: minmax(0, 760px) 260px;
+
+      gap: 70px;
+
+      justify-content: center;
+    }
+
+    .article-body {
+      font-size: 18px;
+      color: #d5d9e2;
+    }
+
+    .article-body p {
+      margin-bottom: 25px;
+    }
+
+    .article-body h2 {
+      color: white;
+
+      font-size: 30px;
+
+      line-height: 1.2;
+
+      margin: 50px 0 18px;
+    }
+
+    .article-body h3 {
+      color: white;
+
+      font-size: 22px;
+
+      margin: 35px 0 15px;
+    }
+
+    .article-body strong {
+      color: white;
+    }
+
+    .article-body blockquote {
+      margin: 35px 0;
+
+      padding: 25px;
+
+      border-left: 4px solid var(--red);
+
+      background: var(--navy);
+
+      color: #e6e9f0;
+
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       ARIYA
+    ========================== */
+
+    .ariya {
+      margin: 50px 0;
+
+      padding: 35px;
+
+      background:
+        linear-gradient(
+          120deg,
+          var(--navy),
+          #080b17
+        );
+
+      border: 1px solid rgba(254,0,0,0.30);
+    }
+
+    .ariya-label {
+      color: var(--red);
+
+      font-size: 10px;
+      font-weight: 900;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 12px;
+    }
+
+    .ariya h2 {
+      margin: 0 0 15px;
+
+      font-size: 28px;
+    }
+
+    .ariya p {
+      margin: 0;
+
+      color: #c8cedc;
+
+      font-size: 17px;
+    }
+
+    /* =========================
+       SOURCES
+    ========================== */
+
+    .sources {
+      margin-top: 60px;
+
+      padding-top: 25px;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .sources h3 {
+      font-size: 18px;
+
+      margin-bottom: 15px;
+    }
+
+    .sources a {
+      display: block;
+
+      color: #aeb6c8;
+
+      font-size: 13px;
+
+      margin-bottom: 8px;
+    }
+
+    .sources a:hover {
+      color: var(--red);
+    }
+
+    /* =========================
+       SIDEBAR
+    ========================== */
+
+    .sidebar {
+      position: sticky;
+      top: 110px;
+
+      height: fit-content;
+    }
+
+    .sidebar-box {
+      padding: 22px;
+
+      background: var(--navy);
+
+      border: 1px solid var(--border);
+    }
+
+    .sidebar-title {
+      color: var(--red);
+
+      font-size: 10px;
+      font-weight: 900;
+
+      letter-spacing: 1.5px;
+
+      margin-bottom: 15px;
+    }
+
+    .sidebar p {
+      color: #929bad;
+
+      font-size: 13px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      margin-top: 80px;
+
+      background: var(--navy);
+
+      border-top: 1px solid var(--border);
+
+      padding: 45px 24px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: auto;
+
+      display: flex;
+      justify-content: space-between;
+
+      gap: 30px;
+
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-size: 19px;
+      font-weight: 900;
+    }
+
+    .footer-brand span {
+      color: var(--red);
+    }
+
+    .footer-text {
+      margin-top: 7px;
+
+      color: #7e879c;
+
+      font-size: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+
+      gap: 20px;
+
+      color: #9aa3b7;
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
+    }
+
+    .copyright {
+      max-width: 1200px;
+
+      margin: 30px auto 0;
+
+      padding-top: 20px;
+
+      border-top: 1px solid var(--border);
+
+      color: #596277;
+
+      font-size: 10px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      nav {
+        display: none;
+      }
+
+      .article-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .topbar {
+        min-height: 68px;
+        padding: 10px 16px;
+      }
+
+      .logo {
+        height: 42px;
+      }
+
+      .article-header {
+        padding: 55px 18px 25px;
+      }
+
+      .article-header h1 {
+        font-size: 42px;
+        letter-spacing: -2px;
+      }
+
+      .dek {
+        font-size: 16px;
+      }
+
+      .article-image {
+        padding: 0 14px;
+      }
+
+      .article-image-placeholder {
+        height: 320px;
+      }
+
+      .article-layout {
+        margin: 40px auto;
+
+        padding: 0 18px;
+      }
+
+      .article-body {
+        font-size: 16px;
+      }
+
+      .article-body h2 {
+        font-size: 26px;
+      }
+
+      .ariya {
+        padding: 25px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <div class="topbar">
+
+      <a href="../index.html" class="logo">
+
+        <img
+          src="../images/logo.png"
+          alt="The Game Times"
+          class="logo-img"
+        >
+
+      </a>
+
+
+      <nav>
+
+        <a href="../index.html">HOME</a>
+
+        <a href="#">NEWS</a>
+
+        <a href="#">REVIEWS</a>
+
+        <a href="#">GAMES</a>
+
+        <a href="#">FEATURES</a>
+
+        <a href="#">GUIDES</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+       ARTICLE HEADER
+  ========================== -->
+
+  <header class="article-header">
+
+    <span class="category">
+      GAMING NEWS
+    </span>
+
+
+    <h1>
+      ARTICLE TITLE GOES HERE
+    </h1>
+
+
+    <p class="dek">
+      Write a short, compelling description of the story here.
+      This should tell readers why the article matters.
+    </p>
+
+
+    <div class="meta">
+
+      <span>
+        By <strong>The Game Times</strong>
+      </span>
+
+      <span>•</span>
+
+      <span>
+        August 11, 2026
+      </span>
+
+      <span>•</span>
+
+      <span>
+        5 MIN READ
+      </span>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+       HERO IMAGE
+  ========================== -->
+
+  <div class="article-image">
+
+    <div class="article-image-placeholder">
+
+      ARTICLE HERO IMAGE
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================
+       ARTICLE
+  ========================== -->
+
+  <div class="article-layout">
+
+
+    <article class="article-body">
+
+
+      <p>
+        This is where the opening paragraph of your article goes.
+        Start with the most important information and immediately
+        give the reader a reason to continue.
+      </p>
+
+
+      <p>
+        Continue the story here. Keep the writing clear, natural
+        and informative. Explain what happened and provide the
+        relevant context.
+      </p>
+
+
+      <h2>
+        What Happened?
+      </h2>
+
+
+      <p>
+        Explain the main development in detail here.
+        Break longer stories into sections so they're easier
+        to read on mobile.
+      </p>
+
+
+      <blockquote>
+
+        Add an important quote from an official source here.
+
+      </blockquote>
+
+
+      <h2>
+        Why It Matters
+      </h2>
+
+
+      <p>
+        This section is where The Game Times adds context,
+        analysis and explains why the story matters to gamers.
+      </p>
+
+
+      <p>
+        Continue with additional information, reactions,
+        announcements or relevant details.
+      </p>
+
+
+
+      <!-- =========================
+           ARIYA
+      ========================== -->
+
+      <div class="ariya">
+
+        <div class="ariya-label">
+          THE GAME TIMES • OPINION
+        </div>
+
+
+        <h2>
+          💋 Ariya's Take
+        </h2>
+
+
+        <p>
+          This is where Ariya gives her honest,
+          sarcastic or unfiltered take on the story.
+        </p>
+
+      </div>
+
+
+
+      <!-- =========================
+           SOURCES
+      ========================== -->
+
+      <div class="sources">
+
+        <h3>
+          Sources
+        </h3>
+
+
+        <a href="#" target="_blank">
+          Official source / announcement
+        </a>
+
+
+        <a href="#" target="_blank">
+          Additional source
+        </a>
+
+
+      </div>
+
+
+    </article>
+
+
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+      <div class="sidebar-box">
+
+        <div class="sidebar-title">
+          THE GAME TIMES
+        </div>
+
+
+        <p>
+          Gaming news, reviews, features and opinions
+          without the corporate fluff.
+        </p>
+
+      </div>
+
+    </aside>
+
+
+  </div>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+
+      <div>
+
+        <div class="footer-brand">
+          THE GAME <span>TIMES</span>
+        </div>
+
+
+        <div class="footer-text">
+          Gaming News • Reviews • Features • Opinions
+        </div>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="../index.html">
+          HOME
+        </a>
+
+        <a href="#">
+          ABOUT
+        </a>
+
+        <a href="#">
+          CONTACT
+        </a>
+
+        <a href="#">
+          PRIVACY
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 The Game Times. All rights reserved.
+
+    </div>
+
+  </footer>
+
+
+</body>
+  </html>
