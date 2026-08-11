@@ -45,14 +45,25 @@
       gap: 20px;
     }
 
+    /* Logo styles: use an image if available */
     .logo {
-      font-size: 25px;
-      font-weight: 900;
-      letter-spacing: -1px;
+      display: block;
+      height: 56px; /* adjust as needed */
+      line-height: 56px;
+    }
+
+    .logo-img {
+      height: 100%;
+      width: auto;
+      display: block;
+      object-fit: contain;
     }
 
     .logo span {
       color: #ff3b30;
+      /* hide textual fallback visually when an image is present */
+      position: absolute;
+      left: -9999px;
     }
 
     nav {
@@ -229,6 +240,10 @@
         min-height: 380px;
         padding: 25px;
       }
+
+      .logo {
+        height: 44px;
+      }
     }
   </style>
 </head>
@@ -237,7 +252,7 @@
 
 <header>
   <div class="topbar">
-    <a href="#" class="logo">THE GAME <span>TIMES</span></a>
+    <a href="#" class="logo"><img src="images/logo.png" alt="The Game Times logo" class="logo-img"></a>
 
     <nav>
       <a href="#">NEWS</a>
