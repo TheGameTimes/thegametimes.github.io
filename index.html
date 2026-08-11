@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Game Times — Gaming News, Reviews & Opinions</title>
+
+  <meta name="description" content="The Game Times — Gaming news, reviews, features and opinions.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0d;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      background: #111116;
+      border-bottom: 1px solid #29292f;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .topbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: #ff3b30;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    nav a:hover {
+      color: #ff3b30;
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    .hero-card {
+      min-height: 430px;
+      background:
+        linear-gradient(to top, rgba(0,0,0,.95), rgba(0,0,0,.1)),
+        linear-gradient(135deg, #292929, #151515);
+      border-radius: 14px;
+      padding: 35px;
+      display: flex;
+      align-items: flex-end;
+      border: 1px solid #29292f;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #ff3b30;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 62px);
+      line-height: 1.05;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #c7c7cc;
+      font-size: 17px;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px 60px;
+    }
+
+    section {
+      margin-top: 55px;
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .section-title h2 {
+      font-size: 25px;
+    }
+
+    .section-title a {
+      color: #ff3b30;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #141419;
+      border: 1px solid #29292f;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #ff3b30;
+    }
+
+    .thumbnail {
+      height: 190px;
+      background: linear-gradient(135deg, #333, #171717);
+    }
+
+    .card-content {
+      padding: 18px;
+    }
+
+    .card small {
+      color: #ff3b30;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      line-height: 1.25;
+      margin: 8px 0;
+    }
+
+    .card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .review-score {
+      display: inline-block;
+      margin-top: 12px;
+      font-weight: 900;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    .rani {
+      background: #17131a;
+      border: 1px solid #3a263e;
+      border-radius: 14px;
+      padding: 30px;
+    }
+
+    .rani h2 {
+      color: #ff4fc3;
+      margin-bottom: 12px;
+    }
+
+    .rani p {
+      color: #d2cbd4;
+      font-size: 17px;
+    }
+
+    footer {
+      border-top: 1px solid #29292f;
+      background: #0e0e11;
+      padding: 35px 20px;
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        display: none;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: 380px;
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="topbar">
+    <a href="#" class="logo">THE GAME <span>TIMES</span></a>
+
+    <nav>
+      <a href="#">NEWS</a>
+      <a href="#">REVIEWS</a>
+      <a href="#">GAMES</a>
+      <a href="#">FEATURES</a>
+      <a href="#">GUIDES</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-card">
+    <div class="hero-content">
+      <span class="tag">FEATURED</span>
+
+      <h1>The Future of Gaming Is About to Change.</h1>
+
+      <p>
+        The latest gaming news, announcements and stories
+        you actually need to know about.
+      </p>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <section>
+    <div class="section-title">
+      <h2>📰 Latest News</h2>
+      <a href="#">VIEW ALL →</a>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="thumbnail"></div>
+
+        <div class="card-content">
+          <small>Gaming News</small>
+
+          <h3>Biggest Gaming Stories You Need to Know Today</h3>
+
+          <p>
+            The latest announcements, updates and controversies
+            from the world of gaming.
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumbnail"></div>
+
+        <div class="card-content">
+          <small>PlayStation</small>
+
+          <h3>What's Happening in the PlayStation World?</h3>
+
+          <p>
+            Everything gamers should know about Sony's latest moves.
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumbnail"></div>
+
+        <div class="card-content">
+          <small>Xbox</small>
+
+          <h3>The Latest Xbox News and Announcements</h3>
+
+          <p>
+            New games, updates and everything happening around Xbox.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <section>
+
+    <div class="section-title">
+      <h2>⭐ Latest Reviews</h2>
+      <a href="#">ALL REVIEWS →</a>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="thumbnail"></div>
+
+        <div class="card-content">
+          <small>Review</small>
+
+          <h3>Game Review</h3>
+
+          <p>
+            Our honest verdict after playing the latest release.
+          </p>
+
+          <span class="review-score">8.5/10</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumbnail"></div>
+
+        <div class="card-content">
+          <small>Review</small>
+
+          <h3>Another Game Review</h3>
+
+          <p>
+            Is this worth your money or should you skip it?
+          </p>
+
+          <span class="review-score">9/10</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumbnail"></div>
+
+        <div class="card-content">
+          <small>Review</small>
+
+          <h3>Our Latest Verdict</h3>
+
+          <p>
+            The good, the bad and everything in between.
+          </p>
+
+          <span class="review-score">7.5/10</span>
+        </div>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <div class="rani">
+
+      <h2>💀 Rani's Take</h2>
+
+      <p>
+        “Another gaming company announcing a $70 game like
+        my wallet hasn't already suffered enough. Girl, be serious.”
+      </p>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <strong>THE GAME TIMES</strong>
+
+  <br><br>
+
+  Gaming News • Reviews • Features • Opinions
+
+  <br><br>
+
+  © 2026 The Game Times. All rights reserved.
+
+</footer>
+
+</body>
+  </html>
