@@ -8,6 +8,7 @@
   --border: rgba(255, 255, 255, 0.10);
 }
 
+
 /* =========================
    RESET
 ========================= */
@@ -24,6 +25,7 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+
   background:
     radial-gradient(
       circle at 85% 5%,
@@ -31,8 +33,11 @@ body {
       transparent 25%
     ),
     var(--black);
+
   color: var(--white);
+
   line-height: 1.6;
+
   overflow-x: hidden;
 }
 
@@ -46,16 +51,20 @@ img {
   display: block;
 }
 
+
 /* =========================
    HEADER
 ========================= */
 
 header {
   position: sticky;
+
   top: 0;
+
   z-index: 999;
 
-  background: rgba(3, 5, 13, 0.94);
+  background: rgba(3, 5, 13, 0.96);
+
   backdrop-filter: blur(18px);
 
   border-bottom: 1px solid var(--border);
@@ -63,20 +72,28 @@ header {
 
 .topbar {
   max-width: 1280px;
-  margin: auto;
 
   min-height: 78px;
+
+  margin: auto;
+
   padding: 12px 24px;
 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
 
-  gap: 20px;
+  align-items: center;
+
+  gap: 30px;
 }
+
+
+/* =========================
+   LOGO
+========================= */
 
 .logo {
   display: flex;
+
   align-items: center;
 
   height: 54px;
@@ -86,6 +103,7 @@ header {
 
 .logo-img {
   height: 100%;
+
   width: auto;
 
   display: block;
@@ -93,17 +111,24 @@ header {
   object-fit: contain;
 }
 
+
 /* =========================
-   NAV
+   NAVIGATION
 ========================= */
 
 nav {
+  flex: 1;
+
   display: flex;
+
   align-items: center;
 
-  gap: 28px;
+  justify-content: center;
+
+  gap: 30px;
 
   font-size: 12px;
+
   font-weight: 800;
 
   letter-spacing: 1.5px;
@@ -114,6 +139,8 @@ nav a {
 
   color: #dfe3ee;
 
+  white-space: nowrap;
+
   transition: color 0.2s ease;
 }
 
@@ -123,9 +150,11 @@ nav a::after {
   position: absolute;
 
   left: 0;
+
   bottom: -8px;
 
   width: 0;
+
   height: 2px;
 
   background: var(--red);
@@ -141,48 +170,98 @@ nav a:hover::after {
   width: 100%;
 }
 
+
 /* =========================
    HEADER ACTIONS
 ========================= */
 
 .header-actions {
   display: flex;
+
   align-items: center;
-  gap: 10px;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  flex-shrink: 0;
 }
 
-.search-button,
-.menu-button {
-  border: 0;
+
+/* SEARCH */
+
+.search-button {
+  width: 38px;
+
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid var(--border);
+
   background: transparent;
+
   color: white;
 
   cursor: pointer;
 
-  font-size: 18px;
+  font-size: 17px;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
-.login-button,
-.signup-button {
-  padding: 8px 12px;
+.search-button:hover {
+  background: var(--navy);
+
+  border-color: var(--red);
+}
+
+
+/* ACCOUNT */
+
+.account-button {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 38px;
+
+  padding: 0 15px;
+
+  background: var(--red);
+
+  color: white;
 
   font-size: 10px;
+
   font-weight: 900;
 
   letter-spacing: 1px;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
-.login-button {
-  color: #dfe3ee;
+.account-button:hover {
+  background: #d90000;
+
+  transform: translateY(-1px);
 }
 
-.signup-button {
-  background: var(--red);
-  color: white;
-}
 
 /* =========================
-   SEARCH
+   SEARCH PANEL
 ========================= */
 
 .search-panel {
@@ -243,9 +322,6 @@ nav a:hover::after {
   cursor: pointer;
 }
 
-.menu-button {
-  display: none;
-}
 
 /* =========================
    HERO
@@ -295,6 +371,7 @@ nav a:hover::after {
 
   left: 0;
   right: 0;
+
   bottom: 0;
 
   height: 5px;
@@ -360,6 +437,7 @@ nav a:hover::after {
   font-weight: 700;
 }
 
+
 /* =========================
    MAIN
 ========================= */
@@ -400,6 +478,7 @@ section {
   display: inline-block;
 
   width: 5px;
+
   height: 25px;
 
   margin-right: 12px;
@@ -418,6 +497,7 @@ section {
 
   letter-spacing: 1.3px;
 }
+
 
 /* =========================
    PLATFORM GRID
@@ -476,6 +556,7 @@ section {
   font-size: 28px;
 }
 
+
 /* =========================
    GRID
 ========================= */
@@ -517,6 +598,7 @@ section {
     0 18px 45px rgba(0, 0, 0, 0.35);
 }
 
+
 /* =========================
    THUMBNAILS
 ========================= */
@@ -538,6 +620,7 @@ section {
 
 .thumbnail img {
   width: 100%;
+
   height: 100%;
 
   object-fit: cover;
@@ -570,6 +653,7 @@ section {
   position: absolute;
 
   left: 15px;
+
   bottom: 15px;
 
   z-index: 3;
@@ -586,6 +670,7 @@ section {
 
   letter-spacing: 1.5px;
 }
+
 
 /* =========================
    CARD CONTENT
@@ -637,6 +722,7 @@ section {
   letter-spacing: 0.5px;
 }
 
+
 /* =========================
    REVIEWS
 ========================= */
@@ -649,6 +735,7 @@ section {
   position: absolute;
 
   right: 18px;
+
   top: 18px;
 
   z-index: 5;
@@ -688,6 +775,7 @@ section {
   font-weight: 700;
 }
 
+
 /* =========================
    ARIYA
 ========================= */
@@ -715,6 +803,7 @@ section {
   position: absolute;
 
   right: -15px;
+
   bottom: -45px;
 
   font-size: 130px;
@@ -767,6 +856,7 @@ section {
 
   font-size: 18px;
 }
+
 
 /* =========================
    FOOTER
@@ -846,40 +936,19 @@ footer {
   font-size: 10px;
 }
 
+
 /* =========================
    MOBILE
 ========================= */
 
 @media (max-width: 900px) {
 
+  .topbar {
+    gap: 18px;
+  }
+
   nav {
     display: none;
-
-    position: absolute;
-
-    top: 78px;
-    left: 0;
-    right: 0;
-
-    padding: 20px;
-
-    background: #03050d;
-
-    border-bottom: 1px solid var(--border);
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 20px;
-  }
-
-  nav.mobile-open {
-    display: flex;
-  }
-
-  .menu-button {
-    display: block;
   }
 
   .platform-grid {
@@ -901,6 +970,7 @@ footer {
   }
 }
 
+
 /* =========================
    SMALL MOBILE
 ========================= */
@@ -911,6 +981,8 @@ footer {
     min-height: 68px;
 
     padding: 10px 16px;
+
+    gap: 12px;
   }
 
   .logo {
@@ -918,19 +990,23 @@ footer {
   }
 
   .header-actions {
+    margin-left: auto;
+
     gap: 7px;
   }
 
-  .login-button {
-    display: none;
+  .search-button {
+    width: 36px;
+
+    height: 36px;
   }
 
-  .signup-button {
-    padding: 7px 9px;
-  }
+  .account-button {
+    min-height: 36px;
 
-  nav {
-    top: 68px;
+    padding: 0 10px;
+
+    font-size: 9px;
   }
 
   .hero {
