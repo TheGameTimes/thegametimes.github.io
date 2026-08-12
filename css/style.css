@@ -1102,6 +1102,7 @@ footer {
   }
 }
 
+
 /* =========================
    MOTION SYSTEM
 ========================= */
@@ -1187,7 +1188,6 @@ body::after {
   50% {
     transform: translate3d(-35px, 25px, 0) scale(1.08);
   }
-
 }
 
 @keyframes ambientFloatReverse {
@@ -1200,7 +1200,6 @@ body::after {
   50% {
     transform: translate3d(30px, -20px, 0) scale(1.06);
   }
-
 }
 
 
@@ -1236,7 +1235,8 @@ header::after {
 
   opacity: 0.45;
 
-  animation: headerGlow 5s ease-in-out infinite;
+  animation:
+    headerGlow 5s ease-in-out infinite;
 }
 
 @keyframes headerGlow {
@@ -1249,12 +1249,11 @@ header::after {
   50% {
     opacity: 0.75;
   }
-
 }
 
 
 /* =========================
-   LOGO BREATHING
+   LOGO MOTION
 ========================= */
 
 .logo-img {
@@ -1275,7 +1274,7 @@ header::after {
 
 
 /* =========================
-   SEARCH BUTTON
+   SEARCH BUTTON MOTION
 ========================= */
 
 .search-button {
@@ -1315,7 +1314,7 @@ header::after {
 
 
 /* =========================
-   ACCOUNT BUTTON
+   ACCOUNT BUTTON MOTION
 ========================= */
 
 .account-button {
@@ -1339,7 +1338,7 @@ header::after {
     linear-gradient(
       90deg,
       transparent,
-      rgba(255,255,255,0.25),
+      rgba(255, 255, 255, 0.25),
       transparent
     );
 
@@ -1401,7 +1400,6 @@ header::after {
 
     opacity: 0.85;
   }
-
 }
 
 
@@ -1428,7 +1426,6 @@ header::after {
       0 0 18px
       rgba(254, 0, 0, 0.65);
   }
-
 }
 
 
@@ -1456,7 +1453,6 @@ header::after {
     transform:
       translateY(0);
   }
-
 }
 
 
@@ -1483,7 +1479,6 @@ header::after {
       0 0 22px
       rgba(254, 0, 0, 0.22);
   }
-
 }
 
 
@@ -1514,7 +1509,6 @@ header::after {
       0 0 12px
       rgba(254, 0, 0, 0.35);
   }
-
 }
 
 
@@ -1618,6 +1612,13 @@ header::after {
   transform:
     translateY(-7px)
     scale(1.008);
+
+  border-color:
+    rgba(254, 0, 0, 0.65);
+
+  box-shadow:
+    0 18px 45px
+    rgba(0, 0, 0, 0.35);
 }
 
 
@@ -1670,7 +1671,6 @@ header::after {
   50% {
     transform: translate(-12px, 8px);
   }
-
 }
 
 
@@ -1695,108 +1695,4 @@ header::after {
 }
 
 
-/* =========================
-   ARIYA SECTION
-========================= */
-
-.ariya::before {
-  animation:
-    ariyaFloat 10s ease-in-out infinite;
-}
-
-@keyframes ariyaFloat {
-
-  0%,
-  100% {
-    transform:
-      translateX(0)
-      translateY(0);
-  }
-
-  50% {
-    transform:
-      translateX(-20px)
-      translateY(-8px);
-  }
-
-}
-
-.ariya {
-  transition:
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-.ariya:hover {
-  border-color:
-    rgba(254, 0, 0, 0.55);
-
-  box-shadow:
-    0 20px 60px
-    rgba(0, 0, 0, 0.25);
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer-brand span {
-  transition:
-    text-shadow 0.3s ease;
-}
-
-.footer-brand:hover span {
-  text-shadow:
-    0 0 15px
-    rgba(254, 0, 0, 0.55);
-}
-
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-section {
-  animation:
-    sectionAppear 0.8s ease both;
-}
-
-@keyframes sectionAppear {
-
-  from {
-    opacity: 0;
-
-    transform:
-      translateY(18px);
-  }
-
-  to {
-    opacity: 1;
-
-    transform:
-      translateY(0);
-  }
-
-}
-
-
-/* =========================
-   REDUCED MOTION
-========================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-
-    animation-iteration-count: 1 !important;
-
-    scroll-behavior: auto !important;
-
-    transition-duration: 0.01ms !important;
-  }
-
-      }
+/* ======
