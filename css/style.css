@@ -2413,3 +2413,278 @@ footer {
   }
 
 }
+
+
+/* =========================
+   THE GAME TIMES — TEAM
+========================= */
+
+#team {
+  position: relative;
+  padding: 90px 24px 100px;
+  overflow: hidden;
+}
+
+
+/* TEAM HEADING */
+
+#team .section-heading {
+  max-width: 1280px;
+  margin: 0 auto 35px;
+}
+
+
+/* TEAM GRID */
+
+#team .grid {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+
+/* TEAM CARD */
+
+#team .card {
+  position: relative;
+
+  min-height: 300px;
+
+  display: flex;
+  align-items: flex-end;
+
+  overflow: hidden;
+
+  padding: 0;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.055),
+      rgba(255,255,255,0.015)
+    );
+
+  border: 1px solid rgba(255,255,255,0.09);
+
+  border-radius: 4px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.45s cubic-bezier(.2,.8,.2,1),
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+
+}
+
+
+/* CARD GLOW */
+
+#team .card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255,255,255,0.09),
+      transparent 55%
+    );
+
+  opacity: 0;
+
+  transition: opacity 0.45s ease;
+
+  pointer-events: none;
+}
+
+
+/* TOP ACCENT LINE */
+
+#team .card::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: rgba(255,255,255,0.65);
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition:
+    transform 0.5s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+/* HOVER */
+
+#team .card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(255,255,255,0.20);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.35);
+}
+
+
+#team .card:hover::before {
+  opacity: 1;
+}
+
+
+#team .card:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* CARD CONTENT */
+
+#team .card-content {
+  position: relative;
+
+  width: 100%;
+
+  padding: 28px;
+
+  z-index: 2;
+}
+
+
+/* ROLE */
+
+#team .category {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+
+  opacity: 0.55;
+}
+
+
+/* NAME */
+
+#team .card h3 {
+  margin: 0 0 10px;
+
+  font-size: 28px;
+  line-height: 1.05;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* DESCRIPTION */
+
+#team .card p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.65;
+
+  opacity: 0.62;
+}
+
+
+/* =========================
+   TEAM CARD ENTRY MOTION
+========================= */
+
+#team .card {
+  animation: teamCardIn 0.7s ease both;
+}
+
+
+#team .card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+
+#team .card:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+
+#team .card:nth-child(3) {
+  animation-delay: 0.19s;
+}
+
+
+#team .card:nth-child(4) {
+  animation-delay: 0.26s;
+}
+
+
+@keyframes teamCardIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================
+   TEAM — TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  #team .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================
+   TEAM — MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  #team {
+    padding: 65px 18px 75px;
+  }
+
+  #team .grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  #team .card {
+    min-height: 250px;
+  }
+
+  #team .card-content {
+    padding: 24px;
+  }
+
+  #team .card h3 {
+    font-size: 25px;
+  }
+
+  }
