@@ -1883,3 +1883,93 @@ footer {
   }
 
 }
+
+
+/* =========================
+   LATEST NEWS — FEATURED GRID
+========================= */
+
+#latest-news .grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+}
+
+
+/* FIRST STORY */
+
+#latest-news .grid .card:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+
+/* FIRST STORY IMAGE */
+
+#latest-news .grid .card:first-child .thumbnail {
+  aspect-ratio: 16 / 9;
+}
+
+
+/* FIRST STORY CONTENT */
+
+#latest-news .grid .card:first-child .card-content {
+  padding: 26px;
+}
+
+
+/* FIRST STORY HEADLINE */
+
+#latest-news .grid .card:first-child h3 {
+  font-size: 30px;
+  line-height: 1.15;
+}
+
+
+/* =========================
+   SECONDARY STORIES
+========================= */
+
+#latest-news .grid .card:not(:first-child) .card-content {
+  padding: 18px;
+}
+
+
+#latest-news .grid .card:not(:first-child) h3 {
+  font-size: 18px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  #latest-news .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #latest-news .grid .card:first-child {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  #latest-news .grid {
+    grid-template-columns: 1fr;
+  }
+
+  #latest-news .grid .card:first-child {
+    grid-column: span 1;
+  }
+
+  #latest-news .grid .card:first-child h3 {
+    font-size: 24px;
+  }
+
+}
