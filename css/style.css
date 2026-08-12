@@ -1101,3 +1101,702 @@ footer {
     flex-wrap: wrap;
   }
 }
+
+/* =========================
+   MOTION SYSTEM
+========================= */
+
+/* Smooth global feel */
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a,
+.card,
+.platform-card {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+/* =========================
+   AMBIENT BACKGROUND
+========================= */
+
+body::before {
+  content: "";
+
+  position: fixed;
+
+  width: 600px;
+  height: 600px;
+
+  top: -250px;
+  right: -220px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(254, 0, 0, 0.10),
+      transparent 68%
+    );
+
+  pointer-events: none;
+
+  z-index: -1;
+
+  animation:
+    ambientFloat 12s ease-in-out infinite;
+}
+
+body::after {
+  content: "";
+
+  position: fixed;
+
+  width: 500px;
+  height: 500px;
+
+  bottom: -250px;
+  left: -220px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(6, 15, 48, 0.35),
+      transparent 68%
+    );
+
+  pointer-events: none;
+
+  z-index: -1;
+
+  animation:
+    ambientFloatReverse 15s ease-in-out infinite;
+}
+
+@keyframes ambientFloat {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-35px, 25px, 0) scale(1.08);
+  }
+
+}
+
+@keyframes ambientFloatReverse {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(30px, -20px, 0) scale(1.06);
+  }
+
+}
+
+
+/* =========================
+   HEADER MOTION
+========================= */
+
+header {
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+header::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -1px;
+
+  width: 100%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(254, 0, 0, 0.55),
+      transparent
+    );
+
+  opacity: 0.45;
+
+  animation: headerGlow 5s ease-in-out infinite;
+}
+
+@keyframes headerGlow {
+
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.75;
+  }
+
+}
+
+
+/* =========================
+   LOGO BREATHING
+========================= */
+
+.logo-img {
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.035);
+
+  filter:
+    drop-shadow(
+      0 0 12px
+      rgba(254, 0, 0, 0.25)
+    );
+}
+
+
+/* =========================
+   SEARCH BUTTON
+========================= */
+
+.search-button {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.search-button::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(254, 0, 0, 0.20),
+      transparent 70%
+    );
+
+  opacity: 0;
+
+  transform: scale(0.4);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.search-button:hover::before {
+  opacity: 1;
+
+  transform: scale(1.2);
+}
+
+
+/* =========================
+   ACCOUNT BUTTON
+========================= */
+
+.account-button {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.account-button::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,0.25),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.6s ease;
+}
+
+.account-button:hover::after {
+  left: 140%;
+}
+
+
+/* =========================
+   HERO ATMOSPHERE
+========================= */
+
+.hero-card {
+  isolation: isolate;
+}
+
+.hero-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -180px;
+  top: -180px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(254, 0, 0, 0.16),
+      transparent 68%
+    );
+
+  border-radius: 50%;
+
+  z-index: 0;
+
+  animation:
+    heroGlow 8s ease-in-out infinite;
+}
+
+@keyframes heroGlow {
+
+  0%,
+  100% {
+    transform: scale(1);
+
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: scale(1.18);
+
+    opacity: 0.85;
+  }
+
+}
+
+
+/* =========================
+   HERO RED LINE
+========================= */
+
+.hero-card::after {
+  animation:
+    heroLine 4s ease-in-out infinite;
+}
+
+@keyframes heroLine {
+
+  0%,
+  100% {
+    opacity: 0.65;
+  }
+
+  50% {
+    opacity: 1;
+
+    box-shadow:
+      0 0 18px
+      rgba(254, 0, 0, 0.65);
+  }
+
+}
+
+
+/* =========================
+   HERO TEXT
+========================= */
+
+.hero-content {
+  animation:
+    heroContentIn 0.8s ease-out both;
+}
+
+@keyframes heroContentIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================
+   EYEBROW PULSE
+========================= */
+
+.eyebrow {
+  animation:
+    eyebrowPulse 4s ease-in-out infinite;
+}
+
+@keyframes eyebrowPulse {
+
+  0%,
+  100% {
+    box-shadow:
+      0 0 0
+      rgba(254, 0, 0, 0);
+  }
+
+  50% {
+    box-shadow:
+      0 0 22px
+      rgba(254, 0, 0, 0.22);
+  }
+
+}
+
+
+/* =========================
+   SECTION ACCENT
+========================= */
+
+.section-heading h2::before {
+  animation:
+    sectionPulse 3.5s ease-in-out infinite;
+}
+
+@keyframes sectionPulse {
+
+  0%,
+  100% {
+    transform: scaleY(1);
+
+    opacity: 0.75;
+  }
+
+  50% {
+    transform: scaleY(1.15);
+
+    opacity: 1;
+
+    box-shadow:
+      0 0 12px
+      rgba(254, 0, 0, 0.35);
+  }
+
+}
+
+
+/* =========================
+   PLATFORM CARDS
+========================= */
+
+.platform-card {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.platform-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  top: -60px;
+  right: -60px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(254, 0, 0, 0.12),
+      transparent 70%
+    );
+
+  border-radius: 50%;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.platform-card:hover::before {
+  transform: scale(2);
+}
+
+.platform-icon {
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.platform-card:hover .platform-icon {
+  transform:
+    translateY(-3px)
+    scale(1.08);
+
+  filter:
+    drop-shadow(
+      0 0 10px
+      rgba(254, 0, 0, 0.35)
+    );
+}
+
+
+/* =========================
+   CARD MOTION
+========================= */
+
+.card {
+  position: relative;
+
+  transform: translateZ(0);
+}
+
+.card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 60%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(254, 0, 0, 0.8),
+      transparent
+    );
+
+  transition:
+    left 0.6s ease;
+
+  z-index: 5;
+}
+
+.card:hover::before {
+  left: 140%;
+}
+
+.card:hover {
+  transform:
+    translateY(-7px)
+    scale(1.008);
+}
+
+
+/* =========================
+   THUMBNAIL MOTION
+========================= */
+
+.thumbnail {
+  isolation: isolate;
+}
+
+.thumbnail::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -20%;
+
+  background:
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(254, 0, 0, 0.12),
+      transparent 45%
+    );
+
+  z-index: 1;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.4s ease;
+
+  pointer-events: none;
+}
+
+.card:hover .thumbnail::before {
+  opacity: 1;
+
+  animation:
+    thumbnailGlow 4s ease-in-out infinite;
+}
+
+@keyframes thumbnailGlow {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-12px, 8px);
+  }
+
+}
+
+
+/* =========================
+   REVIEW SCORE
+========================= */
+
+.score {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.review-card:hover .score {
+  transform:
+    scale(1.08)
+    rotate(-3deg);
+
+  box-shadow:
+    0 0 20px
+    rgba(254, 0, 0, 0.35);
+}
+
+
+/* =========================
+   ARIYA SECTION
+========================= */
+
+.ariya::before {
+  animation:
+    ariyaFloat 10s ease-in-out infinite;
+}
+
+@keyframes ariyaFloat {
+
+  0%,
+  100% {
+    transform:
+      translateX(0)
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateX(-20px)
+      translateY(-8px);
+  }
+
+}
+
+.ariya {
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.ariya:hover {
+  border-color:
+    rgba(254, 0, 0, 0.55);
+
+  box-shadow:
+    0 20px 60px
+    rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-brand span {
+  transition:
+    text-shadow 0.3s ease;
+}
+
+.footer-brand:hover span {
+  text-shadow:
+    0 0 15px
+    rgba(254, 0, 0, 0.55);
+}
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+section {
+  animation:
+    sectionAppear 0.8s ease both;
+}
+
+@keyframes sectionAppear {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    scroll-behavior: auto !important;
+
+    transition-duration: 0.01ms !important;
+  }
+
+      }
