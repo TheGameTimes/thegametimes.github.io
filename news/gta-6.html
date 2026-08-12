@@ -1,834 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GTA 6 Is Getting an Extended Look on August 27 — The Game Times</title>
+  <meta charset="UTF-8">
 
-<meta name="description" content="Rockstar Games has announced an extended look at Grand Theft Auto VI for August 27, ahead of its November 19, 2026 release.">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-<style>
+  <meta
+    name="description"
+    content="GTA 6 is getting another major look on August 27. Here's everything we know."
+  >
 
-:root {
-  --red: #FE0000;
-  --navy: #060F30;
-  --black: #03050d;
-  --white: #f7f7f7;
-  --muted: #9da4b7;
-  --border: rgba(255,255,255,0.10);
-}
+  <meta
+    name="theme-color"
+    content="#03050d"
+  >
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <title>
+    GTA 6 Is Getting an Extended Look on August 27 — The Game Times
+  </title>
 
-html {
-  scroll-behavior: smooth;
-}
+  <link
+    rel="stylesheet"
+    href="../css/style.css"
+  >
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background:
-    radial-gradient(
-      circle at 85% 0%,
-      rgba(254,0,0,0.07),
-      transparent 25%
-    ),
-    var(--black);
-  color: var(--white);
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* HEADER */
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(3,5,13,0.94);
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid var(--border);
-}
-
-.topbar {
-  max-width: 1280px;
-  min-height: 78px;
-  margin: auto;
-  padding: 12px 24px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.logo {
-  height: 54px;
-  display: flex;
-  align-items: center;
-}
-
-.logo-img {
-  height: 100%;
-  width: auto;
-  object-fit: contain;
-}
-
-nav {
-  display: flex;
-  gap: 28px;
-
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-}
-
-nav a {
-  position: relative;
-  color: #dfe3ee;
-}
-
-nav a:hover {
-  color: var(--red);
-}
-
-/* ARTICLE HEADER */
-
-.article-header {
-  max-width: 1050px;
-  margin: auto;
-  padding: 80px 24px 35px;
-}
-
-.category {
-  display: inline-block;
-
-  background: var(--red);
-  color: white;
-
-  padding: 6px 11px;
-  margin-bottom: 20px;
-
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 1.5px;
-}
-
-.article-header h1 {
-  max-width: 1000px;
-
-  font-size: clamp(40px, 7vw, 76px);
-  line-height: 1;
-  letter-spacing: -3px;
-
-  margin-bottom: 24px;
-}
-
-.dek {
-  max-width: 850px;
-
-  color: #b7bfce;
-  font-size: 19px;
-  line-height: 1.6;
-
-  margin-bottom: 25px;
-}
-
-.meta {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-
-  color: #6f7890;
-
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.meta strong {
-  color: #e6e9ef;
-}
-
-/* HERO IMAGE */
-
-.article-image {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 24px;
-}
-
-.article-image-box {
-  position: relative;
-
-  min-height: 600px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-
-  background:
-    linear-gradient(
-      135deg,
-      #17244e,
-      #080b15
-    );
-
-  border: 1px solid var(--border);
-
-  color: rgba(255,255,255,0.25);
-
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-align: center;
-}
-
-.article-image-box::before {
-  content: "GTA VI";
-
-  position: absolute;
-
-  right: -30px;
-  bottom: -70px;
-
-  font-size: 180px;
-  font-weight: 900;
-  letter-spacing: -10px;
-
-  color: rgba(254,0,0,0.06);
-}
-
-.article-image-box::after {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  height: 5px;
-
-  background: var(--red);
-}
-
-/* ARTICLE */
-
-.article-layout {
-  max-width: 1200px;
-  margin: 60px auto 0;
-  padding: 0 24px 80px;
-
-  display: grid;
-  grid-template-columns: minmax(0,760px) 260px;
-  gap: 70px;
-
-  align-items: start;
-}
-
-.article-body {
-  min-width: 0;
-
-  color: #d5d9e2;
-
-  font-size: 18px;
-  line-height: 1.8;
-}
-
-.article-body p {
-  margin-bottom: 25px;
-}
-
-.article-body h2 {
-  color: white;
-
-  font-size: 30px;
-  line-height: 1.2;
-
-  margin: 50px 0 18px;
-}
-
-.article-body strong {
-  color: white;
-}
-
-.article-body blockquote {
-  margin: 35px 0;
-  padding: 25px;
-
-  border-left: 4px solid var(--red);
-
-  background: var(--navy);
-
-  color: #e6e9f0;
-
-  font-size: 20px;
-  font-weight: 700;
-}
-
-/* ARIYA */
-
-.ariya {
-  position: relative;
-  overflow: hidden;
-
-  margin: 50px 0;
-  padding: 35px;
-
-  background:
-    linear-gradient(
-      120deg,
-      var(--navy),
-      #080b17
-    );
-
-  border: 1px solid rgba(254,0,0,0.30);
-}
-
-.ariya::before {
-  content: "ARIYA";
-
-  position: absolute;
-
-  right: -15px;
-  bottom: -45px;
-
-  font-size: 120px;
-  font-weight: 900;
-
-  color: rgba(254,0,0,0.05);
-}
-
-.ariya-label {
-  position: relative;
-  z-index: 2;
-
-  color: var(--red);
-
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 2px;
-
-  margin-bottom: 12px;
-}
-
-.ariya h2 {
-  position: relative;
-  z-index: 2;
-
-  margin: 0 0 15px;
-
-  font-size: 28px;
-}
-
-.ariya p {
-  position: relative;
-  z-index: 2;
-
-  margin: 0;
-
-  color: #c8cedc;
-
-  font-size: 17px;
-}
-
-/* SOURCES */
-
-.sources {
-  margin-top: 60px;
-  padding-top: 25px;
-
-  border-top: 1px solid var(--border);
-}
-
-.sources h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.sources a {
-  display: block;
-
-  color: #aeb6c8;
-
-  font-size: 13px;
-
-  margin-bottom: 8px;
-}
-
-.sources a:hover {
-  color: var(--red);
-}
-
-/* SIDEBAR */
-
-.sidebar {
-  align-self: start;
-}
-
-.sidebar-box {
-  padding: 22px;
-
-  background: var(--navy);
-
-  border: 1px solid var(--border);
-}
-
-.sidebar-title {
-  color: var(--red);
-
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 1.5px;
-
-  margin-bottom: 15px;
-}
-
-.sidebar p {
-  color: #929bad;
-  font-size: 13px;
-}
-
-/* FOOTER */
-
-footer {
-  background: var(--navy);
-
-  border-top: 1px solid var(--border);
-
-  padding: 45px 24px;
-}
-
-.footer-inner {
-  max-width: 1200px;
-  margin: auto;
-
-  display: flex;
-  justify-content: space-between;
-
-  gap: 30px;
-
-  flex-wrap: wrap;
-}
-
-.footer-brand {
-  font-size: 19px;
-  font-weight: 900;
-}
-
-.footer-brand span {
-  color: var(--red);
-}
-
-.footer-text {
-  margin-top: 7px;
-
-  color: #7e879c;
-  font-size: 12px;
-}
-
-.footer-links {
-  display: flex;
-  gap: 20px;
-
-  color: #9aa3b7;
-
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.footer-links a:hover {
-  color: var(--red);
-}
-
-.copyright {
-  max-width: 1200px;
-
-  margin: 30px auto 0;
-
-  padding-top: 20px;
-
-  border-top: 1px solid var(--border);
-
-  color: #596277;
-
-  font-size: 10px;
-}
-
-/* TABLET */
-
-@media (max-width: 900px) {
-
-  nav {
-    display: none;
-  }
-
-  .article-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .sidebar {
-    display: none;
-  }
-
-}
-
-/* MOBILE */
-
-@media (max-width: 600px) {
-
-  .topbar {
-    min-height: 68px;
-    padding: 10px 16px;
-  }
-
-  .logo {
-    height: 42px;
-  }
-
-  .article-header {
-    padding: 55px 18px 25px;
-  }
-
-  .article-header h1 {
-    font-size: 42px;
-    letter-spacing: -2px;
-  }
-
-  .dek {
-    font-size: 16px;
-  }
-
-  .article-image {
-    padding: 0 14px;
-  }
-
-  .article-image-box {
-    min-height: 320px;
-  }
-
-  .article-layout {
-    margin-top: 40px;
-    padding: 0 18px 60px;
-  }
-
-  .article-body {
-    font-size: 16px;
-  }
-
-  .article-body h2 {
-    font-size: 26px;
-  }
-
-  .ariya {
-    padding: 25px;
-  }
-
-  .ariya h2 {
-    font-size: 25px;
-  }
-
-  .ariya p {
-    font-size: 16px;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-  }
-
-  .footer-links {
-    flex-wrap: wrap;
-  }
-
-}
-
-</style>
 </head>
+
 
 <body>
 
-<!-- HEADER -->
 
-<div class="site-header">
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-  <div class="topbar">
+  <header>
 
-    <a href="../index.html" class="logo">
+    <div class="topbar">
 
-      <img
-        src="../images/logo.png"
-        alt="The Game Times"
-        class="logo-img"
+
+      <!-- LOGO -->
+
+      <a
+        href="../index.html"
+        class="logo"
+        aria-label="The Game Times Home"
       >
 
-    </a>
+        <img
+          src="../images/Logo.png"
+          alt="The Game Times"
+          class="logo-img"
+        >
 
-    <nav>
-
-      <a href="../index.html">HOME</a>
-      <a href="../index.html#news">NEWS</a>
-      <a href="../index.html#reviews">REVIEWS</a>
-      <a href="../index.html#games">GAMES</a>
-      <a href="../index.html#features">FEATURES</a>
-      <a href="../index.html#guides">GUIDES</a>
-
-    </nav>
-
-  </div>
-
-</div>
+      </a>
 
 
-<!-- ARTICLE -->
+      <!-- NAVIGATION -->
 
-<main>
+      <nav aria-label="Main navigation">
 
-  <section class="article-header">
+        <a href="../index.html">
+          NEWS
+        </a>
 
-    <span class="category">
-      GRAND THEFT AUTO VI
-    </span>
+        <a href="#">
+          REVIEWS
+        </a>
 
-    <h1>
-      GTA 6 Is Getting an Extended Look on August 27
-    </h1>
+        <a href="#">
+          GAMES
+        </a>
 
-    <p class="dek">
-      Rockstar Games has announced an extended look at Grand Theft Auto VI,
-      giving fans another major glimpse at the highly anticipated game ahead
-      of its November release.
-    </p>
+        <a href="#">
+          FEATURES
+        </a>
 
-    <div class="meta">
+        <a href="#">
+          GUIDES
+        </a>
 
-      <span>By <strong>The Game Times</strong></span>
+      </nav>
 
-      <span>•</span>
 
-      <span>August 11, 2026</span>
+      <!-- ACTIONS -->
 
-      <span>•</span>
+      <div class="header-actions">
 
-      <span>3 MIN READ</span>
+        <a
+          href="../index.html"
+          class="account-button"
+        >
+          HOME
+        </a>
+
+      </div>
+
 
     </div>
 
-  </section>
+  </header>
 
 
-  <!-- HERO -->
 
-  <section class="article-image">
+  <!-- =========================
+       ARTICLE
+  ========================== -->
 
-    <div class="article-image-box">
-      GTA VI HERO IMAGE
-    </div>
-
-  </section>
+  <main class="article-page">
 
 
-  <!-- ARTICLE BODY -->
-
-  <section class="article-layout">
-
-    <article class="article-body">
-
-      <p>
-        Rockstar Games is giving Grand Theft Auto VI another major spotlight.
-        The developer has announced an “Extended Look” at the game for
-        August 27 at 3 PM ET, according to the official Grand Theft Auto VI
-        website.
-      </p>
-
-      <p>
-        The presentation arrives ahead of GTA VI's currently scheduled
-        November 19, 2026 release, with the game set to launch on
-        PlayStation 5 and Xbox Series X|S.
-      </p>
+    <article class="article">
 
 
-      <h2>
-        Another Look at Vice City
-      </h2>
+      <!-- CATEGORY -->
 
-      <p>
-        Rockstar has already shown fans its new version of Vice City,
-        alongside protagonists Jason and Lucia and the wider criminal world
-        of Leonida.
-      </p>
+      <div class="article-category">
 
-      <p>
-        The upcoming extended look gives Rockstar another opportunity to show
-        how the world, characters and gameplay systems come together before
-        launch.
+        GRAND THEFT AUTO VI
+
+      </div>
+
+
+
+      <!-- HEADLINE -->
+
+      <h1 class="article-title">
+
+        GTA 6 Is Getting an Extended Look on August 27
+
+      </h1>
+
+
+
+      <!-- DECK -->
+
+      <p class="article-deck">
+
+        Rockstar Games is preparing another major look at
+        Grand Theft Auto VI ahead of its November release.
+
       </p>
 
 
-      <blockquote>
-        “An Extended Look” — Rockstar Games
-      </blockquote>
+
+      <!-- META -->
+
+      <div class="article-meta">
+
+        <span>
+          AUGUST 11, 2026
+        </span>
+
+        <span>
+          •
+        </span>
+
+        <span>
+          THE GAME TIMES
+        </span>
+
+      </div>
 
 
-      <h2>
-        When Is the GTA 6 Extended Look?
-      </h2>
 
-      <p>
-        Rockstar has scheduled the extended look for
-        <strong>August 27 at 3 PM ET</strong>.
-      </p>
+      <!-- HERO IMAGE -->
 
-      <p>
-        With the release date currently set for November 19, this could become
-        one of the biggest official GTA VI showcases before the game finally
-        reaches players.
-      </p>
+      <figure class="article-hero">
+
+        <img
+          src="../images/gta-6.jpg"
+          alt="Grand Theft Auto VI"
+        >
+
+      </figure>
 
 
-      <h2>
-        The Game Times' Take
-      </h2>
 
-      <p>
-        GTA VI is now entering the part of its marketing cycle where every
-        official reveal carries serious weight. Rockstar doesn't need to flood
-        fans with information — it just needs to show enough of the game to
-        make the wait until November feel even longer.
-      </p>
+      <!-- ARTICLE BODY -->
 
-      <p>
-        And judging by the level of anticipation surrounding GTA VI,
-        Rockstar probably doesn't have to do much convincing.
-      </p>
+      <div class="article-body">
 
-
-      <!-- ARIYA -->
-
-      <div class="ariya">
-
-        <div class="ariya-label">
-          THE GAME TIMES • OPINION
-        </div>
-
-        <h2>
-          💋 Ariya's Take
-        </h2>
 
         <p>
-          “Rockstar said ‘here, have another look’ like we haven't been
-          dissecting every pixel they've released for years. August 27 is
-          officially another day where productivity goes out the window.”
+
+          Rockstar Games is preparing to give Grand Theft Auto VI
+          another major spotlight, with an extended look reportedly
+          arriving on August 27.
+
         </p>
 
+
+        <p>
+
+          The upcoming reveal comes as anticipation continues to
+          build around Rockstar's next open-world blockbuster,
+          which is currently scheduled to launch in November.
+
+        </p>
+
+
+
+        <h2>
+
+          Another Look at Vice City
+
+        </h2>
+
+
+        <p>
+
+          Grand Theft Auto VI is set to return players to Vice City,
+          introducing a new story, characters and a much larger
+          world for players to explore.
+
+        </p>
+
+
+        <p>
+
+          Rockstar has remained relatively selective about what it
+          shows publicly, making every new trailer, screenshot and
+          announcement a major event for the gaming community.
+
+        </p>
+
+
+
+        <!-- QUOTE -->
+
+        <blockquote>
+
+          “The next major look at GTA VI could reveal more about
+          Rockstar's vision for the game.”
+
+        </blockquote>
+
+
+
+        <h2>
+
+          What Happens Next?
+
+        </h2>
+
+
+        <p>
+
+          With the release approaching, Rockstar is expected to
+          gradually reveal more information about the game,
+          including additional gameplay details and features.
+
+        </p>
+
+
+        <p>
+
+          The Game Times will continue following the biggest
+          developments surrounding Grand Theft Auto VI.
+
+        </p>
+
+
       </div>
 
 
-      <!-- SOURCES -->
 
-      <div class="sources">
+      <!-- =========================
+           ARIYA'S TAKE
+      ========================== -->
 
-        <h3>
-          Sources
-        </h3>
+      <section class="article-opinion">
 
-        <a
-          href="https://www.rockstargames.com/VI/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Rockstar Games — Grand Theft Auto VI
-        </a>
 
-        <a
-          href="https://www.rockstargames.com/newswire"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Rockstar Games — Newswire
-        </a>
+        <div class="article-opinion-label">
+
+          THE GAME TIMES • OPINION
+
+        </div>
+
+
+        <h2>
+
+          💋 Ariya's Take
+
+        </h2>
+
+
+        <p>
+
+          “Rockstar really knows how to keep people starving.
+          Give us another trailer already, girl.”
+
+        </p>
+
+
+      </section>
+
+
+
+      <!-- =========================
+           ARTICLE FOOTER
+      ========================== -->
+
+      <div class="article-footer">
+
+
+        <span>
+
+          Written by The Game Times
+
+        </span>
+
+
+        <span>
+
+          •
+
+        </span>
+
+
+        <span>
+
+          August 11, 2026
+
+        </span>
+
 
       </div>
+
 
     </article>
 
 
-    <!-- SIDEBAR -->
+  </main>
 
-    <aside class="sidebar">
 
-      <div class="sidebar-box">
 
-        <div class="sidebar-title">
-          THE GAME TIMES
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+
+    <div class="footer-inner">
+
+
+      <div>
+
+        <div class="footer-brand">
+
+          THE GAME <span>TIMES</span>
+
         </div>
 
-        <p>
-          Gaming news, reviews, features and opinions
-          without the corporate fluff.
-        </p>
+
+        <div class="footer-text">
+
+          Gaming News • Reviews • Features • Guides • Opinions
+
+        </div>
 
       </div>
 
-    </aside>
-
-  </section>
-
-</main>
 
 
-<!-- FOOTER -->
+      <div class="footer-links">
 
-<footer>
+        <a href="#">
+          ABOUT
+        </a>
 
-  <div class="footer-inner">
+        <a href="#">
+          CONTACT
+        </a>
 
-    <div>
+        <a href="#">
+          PRIVACY
+        </a>
 
-      <div class="footer-brand">
-        THE GAME <span>TIMES</span>
+        <a href="#">
+          TERMS
+        </a>
+
       </div>
 
-      <div class="footer-text">
-        Gaming News • Reviews • Features • Opinions
-      </div>
 
     </div>
 
 
-    <div class="footer-links">
 
-      <a href="../index.html">HOME</a>
-      <a href="#">ABOUT</a>
-      <a href="#">CONTACT</a>
-      <a href="#">PRIVACY</a>
+    <div class="copyright">
+
+      © 2026 The Game Times. All rights reserved.
 
     </div>
 
-  </div>
 
+  </footer>
 
-  <div class="copyright">
-    © 2026 The Game Times. All rights reserved.
-  </div>
-
-</footer>
 
 </body>
-  </html>
+
+</html>
