@@ -1,1 +1,26 @@
-
+[
+  {
+    "id": "lucifer",
+    "name": "Lucifer",
+    "role": "Editor-in-Chief",
+    "bio": "Oversees The Game Time, editorial direction, stories and the overall voice of the brand."
+  },
+  {
+    "id": "ariya",
+    "name": "Ariya",
+    "role": "Writer & Narrator",
+    "bio": "Writes stories, delivers narration and brings the voice of The Game Time."
+  },
+  {
+    "id": "sheesh",
+    "name": "Sheesh",
+    "role": "Social Manager",
+    "bio": "Handles social media, community engagement and daily publishing across our platforms."
+  },
+  {
+    "id": "zain",
+    "name": "Zain",
+    "role": "Editor & Graphic",
+    "bio": "Handles visual design, graphics, editing and the visual identity of The Game Time."
+  }
+]
