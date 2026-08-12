@@ -1696,3 +1696,747 @@ header::after {
 
 
 /* ======
+
+
+/* =========================
+   ARTICLE SYSTEM
+========================= */
+
+.article-page {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding:
+    60px 24px
+    90px;
+}
+
+
+/* =========================
+   ARTICLE CONTAINER
+========================= */
+
+.article {
+  max-width: 980px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   ARTICLE HEADER
+========================= */
+
+.article-header {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding-bottom: 35px;
+}
+
+.article-header .eyebrow {
+  margin-bottom: 22px;
+}
+
+.article-header h1 {
+  font-size:
+    clamp(
+      42px,
+      6vw,
+      76px
+    );
+
+  line-height: 0.98;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 25px;
+}
+
+.article-dek {
+  max-width: 780px;
+
+  color: #c4cad8;
+
+  font-size: 19px;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================
+   ARTICLE META
+========================= */
+
+.article-meta {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  color: #7f889d;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.article-meta strong {
+  color: var(--red);
+}
+
+
+/* =========================
+   ARTICLE IMAGE
+========================= */
+
+.article-image {
+  position: relative;
+
+  width: 100%;
+
+  margin: 10px 0 50px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--navy-light),
+      #080b15
+    );
+}
+
+.article-image::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 0;
+
+  height: 4px;
+
+  background: var(--red);
+
+  box-shadow:
+    0 0 18px
+    rgba(254, 0, 0, 0.45);
+}
+
+.article-image img {
+  width: 100%;
+
+  height: auto;
+
+  max-height: 650px;
+
+  object-fit: cover;
+}
+
+
+/* =========================
+   ARTICLE CONTENT
+========================= */
+
+.article-content {
+  max-width: 780px;
+
+  margin: 0 auto;
+
+  color: #dce1eb;
+
+  font-size: 17px;
+
+  line-height: 1.85;
+}
+
+.article-content p {
+  margin-bottom: 24px;
+}
+
+.article-content .article-lead {
+  color: #f4f5f8;
+
+  font-size: 20px;
+
+  line-height: 1.7;
+
+  font-weight: 600;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   ARTICLE HEADINGS
+========================= */
+
+.article-content h2 {
+  position: relative;
+
+  margin:
+    48px 0 20px;
+
+  padding-left: 17px;
+
+  color: white;
+
+  font-size: 29px;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.7px;
+}
+
+.article-content h2::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 3px;
+
+  width: 5px;
+
+  height: calc(100% - 6px);
+
+  background: var(--red);
+
+  box-shadow:
+    0 0 10px
+    rgba(254, 0, 0, 0.25);
+}
+
+
+/* =========================
+   ARTICLE LINKS
+========================= */
+
+.article-content a {
+  color: var(--red);
+
+  font-weight: 700;
+
+  text-decoration:
+    underline;
+
+  text-decoration-thickness: 1px;
+
+  text-underline-offset: 3px;
+
+  transition:
+    color 0.2s ease;
+}
+
+.article-content a:hover {
+  color: white;
+}
+
+
+/* =========================
+   ARTICLE QUOTES
+========================= */
+
+.article-content blockquote {
+  position: relative;
+
+  margin:
+    40px 0;
+
+  padding:
+    25px 28px 25px 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(6, 15, 48, 0.95),
+      rgba(7, 9, 17, 0.98)
+    );
+
+  border:
+    1px solid
+    var(--border);
+
+  border-left:
+    4px solid
+    var(--red);
+
+  color: #f0f2f6;
+
+  font-size: 20px;
+
+  line-height: 1.6;
+
+  font-weight: 700;
+}
+
+.article-content blockquote cite {
+  display: block;
+
+  margin-top: 15px;
+
+  color: #858ea3;
+
+  font-size: 11px;
+
+  font-style: normal;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   ARIYA'S TAKE
+========================= */
+
+.article-opinion {
+  position: relative;
+
+  overflow: hidden;
+
+  margin:
+    55px 0;
+
+  padding: 35px;
+
+  background:
+    linear-gradient(
+      120deg,
+      var(--navy),
+      #080b17
+    );
+
+  border:
+    1px solid
+    rgba(254, 0, 0, 0.35);
+
+  box-shadow:
+    0 18px 50px
+    rgba(0, 0, 0, 0.25);
+}
+
+.article-opinion::before {
+  content: "ARIYA";
+
+  position: absolute;
+
+  right: -20px;
+
+  bottom: -55px;
+
+  color:
+    rgba(254, 0, 0, 0.055);
+
+  font-size: 120px;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: -8px;
+
+  pointer-events: none;
+}
+
+.article-opinion::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: 0;
+
+  height: 3px;
+
+  background: var(--red);
+
+  box-shadow:
+    0 0 18px
+    rgba(254, 0, 0, 0.45);
+}
+
+.article-opinion-label {
+  position: relative;
+
+  z-index: 2;
+
+  margin-bottom: 10px;
+
+  color: var(--red);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.article-opinion h2 {
+  position: relative;
+
+  z-index: 2;
+
+  margin:
+    0 0 15px;
+
+  padding: 0;
+
+  font-size: 32px;
+}
+
+.article-opinion h2::before {
+  display: none;
+}
+
+.article-opinion p {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 0;
+
+  max-width: 680px;
+
+  color: #dce1eb;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   ARTICLE FOOTER
+========================= */
+
+.article-footer {
+  max-width: 780px;
+
+  margin:
+    55px auto 0;
+
+  padding:
+    25px 0;
+
+  border-top:
+    1px solid
+    var(--border);
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+.article-author strong {
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.article-author p {
+  margin-top: 6px;
+
+  color: #707a90;
+
+  font-size: 11px;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   BACK TO NEWS
+========================= */
+
+.article-back {
+  max-width: 780px;
+
+  margin:
+    35px auto 0;
+}
+
+.article-back a {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding:
+    11px 16px;
+
+  border:
+    1px solid
+    var(--border);
+
+  background:
+    rgba(6, 15, 48, 0.55);
+
+  color: #cbd1dd;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.2px;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.article-back a:hover {
+  background: var(--red);
+
+  border-color: var(--red);
+
+  color: white;
+
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================
+   ARTICLE MOTION
+========================= */
+
+.article-header {
+  animation:
+    articleHeaderIn
+    0.7s
+    ease-out
+    both;
+}
+
+.article-image {
+  animation:
+    articleImageIn
+    0.8s
+    ease-out
+    0.1s
+    both;
+}
+
+.article-content {
+  animation:
+    articleContentIn
+    0.8s
+    ease-out
+    0.2s
+    both;
+}
+
+@keyframes articleHeaderIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+@keyframes articleImageIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+@keyframes articleContentIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================
+   ARTICLE IMAGE HOVER
+========================= */
+
+.article-image img {
+  transition:
+    transform 0.6s ease;
+}
+
+.article-image:hover img {
+  transform:
+    scale(1.015);
+}
+
+
+/* =========================
+   ARTICLE MOBILE
+========================= */
+
+@media (max-width: 620px) {
+
+  .article-page {
+    padding:
+      35px 14px
+      60px;
+  }
+
+  .article-header {
+    padding-bottom: 25px;
+  }
+
+  .article-header .eyebrow {
+    margin-bottom: 17px;
+
+    font-size: 9px;
+  }
+
+  .article-header h1 {
+    font-size: 40px;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 18px;
+  }
+
+  .article-dek {
+    font-size: 16px;
+
+    line-height: 1.55;
+
+    margin-bottom: 20px;
+  }
+
+  .article-meta {
+    gap: 7px;
+
+    font-size: 9px;
+
+    line-height: 1.6;
+  }
+
+  .article-image {
+    margin:
+      5px 0 35px;
+  }
+
+  .article-content {
+    font-size: 16px;
+
+    line-height: 1.8;
+  }
+
+  .article-content .article-lead {
+    font-size: 18px;
+
+    line-height: 1.65;
+  }
+
+  .article-content h2 {
+    margin:
+      38px 0 17px;
+
+    font-size: 25px;
+
+    padding-left: 14px;
+  }
+
+  .article-content blockquote {
+    margin:
+      30px 0;
+
+    padding:
+      21px 20px 21px 23px;
+
+    font-size: 17px;
+  }
+
+  .article-opinion {
+    margin:
+      40px 0;
+
+    padding: 27px;
+  }
+
+  .article-opinion::before {
+    font-size: 85px;
+
+    right: -15px;
+
+    bottom: -35px;
+  }
+
+  .article-opinion h2 {
+    font-size: 27px;
+  }
+
+  .article-opinion p {
+    font-size: 16px;
+  }
+
+  .article-footer {
+    margin-top: 40px;
+  }
+
+    }
