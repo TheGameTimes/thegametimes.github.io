@@ -1,1 +1,163 @@
+[
+  {
+    "id": 1,
+    "type": "news",
+    "title": "GTA 6 Is Getting an Extended Look on August 27",
+    "slug": "gta-6-extended-look-august-27",
+    "category": "News",
+    "subcategory": "Grand Theft Auto VI",
+    "author": "Ariya",
+    "editor": "Lucifer",
+    "featuredImage": "images/articles/gta-6-extended-look.jpg",
+    "socialImage": "images/articles/gta-6-social.jpg",
+    "excerpt": "Rockstar Games is preparing another major look at Grand Theft Auto VI ahead of its November release.",
+    "content": "",
+    "take": "",
+    "tags": [
+      "GTA VI",
+      "Rockstar Games",
+      "Grand Theft Auto"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "2026-08-11",
+    "status": "published",
+    "featured": true,
+    "views": 0
+  },
 
+  {
+    "id": 2,
+    "type": "news",
+    "title": "What's Happening in the PlayStation World?",
+    "slug": "playstation-latest-news",
+    "category": "News",
+    "subcategory": "PlayStation",
+    "author": "Ariya",
+    "editor": "Lucifer",
+    "featuredImage": "images/articles/playstation.jpg",
+    "socialImage": "images/articles/playstation-social.jpg",
+    "excerpt": "The biggest PlayStation stories, announcements and developments.",
+    "content": "",
+    "take": "",
+    "tags": [
+      "PlayStation",
+      "Sony",
+      "PS5"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "2026-08-11",
+    "status": "published",
+    "featured": false,
+    "views": 0
+  },
+
+  {
+    "id": 3,
+    "type": "news",
+    "title": "The Latest Xbox News and Announcements",
+    "slug": "latest-xbox-news",
+    "category": "News",
+    "subcategory": "Xbox",
+    "author": "Ariya",
+    "editor": "Lucifer",
+    "featuredImage": "images/articles/xbox.jpg",
+    "socialImage": "images/articles/xbox-social.jpg",
+    "excerpt": "New games, updates and everything happening around Xbox.",
+    "content": "",
+    "take": "",
+    "tags": [
+      "Xbox",
+      "Microsoft"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "2026-08-11",
+    "status": "published",
+    "featured": false,
+    "views": 0
+  },
+
+  {
+    "id": 4,
+    "type": "news",
+    "title": "The Biggest PC Gaming News",
+    "slug": "biggest-pc-gaming-news",
+    "category": "News",
+    "subcategory": "PC Gaming",
+    "author": "Ariya",
+    "editor": "Lucifer",
+    "featuredImage": "images/articles/pc-gaming.jpg",
+    "socialImage": "images/articles/pc-gaming-social.jpg",
+    "excerpt": "Hardware, games, announcements and everything happening across PC gaming.",
+    "content": "",
+    "take": "",
+    "tags": [
+      "PC Gaming",
+      "Steam",
+      "NVIDIA"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "2026-08-11",
+    "status": "published",
+    "featured": false,
+    "views": 0
+  },
+
+  {
+    "id": 5,
+    "type": "news",
+    "title": "What's New in Nintendo Gaming?",
+    "slug": "latest-nintendo-news",
+    "category": "News",
+    "subcategory": "Nintendo",
+    "author": "Ariya",
+    "editor": "Lucifer",
+    "featuredImage": "images/articles/nintendo.jpg",
+    "socialImage": "images/articles/nintendo-social.jpg",
+    "excerpt": "Nintendo games, announcements and everything happening across the platform.",
+    "content": "",
+    "take": "",
+    "tags": [
+      "Nintendo",
+      "Switch"
+    ],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "2026-08-11",
+    "status": "published",
+    "featured": false,
+    "views": 0
+  },
+
+  {
+    "id": 6,
+    "type": "review",
+    "title": "Game Review",
+    "slug": "game-review",
+    "category": "Reviews",
+    "subcategory": "",
+    "game": "Game Title",
+    "developer": "Developer",
+    "publisher": "Publisher",
+    "platforms": [
+      "PC",
+      "PS5",
+      "Xbox Series X|S"
+    ],
+    "genre": "Action",
+    "author": "Zain",
+    "editor": "Lucifer",
+    "featuredImage": "images/articles/review-01.jpg",
+    "socialImage": "images/articles/review-01-social.jpg",
+    "excerpt": "Our honest verdict after playing the latest release.",
+    "content": "",
+    "pros": [],
+    "cons": [],
+    "verdict": "WORTH PLAYING",
+    "score": 8.5,
+    "tags": [],
+    "publishedAt": "2026-08-11",
+    "updatedAt": "2026-08-11",
+    "status": "published",
+    "featured": false,
+    "views": 0
+  }
+]
