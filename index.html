@@ -93,13 +93,15 @@
 
       <div class="header-actions">
 
-        <button
-          class="search-button"
-          type="button"
-          aria-label="Search The Game Times"
-        >
-          🔍
-        </button>
+<button
+  class="search-button"
+  type="button"
+  aria-label="Open search"
+  aria-controls="search-panel"
+  aria-expanded="false"
+>
+  🔍
+</button>
 
 
         <a
@@ -117,7 +119,38 @@
   </header>
 
 
+  <!-- =========================
+     SEARCH PANEL
+========================= -->
 
+<div
+  class="search-panel"
+  id="search-panel"
+>
+
+  <div class="search-inner">
+
+    <input
+      type="search"
+      id="site-search"
+      placeholder="Search The Game Times..."
+      aria-label="Search The Game Times"
+      autocomplete="off"
+    >
+
+    <button
+      type="button"
+      id="search-submit"
+    >
+      SEARCH
+    </button>
+
+  </div>
+
+</div>
+
+
+  
   <!-- =========================
        HERO
   ========================== -->
@@ -970,6 +1003,176 @@
 
 
 
-</body>
+<script>
 
-  </html>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const searchButton =
+    document.querySelector(".search-button");
+
+  const searchPanel =
+    document.getElementById("search-panel");
+
+  const searchInput =
+    document.getElementById("site-search");
+
+  const searchSubmit =
+    document.getElementById("search-submit");
+
+  const cards =
+    document.querySelectorAll(".grid .card");
+
+
+  /* =========================
+     OPEN / CLOSE SEARCH
+  ========================== */
+
+  searchButton.addEventListener("click", function () {
+
+    const isOpen =
+      searchPanel.classList.contains("active");
+
+    searchPanel.classList.toggle("active");
+
+    searchButton.setAttribute(
+      "aria-expanded",
+      String(!isOpen)
+    );
+
+    if (!isOpen) {
+
+      setTimeout(function () {
+        searchInput.focus();
+      }, 100);
+
+    } else {
+
+      searchInput.value = "";
+
+      cards.forEach(function (card) {
+        card.style.display = "";
+      });
+
+    }
+
+  });
+
+
+  /* =========================
+     SEARCH FUNCTION
+  ========================== */
+
+  function performSearch() {
+
+    const query =
+      searchInput.value
+        .trim()
+        .toLowerCase();
+
+
+    if (!query) {
+
+      cards.forEach(function (card) {
+        card.style.display = "";
+      });
+
+      return;
+    }
+
+
+    cards.forEach(function (card) {
+
+      const text =
+        card.textContent.toLowerCase();
+
+      if (text.includes(query)) {
+
+        card.style.display = "";
+
+      } else {
+
+        card.style.display = "none";
+
+      }
+
+    });
+
+  }
+
+
+  /* =========================
+     SEARCH BUTTON
+  ========================== */
+
+  searchSubmit.addEventListener(
+    "click",
+    performSearch
+  );
+
+
+  /* =========================
+     ENTER KEY
+  ========================== */
+
+  searchInput.addEventListener(
+    "keydown",
+    function (event) {
+
+      if (event.key === "Enter") {
+
+        event.preventDefault();
+
+        performSearch();
+
+      }
+
+    }
+  );
+
+
+  /* =========================
+     LIVE SEARCH
+  ========================== */
+
+  searchInput.addEventListener(
+    "input",
+    performSearch
+  );
+
+
+  /* =========================
+     ESCAPE TO CLOSE
+  ========================== */
+
+  searchInput.addEventListener(
+    "keydown",
+    function (event) {
+
+      if (event.key === "Escape") {
+
+        searchPanel.classList.remove("active");
+
+        searchButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        searchInput.value = "";
+
+        cards.forEach(function (card) {
+          card.style.display = "";
+        });
+
+        searchButton.focus();
+
+      }
+
+    }
+  );
+
+});
+
+</script>
+
+</body>
+</html>
