@@ -1361,7 +1361,9 @@ footer {
 }
 
 
-/* SLIDES */
+/* =========================
+   SLIDES
+========================= */
 
 .hero-slide {
   position: absolute;
@@ -1379,19 +1381,25 @@ footer {
   opacity: 0;
   visibility: hidden;
 
-  transform: scale(1.04);
+  transform: scale(1.06);
 
   transition:
-    opacity 0.7s ease,
-    transform 5.5s ease,
-    visibility 0.7s ease;
+    opacity 1.2s ease-in-out,
+    transform 1.8s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 1.2s;
 }
+
 
 .hero-slide.active {
   opacity: 1;
   visibility: visible;
 
   transform: scale(1);
+
+  transition:
+    opacity 1.2s ease-in-out,
+    transform 6s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s;
 }
 
 
