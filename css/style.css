@@ -1318,36 +1318,19 @@ footer {
 ========================= */
 
 .search-icon {
-  position: relative;
+  width: 18px;
+  height: 18px;
   display: block;
-  width: 15px;
-  height: 15px;
-  border: 2px solid white;
-  border-radius: 50%;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
   transition:
     transform 0.25s ease,
-    border-color 0.25s ease;
-}
-
-.search-icon::after {
-  content: "";
-  position: absolute;
-  width: 7px;
-  height: 2px;
-  right: -5px;
-  bottom: -3px;
-  background: white;
-  transform: rotate(45deg);
-  transform-origin: left center;
-  border-radius: 2px;
-  transition: background 0.25s ease;
+    stroke 0.25s ease;
 }
 
 .search-button:hover .search-icon {
   transform: scale(1.08);
-  border-color: var(--red);
-}
-
-.search-button:hover .search-icon::after {
-  background: var(--red);
+  stroke: var(--red);
 }
