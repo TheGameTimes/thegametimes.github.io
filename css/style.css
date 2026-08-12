@@ -2688,3 +2688,227 @@ footer {
   }
 
   }
+
+
+/* =========================
+   THE GAME TIMES — FOOTER
+========================= */
+
+footer {
+  position: relative;
+
+  margin-top: 40px;
+  padding: 70px 24px 25px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #050814 0%,
+      #03050d 100%
+    );
+
+  border-top: 1px solid rgba(255,255,255,0.08);
+
+  overflow: hidden;
+}
+
+
+/* TOP GLOW */
+
+footer::before {
+  content: "";
+
+  position: absolute;
+
+  top: -120px;
+  left: 50%;
+
+  width: 500px;
+  height: 200px;
+
+  transform: translateX(-50%);
+
+  background: rgba(255,255,255,0.035);
+
+  filter: blur(70px);
+
+  pointer-events: none;
+}
+
+
+/* FOOTER INNER */
+
+.footer-inner {
+  position: relative;
+
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 50px;
+
+  z-index: 2;
+}
+
+
+/* BRAND */
+
+.footer-brand {
+  font-size: 25px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  line-height: 1;
+}
+
+
+.footer-brand span {
+  opacity: 0.45;
+}
+
+
+/* DESCRIPTION */
+
+.footer-text {
+  margin-top: 14px;
+
+  font-size: 12px;
+
+  letter-spacing: 0.8px;
+
+  opacity: 0.45;
+}
+
+
+/* FOOTER LINKS */
+
+.footer-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  flex-wrap: wrap;
+}
+
+
+.footer-links a {
+  position: relative;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  opacity: 0.55;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.footer-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 100%;
+  height: 1px;
+
+  background: currentColor;
+
+  transform: scaleX(0);
+
+  transform-origin: right;
+
+  transition:
+    transform 0.35s cubic-bezier(.2,.8,.2,1);
+}
+
+
+.footer-links a:hover {
+  opacity: 1;
+
+  transform: translateY(-2px);
+}
+
+
+.footer-links a:hover::after {
+  transform: scaleX(1);
+
+  transform-origin: left;
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+  position: relative;
+
+  max-width: 1280px;
+
+  margin: 55px auto 0;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255,255,255,0.07);
+
+  font-size: 11px;
+
+  letter-spacing: 0.5px;
+
+  opacity: 0.35;
+
+  z-index: 2;
+}
+
+
+/* =========================
+   FOOTER — MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  footer {
+    padding: 55px 20px 22px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+
+    gap: 30px;
+  }
+
+  .footer-links {
+    gap: 20px;
+  }
+
+  .footer-text {
+    max-width: 280px;
+
+    line-height: 1.6;
+  }
+
+  .copyright {
+    margin-top: 40px;
+  }
+
+    }
