@@ -230,3 +230,119 @@ document.addEventListener(
   "DOMContentLoaded",
   initializeTheGameTime
 );
+
+
+/* =========================
+   ARTICLE DATA LOADER
+========================= */
+
+async function loadArticles() {
+
+  try {
+
+    const response =
+      await fetch("data/articles.json");
+
+    if (!response.ok) {
+      throw new Error("Could not load articles.json");
+    }
+
+    const articles =
+      await response.json();
+
+    renderLatestNews(articles);
+
+  } catch (error) {
+
+    console.error(
+      "The Game Times article loader failed:",
+      error
+    );
+
+  }
+
+}
+
+
+/* =========================
+   RENDER LATEST NEWS
+========================= */
+
+function renderLatestNews(articles) {
+
+  const newsGrid =
+    document.querySelector("#latest-news .grid");
+
+  if (!newsGrid) {
+    return;
+  }
+
+
+  newsGrid.innerHTML = "";
+
+
+  articles.forEach(function (article) {
+
+    const card =
+      document.createElement("a");
+
+    card.className = "card";
+
+    card.href = article.url;
+
+
+    card.innerHTML = `
+
+      <div class="thumbnail">
+
+        <img
+          src="${article.image}"
+          alt="${article.title}"
+          loading="lazy"
+        >
+
+        <span class="thumbnail-label">
+          ${article.category}
+        </span>
+
+      </div>
+
+
+      <div class="card-content">
+
+        <span class="category">
+          ${article.category}
+        </span>
+
+
+        <h3>
+          ${article.title}
+        </h3>
+
+
+        <p>
+          ${article.excerpt}
+        </p>
+
+
+        <span class="date">
+          ${article.date}
+        </span>
+
+      </div>
+
+    `;
+
+
+    newsGrid.appendChild(card);
+
+  });
+
+}
+
+
+/* =========================
+   START ARTICLE SYSTEM
+========================= */
+
+loadArticles();
