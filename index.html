@@ -1385,7 +1385,62 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 
-});
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* =========================
+     YOUR SEARCH CODE
+  ========================== */
+
+  // Everything you already have here...
+
+
+  /* =========================
+     HERO CAROUSEL
+  ========================== */
+
+  const heroSlides = document.querySelectorAll(".hero-slide");
+
+  let currentSlide = 0;
+
+  function showHeroSlide(index) {
+
+    heroSlides.forEach(function (slide) {
+      slide.classList.remove("active");
+    });
+
+    if (heroSlides[index]) {
+      heroSlides[index].classList.add("active");
+    }
+
+  }
+
+
+  function nextHeroSlide() {
+
+    currentSlide++;
+
+    if (currentSlide >= heroSlides.length) {
+      currentSlide = 0;
+    }
+
+    showHeroSlide(currentSlide);
+
+  }
+
+
+  if (heroSlides.length > 1) {
+
+    setInterval(
+      nextHeroSlide,
+      5000
+    );
+
+  }
+
+
+}); // ← closes DOMContentLoaded
 
 </script>
 
