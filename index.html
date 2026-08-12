@@ -12,13 +12,14 @@
 
   <meta
     name="description"
-    content="The Game Times — Gaming News, Reviews, Features, Guides and Unapologetic Opinions."
+    content="The Game Times — Gaming news, reviews, features, guides and unapologetic opinions."
   >
 
   <title>
     The Game Times — Gaming News, Reviews & Culture
   </title>
 
+  <!-- Main CSS -->
   <link
     rel="stylesheet"
     href="css/style.css"
@@ -55,9 +56,9 @@
       </a>
 
 
-      <!-- NAVIGATION -->
+      <!-- MAIN NAVIGATION -->
 
-      <nav id="mainNav">
+      <nav>
 
         <a href="index.html">
           NEWS
@@ -88,64 +89,24 @@
 
         <button
           class="search-button"
-          onclick="toggleSearch()"
+          type="button"
           aria-label="Search"
         >
-          🔎
+          🔍
         </button>
+
 
         <a
           href="#"
-          class="login-button"
+          class="account-button"
         >
-          LOGIN
+          ACCOUNT
         </a>
-
-        <a
-          href="#"
-          class="signup-button"
-        >
-          SIGN UP
-        </a>
-
-        <button
-          class="menu-button"
-          onclick="toggleMenu()"
-          aria-label="Menu"
-        >
-          ☰
-        </button>
 
       </div>
 
 
     </div>
-
-
-    <!-- SEARCH BAR -->
-
-    <div
-      class="search-panel"
-      id="searchPanel"
-    >
-
-      <div class="search-inner">
-
-        <input
-          type="search"
-          id="searchInput"
-          placeholder="Search The Game Times..."
-          onkeyup="searchArticles()"
-        >
-
-        <button onclick="toggleSearch()">
-          CLOSE
-        </button>
-
-      </div>
-
-    </div>
-
 
   </header>
 
@@ -161,6 +122,7 @@
 
 
       <div class="hero-content">
+
 
         <span class="eyebrow">
           BREAKING • THE GAME TIMES
@@ -204,86 +166,10 @@
 
 
   <!-- =========================
-       MAIN
+       MAIN CONTENT
   ========================== -->
 
   <main>
-
-
-    <!-- =========================
-         PLATFORM HUB
-    ========================== -->
-
-    <section>
-
-      <div class="section-heading">
-
-        <h2>
-          Gaming Platforms
-        </h2>
-
-      </div>
-
-
-      <div class="platform-grid">
-
-
-        <a href="#" class="platform-card">
-
-          <span class="platform-icon">
-            🎮
-          </span>
-
-          <span>
-            PLAYSTATION
-          </span>
-
-        </a>
-
-
-        <a href="#" class="platform-card">
-
-          <span class="platform-icon">
-            🟢
-          </span>
-
-          <span>
-            XBOX
-          </span>
-
-        </a>
-
-
-        <a href="#" class="platform-card">
-
-          <span class="platform-icon">
-            🖥️
-          </span>
-
-          <span>
-            PC
-          </span>
-
-        </a>
-
-
-        <a href="#" class="platform-card">
-
-          <span class="platform-icon">
-            🔴
-          </span>
-
-          <span>
-            NINTENDO SWITCH
-          </span>
-
-        </a>
-
-
-      </div>
-
-    </section>
-
 
 
     <!-- =========================
@@ -291,6 +177,7 @@
     ========================== -->
 
     <section>
+
 
       <div class="section-heading">
 
@@ -305,25 +192,18 @@
       </div>
 
 
-      <div
-        class="grid"
-        id="newsGrid"
-      >
+
+      <div class="grid">
 
 
-        <!-- GTA VI -->
+        <!-- NEWS CARD 1 -->
 
         <a
           href="news/gta-6.html"
-          class="card article-card"
+          class="card"
         >
 
           <div class="thumbnail">
-
-            <img
-              src="images/gta6.jpg"
-              alt="Grand Theft Auto VI"
-            >
 
             <span class="thumbnail-label">
               GTA VI
@@ -360,16 +240,11 @@
 
 
 
-        <!-- PLAYSTATION -->
+        <!-- NEWS CARD 2 -->
 
-        <article class="card article-card">
+        <article class="card">
 
           <div class="thumbnail">
-
-            <img
-              src="images/playstation.jpg"
-              alt="PlayStation gaming"
-            >
 
             <span class="thumbnail-label">
               PLAYSTATION
@@ -406,16 +281,11 @@
 
 
 
-        <!-- XBOX -->
+        <!-- NEWS CARD 3 -->
 
-        <article class="card article-card">
+        <article class="card">
 
           <div class="thumbnail">
-
-            <img
-              src="images/xbox.jpg"
-              alt="Xbox gaming"
-            >
 
             <span class="thumbnail-label">
               XBOX
@@ -452,16 +322,11 @@
 
 
 
-        <!-- PC -->
+        <!-- NEWS CARD 4 -->
 
-        <article class="card article-card">
+        <article class="card">
 
           <div class="thumbnail">
-
-            <img
-              src="images/pc.jpg"
-              alt="PC gaming"
-            >
 
             <span class="thumbnail-label">
               PC
@@ -478,13 +343,13 @@
 
 
             <h3>
-              The Biggest Things Happening in PC Gaming
+              The Biggest PC Gaming News
             </h3>
 
 
             <p>
-              Hardware, games, technology and the biggest
-              developments across PC gaming.
+              Hardware, games, announcements and everything
+              happening across PC gaming.
             </p>
 
 
@@ -498,16 +363,11 @@
 
 
 
-        <!-- SWITCH -->
+        <!-- NEWS CARD 5 -->
 
-        <article class="card article-card">
+        <article class="card">
 
           <div class="thumbnail">
-
-            <img
-              src="images/switch.jpg"
-              alt="Nintendo Switch gaming"
-            >
 
             <span class="thumbnail-label">
               SWITCH
@@ -519,64 +379,18 @@
           <div class="card-content">
 
             <span class="category">
-              NINTENDO
+              NINTENDO SWITCH
             </span>
 
 
             <h3>
-              Nintendo's Latest Games and Announcements
+              What's New in Nintendo Gaming?
             </h3>
 
 
             <p>
-              Everything happening across Nintendo and
-              the Switch ecosystem.
-            </p>
-
-
-            <span class="date">
-              AUGUST 11, 2026
-            </span>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- FEATURE -->
-
-        <article class="card article-card">
-
-          <div class="thumbnail">
-
-            <img
-              src="images/feature.jpg"
-              alt="Gaming feature"
-            >
-
-            <span class="thumbnail-label">
-              FEATURE
-            </span>
-
-          </div>
-
-
-          <div class="card-content">
-
-            <span class="category">
-              FEATURE
-            </span>
-
-
-            <h3>
-              Why Gaming Is Changing Faster Than Ever
-            </h3>
-
-
-            <p>
-              The trends, technology and decisions shaping
-              the next generation of gaming.
+              Nintendo games, announcements and everything
+              happening on Switch.
             </p>
 
 
@@ -601,17 +415,20 @@
 
     <section>
 
+
       <div class="section-heading">
 
         <h2>
           Latest Reviews
         </h2>
 
+
         <a href="#">
           ALL REVIEWS →
         </a>
 
       </div>
+
 
 
       <div class="grid">
@@ -622,11 +439,6 @@
         <article class="card review-card">
 
           <div class="thumbnail">
-
-            <img
-              src="images/review1.jpg"
-              alt="Game review"
-            >
 
             <span class="thumbnail-label">
               REVIEW
@@ -641,6 +453,7 @@
 
 
           <div class="card-content">
+
 
             <span class="category">
               REVIEW
@@ -661,6 +474,7 @@
               WORTH PLAYING
             </div>
 
+
           </div>
 
         </article>
@@ -671,12 +485,8 @@
 
         <article class="card review-card">
 
-          <div class="thumbnail">
 
-            <img
-              src="images/review2.jpg"
-              alt="Game review"
-            >
+          <div class="thumbnail">
 
             <span class="thumbnail-label">
               REVIEW
@@ -691,6 +501,7 @@
 
 
           <div class="card-content">
+
 
             <span class="category">
               REVIEW
@@ -711,6 +522,7 @@
               HIGHLY RECOMMENDED
             </div>
 
+
           </div>
 
         </article>
@@ -721,12 +533,8 @@
 
         <article class="card review-card">
 
-          <div class="thumbnail">
 
-            <img
-              src="images/review3.jpg"
-              alt="Game review"
-            >
+          <div class="thumbnail">
 
             <span class="thumbnail-label">
               REVIEW
@@ -741,6 +549,7 @@
 
 
           <div class="card-content">
+
 
             <span class="category">
               REVIEW
@@ -761,6 +570,7 @@
               WORTH CONSIDERING
             </div>
 
+
           </div>
 
         </article>
@@ -778,7 +588,9 @@
 
     <section>
 
+
       <div class="ariya">
+
 
         <div class="ariya-label">
           THE GAME TIMES • OPINION
@@ -795,6 +607,7 @@
           my wallet hasn't already suffered enough. Girl, be serious.”
         </p>
 
+
       </div>
 
     </section>
@@ -806,6 +619,7 @@
     ========================== -->
 
     <section>
+
 
       <div class="section-heading">
 
@@ -829,11 +643,9 @@
               EDITOR-IN-CHIEF
             </span>
 
-
             <h3>
               Lucifer
             </h3>
-
 
             <p>
               Oversees The Game Times, editorial direction,
@@ -856,11 +668,9 @@
               WRITER & NARRATOR
             </span>
 
-
             <h3>
               Ariya
             </h3>
-
 
             <p>
               Writes stories, delivers narration and brings
@@ -883,11 +693,9 @@
               SOCIAL MANAGER
             </span>
 
-
             <h3>
               Sheesh
             </h3>
-
 
             <p>
               Handles social media, community engagement and
@@ -910,11 +718,9 @@
               EDITOR & GRAPHIC DESIGN
             </span>
 
-
             <h3>
               Zain
             </h3>
-
 
             <p>
               Handles visual design, graphics, editing and
@@ -941,10 +747,12 @@
 
   <footer>
 
+
     <div class="footer-inner">
 
 
       <div>
+
 
         <div class="footer-brand">
           THE GAME <span>TIMES</span>
@@ -955,32 +763,39 @@
           Gaming News • Reviews • Features • Opinions
         </div>
 
+
       </div>
 
 
 
       <div class="footer-links">
 
+
         <a href="#">
           ABOUT
         </a>
+
 
         <a href="#">
           CONTACT
         </a>
 
+
         <a href="#">
           PRIVACY
         </a>
+
 
         <a href="#">
           TERMS
         </a>
 
+
       </div>
 
 
     </div>
+
 
 
     <div class="copyright">
@@ -994,74 +809,6 @@
 
 
 
-  <!-- =========================
-       SEARCH SCRIPT
-  ========================== -->
-
-  <script>
-
-    function toggleSearch() {
-
-      const panel =
-        document.getElementById("searchPanel");
-
-      panel.classList.toggle("active");
-
-      if (panel.classList.contains("active")) {
-
-        document
-          .getElementById("searchInput")
-          .focus();
-
-      }
-
-    }
-
-
-    function toggleMenu() {
-
-      const nav =
-        document.getElementById("mainNav");
-
-      nav.classList.toggle("mobile-open");
-
-    }
-
-
-    function searchArticles() {
-
-      const input =
-        document
-          .getElementById("searchInput")
-          .value
-          .toLowerCase();
-
-      const articles =
-        document.querySelectorAll(".article-card");
-
-
-      articles.forEach(function(article) {
-
-        const text =
-          article.innerText.toLowerCase();
-
-        if (text.includes(input)) {
-
-          article.style.display = "";
-
-        } else {
-
-          article.style.display = "none";
-
-        }
-
-      });
-
-    }
-
-  </script>
-
-
 </body>
 
-  </html>
+</html>
