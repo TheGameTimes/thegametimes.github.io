@@ -15,6 +15,11 @@
     content="The Game Times — Gaming news, reviews, features, guides and unapologetic opinions."
   >
 
+  <meta
+    name="theme-color"
+    content="#03050d"
+  >
+
   <title>
     The Game Times — Gaming News, Reviews & Culture
   </title>
@@ -45,6 +50,7 @@
       <a
         href="index.html"
         class="logo"
+        aria-label="The Game Times Home"
       >
 
         <img
@@ -58,7 +64,7 @@
 
       <!-- MAIN NAVIGATION -->
 
-      <nav>
+      <nav aria-label="Main navigation">
 
         <a href="index.html">
           NEWS
@@ -90,7 +96,7 @@
         <button
           class="search-button"
           type="button"
-          aria-label="Search"
+          aria-label="Search The Game Times"
         >
           🔍
         </button>
@@ -125,7 +131,7 @@
 
 
         <span class="eyebrow">
-          BREAKING • THE GAME TIMES
+          THE GAME TIMES • FEATURED
         </span>
 
 
@@ -176,7 +182,7 @@
          LATEST NEWS
     ========================== -->
 
-    <section>
+    <section id="latest-news">
 
 
       <div class="section-heading">
@@ -196,7 +202,9 @@
       <div class="grid">
 
 
-        <!-- NEWS CARD 1 -->
+        <!-- =========================
+             NEWS ARTICLE 1
+        ========================== -->
 
         <a
           href="news/gta-6.html"
@@ -204,6 +212,12 @@
         >
 
           <div class="thumbnail">
+
+            <img
+              src="images/gta-6.jpg"
+              alt="Grand Theft Auto VI"
+              loading="lazy"
+            >
 
             <span class="thumbnail-label">
               GTA VI
@@ -240,11 +254,22 @@
 
 
 
-        <!-- NEWS CARD 2 -->
+        <!-- =========================
+             NEWS ARTICLE 2
+        ========================== -->
 
-        <article class="card">
+        <a
+          href="news/playstation-latest.html"
+          class="card"
+        >
 
           <div class="thumbnail">
+
+            <img
+              src="images/playstation-latest.jpg"
+              alt="PlayStation gaming news"
+              loading="lazy"
+            >
 
             <span class="thumbnail-label">
               PLAYSTATION
@@ -277,15 +302,26 @@
 
           </div>
 
-        </article>
+        </a>
 
 
 
-        <!-- NEWS CARD 3 -->
+        <!-- =========================
+             NEWS ARTICLE 3
+        ========================== -->
 
-        <article class="card">
+        <a
+          href="news/xbox-latest.html"
+          class="card"
+        >
 
           <div class="thumbnail">
+
+            <img
+              src="images/xbox-latest.jpg"
+              alt="Xbox gaming news"
+              loading="lazy"
+            >
 
             <span class="thumbnail-label">
               XBOX
@@ -318,15 +354,26 @@
 
           </div>
 
-        </article>
+        </a>
 
 
 
-        <!-- NEWS CARD 4 -->
+        <!-- =========================
+             NEWS ARTICLE 4
+        ========================== -->
 
-        <article class="card">
+        <a
+          href="news/pc-gaming-latest.html"
+          class="card"
+        >
 
           <div class="thumbnail">
+
+            <img
+              src="images/pc-gaming-latest.jpg"
+              alt="PC gaming news"
+              loading="lazy"
+            >
 
             <span class="thumbnail-label">
               PC
@@ -359,18 +406,29 @@
 
           </div>
 
-        </article>
+        </a>
 
 
 
-        <!-- NEWS CARD 5 -->
+        <!-- =========================
+             NEWS ARTICLE 5
+        ========================== -->
 
-        <article class="card">
+        <a
+          href="news/nintendo-latest.html"
+          class="card"
+        >
 
           <div class="thumbnail">
 
+            <img
+              src="images/nintendo-latest.jpg"
+              alt="Nintendo gaming news"
+              loading="lazy"
+            >
+
             <span class="thumbnail-label">
-              SWITCH
+              NINTENDO
             </span>
 
           </div>
@@ -379,7 +437,7 @@
           <div class="card-content">
 
             <span class="category">
-              NINTENDO SWITCH
+              NINTENDO
             </span>
 
 
@@ -390,7 +448,7 @@
 
             <p>
               Nintendo games, announcements and everything
-              happening on Switch.
+              happening across the platform.
             </p>
 
 
@@ -400,7 +458,59 @@
 
           </div>
 
-        </article>
+        </a>
+
+
+
+        <!-- =========================
+             NEWS ARTICLE 6
+        ========================== -->
+
+        <a
+          href="news/gaming-industry-latest.html"
+          class="card"
+        >
+
+          <div class="thumbnail">
+
+            <img
+              src="images/gaming-industry-latest.jpg"
+              alt="Gaming industry news"
+              loading="lazy"
+            >
+
+            <span class="thumbnail-label">
+              INDUSTRY
+            </span>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <span class="category">
+              GAMING INDUSTRY
+            </span>
+
+
+            <h3>
+              The Biggest Stories Shaping Gaming
+            </h3>
+
+
+            <p>
+              Major developments, studio news and stories
+              shaping the gaming industry.
+            </p>
+
+
+            <span class="date">
+              AUGUST 11, 2026
+            </span>
+
+          </div>
+
+        </a>
 
 
       </div>
@@ -413,7 +523,7 @@
          REVIEWS
     ========================== -->
 
-    <section>
+    <section id="latest-reviews">
 
 
       <div class="section-heading">
@@ -434,11 +544,22 @@
       <div class="grid">
 
 
-        <!-- REVIEW 1 -->
+        <!-- =========================
+             REVIEW 1
+        ========================== -->
 
-        <article class="card review-card">
+        <a
+          href="news/review-1.html"
+          class="card review-card"
+        >
 
           <div class="thumbnail">
+
+            <img
+              src="images/review-1.jpg"
+              alt="The Game Times game review"
+              loading="lazy"
+            >
 
             <span class="thumbnail-label">
               REVIEW
@@ -447,7 +568,10 @@
           </div>
 
 
-          <span class="score">
+          <span
+            class="score"
+            aria-label="Review score 8.5 out of 10"
+          >
             8.5
           </span>
 
@@ -477,16 +601,27 @@
 
           </div>
 
-        </article>
+        </a>
 
 
 
-        <!-- REVIEW 2 -->
+        <!-- =========================
+             REVIEW 2
+        ========================== -->
 
-        <article class="card review-card">
+        <a
+          href="news/review-2.html"
+          class="card review-card"
+        >
 
 
           <div class="thumbnail">
+
+            <img
+              src="images/review-2.jpg"
+              alt="The Game Times game review"
+              loading="lazy"
+            >
 
             <span class="thumbnail-label">
               REVIEW
@@ -495,7 +630,10 @@
           </div>
 
 
-          <span class="score">
+          <span
+            class="score"
+            aria-label="Review score 9 out of 10"
+          >
             9.0
           </span>
 
@@ -525,16 +663,27 @@
 
           </div>
 
-        </article>
+        </a>
 
 
 
-        <!-- REVIEW 3 -->
+        <!-- =========================
+             REVIEW 3
+        ========================== -->
 
-        <article class="card review-card">
+        <a
+          href="news/review-3.html"
+          class="card review-card"
+        >
 
 
           <div class="thumbnail">
+
+            <img
+              src="images/review-3.jpg"
+              alt="The Game Times game review"
+              loading="lazy"
+            >
 
             <span class="thumbnail-label">
               REVIEW
@@ -543,7 +692,10 @@
           </div>
 
 
-          <span class="score">
+          <span
+            class="score"
+            aria-label="Review score 7.5 out of 10"
+          >
             7.5
           </span>
 
@@ -573,7 +725,7 @@
 
           </div>
 
-        </article>
+        </a>
 
 
       </div>
@@ -586,7 +738,7 @@
          ARIYA'S TAKE
     ========================== -->
 
-    <section>
+    <section id="ariyas-take">
 
 
       <div class="ariya">
@@ -618,7 +770,7 @@
          TEAM
     ========================== -->
 
-    <section>
+    <section id="team">
 
 
       <div class="section-heading">
@@ -633,7 +785,9 @@
       <div class="grid">
 
 
-        <!-- LUCIFER -->
+        <!-- =========================
+             LUCIFER
+        ========================== -->
 
         <article class="card">
 
@@ -649,7 +803,8 @@
 
             <p>
               Oversees The Game Times, editorial direction,
-              stories and the overall voice of the brand.
+              publishing standards, stories and the overall
+              voice of the brand.
             </p>
 
           </div>
@@ -658,7 +813,9 @@
 
 
 
-        <!-- ARIYA -->
+        <!-- =========================
+             ARIYA
+        ========================== -->
 
         <article class="card">
 
@@ -674,7 +831,7 @@
 
             <p>
               Writes stories, delivers narration and brings
-              the unfiltered voice of The Game Times.
+              the distinctive editorial voice of The Game Times.
             </p>
 
           </div>
@@ -683,7 +840,9 @@
 
 
 
-        <!-- SHEESH -->
+        <!-- =========================
+             SHEESH
+        ========================== -->
 
         <article class="card">
 
@@ -698,8 +857,8 @@
             </h3>
 
             <p>
-              Handles social media, community engagement and
-              the daily chaos across our platforms.
+              Handles social media, community engagement,
+              publishing and the daily presence of The Game Times.
             </p>
 
           </div>
@@ -708,7 +867,9 @@
 
 
 
-        <!-- ZAIN -->
+        <!-- =========================
+             ZAIN
+        ========================== -->
 
         <article class="card">
 
@@ -724,7 +885,7 @@
 
             <p>
               Handles visual design, graphics, editing and
-              the look of The Game Times.
+              the overall visual identity of The Game Times.
             </p>
 
           </div>
@@ -760,7 +921,7 @@
 
 
         <div class="footer-text">
-          Gaming News • Reviews • Features • Opinions
+          Gaming News • Reviews • Features • Guides • Opinions
         </div>
 
 
@@ -811,4 +972,4 @@
 
 </body>
 
-</html>
+  </html>
