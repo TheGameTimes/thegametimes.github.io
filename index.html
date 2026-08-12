@@ -19,7 +19,6 @@
     The Game Times — Gaming News, Reviews & Culture
   </title>
 
-  <!-- Main CSS -->
   <link
     rel="stylesheet"
     href="css/style.css"
@@ -56,9 +55,9 @@
       </a>
 
 
-      <!-- DESKTOP NAVIGATION -->
+      <!-- NAVIGATION -->
 
-      <nav>
+      <nav id="mainNav">
 
         <a href="index.html">
           NEWS
@@ -83,7 +82,70 @@
       </nav>
 
 
+      <!-- HEADER ACTIONS -->
+
+      <div class="header-actions">
+
+        <button
+          class="search-button"
+          onclick="toggleSearch()"
+          aria-label="Search"
+        >
+          🔎
+        </button>
+
+        <a
+          href="#"
+          class="login-button"
+        >
+          LOGIN
+        </a>
+
+        <a
+          href="#"
+          class="signup-button"
+        >
+          SIGN UP
+        </a>
+
+        <button
+          class="menu-button"
+          onclick="toggleMenu()"
+          aria-label="Menu"
+        >
+          ☰
+        </button>
+
+      </div>
+
+
     </div>
+
+
+    <!-- SEARCH BAR -->
+
+    <div
+      class="search-panel"
+      id="searchPanel"
+    >
+
+      <div class="search-inner">
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search The Game Times..."
+          onkeyup="searchArticles()"
+        >
+
+        <button onclick="toggleSearch()">
+          CLOSE
+        </button>
+
+      </div>
+
+    </div>
+
 
   </header>
 
@@ -99,7 +161,6 @@
 
 
       <div class="hero-content">
-
 
         <span class="eyebrow">
           BREAKING • THE GAME TIMES
@@ -143,10 +204,86 @@
 
 
   <!-- =========================
-       MAIN CONTENT
+       MAIN
   ========================== -->
 
   <main>
+
+
+    <!-- =========================
+         PLATFORM HUB
+    ========================== -->
+
+    <section>
+
+      <div class="section-heading">
+
+        <h2>
+          Gaming Platforms
+        </h2>
+
+      </div>
+
+
+      <div class="platform-grid">
+
+
+        <a href="#" class="platform-card">
+
+          <span class="platform-icon">
+            🎮
+          </span>
+
+          <span>
+            PLAYSTATION
+          </span>
+
+        </a>
+
+
+        <a href="#" class="platform-card">
+
+          <span class="platform-icon">
+            🟢
+          </span>
+
+          <span>
+            XBOX
+          </span>
+
+        </a>
+
+
+        <a href="#" class="platform-card">
+
+          <span class="platform-icon">
+            🖥️
+          </span>
+
+          <span>
+            PC
+          </span>
+
+        </a>
+
+
+        <a href="#" class="platform-card">
+
+          <span class="platform-icon">
+            🔴
+          </span>
+
+          <span>
+            NINTENDO SWITCH
+          </span>
+
+        </a>
+
+
+      </div>
+
+    </section>
+
 
 
     <!-- =========================
@@ -154,7 +291,6 @@
     ========================== -->
 
     <section>
-
 
       <div class="section-heading">
 
@@ -169,25 +305,25 @@
       </div>
 
 
+      <div
+        class="grid"
+        id="newsGrid"
+      >
 
-      <div class="grid">
 
-
-        <!-- =========================
-             NEWS CARD 1
-        ========================== -->
+        <!-- GTA VI -->
 
         <a
           href="news/gta-6.html"
-          class="card"
+          class="card article-card"
         >
 
           <div class="thumbnail">
 
-            <!--
-              LATER:
-              Replace this with a real article image.
-            -->
+            <img
+              src="images/gta6.jpg"
+              alt="Grand Theft Auto VI"
+            >
 
             <span class="thumbnail-label">
               GTA VI
@@ -224,13 +360,16 @@
 
 
 
-        <!-- =========================
-             NEWS CARD 2
-        ========================== -->
+        <!-- PLAYSTATION -->
 
-        <article class="card">
+        <article class="card article-card">
 
           <div class="thumbnail">
+
+            <img
+              src="images/playstation.jpg"
+              alt="PlayStation gaming"
+            >
 
             <span class="thumbnail-label">
               PLAYSTATION
@@ -267,13 +406,16 @@
 
 
 
-        <!-- =========================
-             NEWS CARD 3
-        ========================== -->
+        <!-- XBOX -->
 
-        <article class="card">
+        <article class="card article-card">
 
           <div class="thumbnail">
+
+            <img
+              src="images/xbox.jpg"
+              alt="Xbox gaming"
+            >
 
             <span class="thumbnail-label">
               XBOX
@@ -309,6 +451,144 @@
         </article>
 
 
+
+        <!-- PC -->
+
+        <article class="card article-card">
+
+          <div class="thumbnail">
+
+            <img
+              src="images/pc.jpg"
+              alt="PC gaming"
+            >
+
+            <span class="thumbnail-label">
+              PC
+            </span>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <span class="category">
+              PC GAMING
+            </span>
+
+
+            <h3>
+              The Biggest Things Happening in PC Gaming
+            </h3>
+
+
+            <p>
+              Hardware, games, technology and the biggest
+              developments across PC gaming.
+            </p>
+
+
+            <span class="date">
+              AUGUST 11, 2026
+            </span>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- SWITCH -->
+
+        <article class="card article-card">
+
+          <div class="thumbnail">
+
+            <img
+              src="images/switch.jpg"
+              alt="Nintendo Switch gaming"
+            >
+
+            <span class="thumbnail-label">
+              SWITCH
+            </span>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <span class="category">
+              NINTENDO
+            </span>
+
+
+            <h3>
+              Nintendo's Latest Games and Announcements
+            </h3>
+
+
+            <p>
+              Everything happening across Nintendo and
+              the Switch ecosystem.
+            </p>
+
+
+            <span class="date">
+              AUGUST 11, 2026
+            </span>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- FEATURE -->
+
+        <article class="card article-card">
+
+          <div class="thumbnail">
+
+            <img
+              src="images/feature.jpg"
+              alt="Gaming feature"
+            >
+
+            <span class="thumbnail-label">
+              FEATURE
+            </span>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <span class="category">
+              FEATURE
+            </span>
+
+
+            <h3>
+              Why Gaming Is Changing Faster Than Ever
+            </h3>
+
+
+            <p>
+              The trends, technology and decisions shaping
+              the next generation of gaming.
+            </p>
+
+
+            <span class="date">
+              AUGUST 11, 2026
+            </span>
+
+          </div>
+
+        </article>
+
+
       </div>
 
     </section>
@@ -321,20 +601,17 @@
 
     <section>
 
-
       <div class="section-heading">
 
         <h2>
           Latest Reviews
         </h2>
 
-
         <a href="#">
           ALL REVIEWS →
         </a>
 
       </div>
-
 
 
       <div class="grid">
@@ -344,8 +621,12 @@
 
         <article class="card review-card">
 
-
           <div class="thumbnail">
+
+            <img
+              src="images/review1.jpg"
+              alt="Game review"
+            >
 
             <span class="thumbnail-label">
               REVIEW
@@ -360,7 +641,6 @@
 
 
           <div class="card-content">
-
 
             <span class="category">
               REVIEW
@@ -381,7 +661,6 @@
               WORTH PLAYING
             </div>
 
-
           </div>
 
         </article>
@@ -392,8 +671,12 @@
 
         <article class="card review-card">
 
-
           <div class="thumbnail">
+
+            <img
+              src="images/review2.jpg"
+              alt="Game review"
+            >
 
             <span class="thumbnail-label">
               REVIEW
@@ -408,7 +691,6 @@
 
 
           <div class="card-content">
-
 
             <span class="category">
               REVIEW
@@ -429,7 +711,6 @@
               HIGHLY RECOMMENDED
             </div>
 
-
           </div>
 
         </article>
@@ -440,8 +721,12 @@
 
         <article class="card review-card">
 
-
           <div class="thumbnail">
+
+            <img
+              src="images/review3.jpg"
+              alt="Game review"
+            >
 
             <span class="thumbnail-label">
               REVIEW
@@ -456,7 +741,6 @@
 
 
           <div class="card-content">
-
 
             <span class="category">
               REVIEW
@@ -477,7 +761,6 @@
               WORTH CONSIDERING
             </div>
 
-
           </div>
 
         </article>
@@ -495,9 +778,7 @@
 
     <section>
 
-
       <div class="ariya">
-
 
         <div class="ariya-label">
           THE GAME TIMES • OPINION
@@ -514,7 +795,6 @@
           my wallet hasn't already suffered enough. Girl, be serious.”
         </p>
 
-
       </div>
 
     </section>
@@ -526,7 +806,6 @@
     ========================== -->
 
     <section>
-
 
       <div class="section-heading">
 
@@ -540,6 +819,8 @@
       <div class="grid">
 
 
+        <!-- LUCIFER -->
+
         <article class="card">
 
           <div class="card-content">
@@ -548,9 +829,11 @@
               EDITOR-IN-CHIEF
             </span>
 
+
             <h3>
               Lucifer
             </h3>
+
 
             <p>
               Oversees The Game Times, editorial direction,
@@ -563,6 +846,8 @@
 
 
 
+        <!-- ARIYA -->
+
         <article class="card">
 
           <div class="card-content">
@@ -571,9 +856,11 @@
               WRITER & NARRATOR
             </span>
 
+
             <h3>
               Ariya
             </h3>
+
 
             <p>
               Writes stories, delivers narration and brings
@@ -586,6 +873,8 @@
 
 
 
+        <!-- SHEESH -->
+
         <article class="card">
 
           <div class="card-content">
@@ -594,9 +883,11 @@
               SOCIAL MANAGER
             </span>
 
+
             <h3>
               Sheesh
             </h3>
+
 
             <p>
               Handles social media, community engagement and
@@ -609,6 +900,8 @@
 
 
 
+        <!-- ZAIN -->
+
         <article class="card">
 
           <div class="card-content">
@@ -617,9 +910,11 @@
               EDITOR & GRAPHIC DESIGN
             </span>
 
+
             <h3>
               Zain
             </h3>
+
 
             <p>
               Handles visual design, graphics, editing and
@@ -646,12 +941,10 @@
 
   <footer>
 
-
     <div class="footer-inner">
 
 
       <div>
-
 
         <div class="footer-brand">
           THE GAME <span>TIMES</span>
@@ -662,39 +955,32 @@
           Gaming News • Reviews • Features • Opinions
         </div>
 
-
       </div>
 
 
 
       <div class="footer-links">
 
-
         <a href="#">
           ABOUT
         </a>
-
 
         <a href="#">
           CONTACT
         </a>
 
-
         <a href="#">
           PRIVACY
         </a>
-
 
         <a href="#">
           TERMS
         </a>
 
-
       </div>
 
 
     </div>
-
 
 
     <div class="copyright">
@@ -708,6 +994,74 @@
 
 
 
+  <!-- =========================
+       SEARCH SCRIPT
+  ========================== -->
+
+  <script>
+
+    function toggleSearch() {
+
+      const panel =
+        document.getElementById("searchPanel");
+
+      panel.classList.toggle("active");
+
+      if (panel.classList.contains("active")) {
+
+        document
+          .getElementById("searchInput")
+          .focus();
+
+      }
+
+    }
+
+
+    function toggleMenu() {
+
+      const nav =
+        document.getElementById("mainNav");
+
+      nav.classList.toggle("mobile-open");
+
+    }
+
+
+    function searchArticles() {
+
+      const input =
+        document
+          .getElementById("searchInput")
+          .value
+          .toLowerCase();
+
+      const articles =
+        document.querySelectorAll(".article-card");
+
+
+      articles.forEach(function(article) {
+
+        const text =
+          article.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+
+          article.style.display = "";
+
+        } else {
+
+          article.style.display = "none";
+
+        }
+
+      });
+
+    }
+
+  </script>
+
+
 </body>
 
-</html>
+  </html>
