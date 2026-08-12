@@ -1227,7 +1227,7 @@ footer {
     flex-direction: column;
   }
 
-  .footer-links {
+    .footer-links {
     flex-wrap: wrap;
   }
-  }  
+}
