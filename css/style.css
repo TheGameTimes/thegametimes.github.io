@@ -3735,3 +3735,41 @@ footer::before {
   }
 
 }
+
+/* =========================================================
+   REVIEW PLACEHOLDER
+========================================================= */
+
+.review-placeholder {
+  padding: 55px 30px;
+
+  text-align: center;
+
+  background: rgba(255,255,255,0.025);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 12px;
+}
+
+.review-placeholder strong {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 13px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  color: #ffffff;
+}
+
+.review-placeholder p {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.6;
+
+  color: rgba(255,255,255,0.5);
+}
