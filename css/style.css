@@ -3358,3 +3358,380 @@ footer::before {
   }
 
 }
+
+/* =========================================================
+   REVIEWS DIRECTORY
+========================================================= */
+
+.reviews-page {
+  width: 100%;
+  padding: 80px 24px 100px;
+}
+
+
+/* =========================================================
+   REVIEWS INTRO
+========================================================= */
+
+.reviews-intro {
+  max-width: 900px;
+  margin: 0 auto 75px;
+  text-align: center;
+}
+
+.reviews-eyebrow {
+  margin-bottom: 18px;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  color: #8ea2ff;
+}
+
+.reviews-intro h1 {
+  margin: 0 0 24px;
+
+  font-size: clamp(52px, 8vw, 96px);
+  line-height: 0.95;
+
+  letter-spacing: -3px;
+  font-weight: 900;
+
+  color: #ffffff;
+}
+
+.reviews-intro p {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  font-size: 19px;
+  line-height: 1.7;
+
+  color: rgba(255,255,255,0.62);
+}
+
+
+/* =========================================================
+   REVIEWS LIBRARY
+========================================================= */
+
+.reviews-library {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.reviews-library .section-heading {
+  margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   REVIEWS GRID
+========================================================= */
+
+.reviews-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   REVIEW CARD
+========================================================= */
+
+.review-directory-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  background: #080d20;
+
+  border: 1px solid rgba(255,255,255,0.09);
+
+  border-radius: 16px;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.review-directory-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(255,255,255,0.20);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.35);
+}
+
+
+/* =========================================================
+   REVIEW IMAGE
+========================================================= */
+
+.review-directory-image {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 10;
+
+  overflow: hidden;
+
+  background: #060a18;
+}
+
+.review-directory-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s ease;
+}
+
+.review-directory-card:hover
+.review-directory-image img {
+  transform: scale(1.06);
+}
+
+
+/* IMAGE GRADIENT */
+
+.review-directory-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.65),
+      transparent 55%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   REVIEW LABEL
+========================================================= */
+
+.review-directory-label {
+  position: absolute;
+
+  left: 16px;
+  bottom: 16px;
+
+  z-index: 2;
+
+  padding: 7px 10px;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+
+  color: #ffffff;
+
+  background: rgba(0,0,0,0.65);
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  border-radius: 5px;
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   REVIEW CONTENT
+========================================================= */
+
+.review-directory-content {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  padding: 24px;
+}
+
+.review-directory-content .category {
+  margin-bottom: 10px;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+
+  color: #8ea2ff;
+}
+
+.review-directory-content h3 {
+  margin: 0 0 13px;
+
+  font-size: 25px;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.5px;
+
+  font-weight: 850;
+
+  color: #ffffff;
+}
+
+.review-directory-content p {
+  margin: 0;
+
+  font-size: 15px;
+
+  line-height: 1.65;
+
+  color: rgba(255,255,255,0.55);
+}
+
+
+/* =========================================================
+   REVIEW META
+========================================================= */
+
+.review-directory-meta {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-top: auto;
+  padding-top: 24px;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  color: rgba(255,255,255,0.42);
+
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.review-directory-meta span:last-child {
+  color: #ffffff;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.review-directory-card:hover
+.review-directory-meta span:last-child {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .reviews-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 680px) {
+
+  .reviews-page {
+    padding: 55px 18px 70px;
+  }
+
+  .reviews-intro {
+    margin-bottom: 55px;
+  }
+
+  .reviews-intro h1 {
+    font-size: 54px;
+
+    letter-spacing: -2px;
+  }
+
+  .reviews-intro p {
+    font-size: 16px;
+
+    line-height: 1.65;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .review-directory-content {
+    padding: 21px;
+  }
+
+  .review-directory-content h3 {
+    font-size: 23px;
+  }
+
+  .review-directory-content p {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .reviews-page {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .reviews-intro h1 {
+    font-size: 48px;
+  }
+
+  .review-directory-image {
+    aspect-ratio: 16 / 9;
+  }
+
+}
