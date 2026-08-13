@@ -154,7 +154,7 @@ function createReviewCard(article) {
   */
 
   card.href =
-    `news/${article.slug}.html`;
+  `news/review-${article.slug.replace("-review", "")}.html`;
 
 
   /*
