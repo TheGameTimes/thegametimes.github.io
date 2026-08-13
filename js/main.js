@@ -1,18 +1,27 @@
 /*
 ========================================
-THE GAME TIME
+THE GAME TIMES
 MAIN CONTENT SYSTEM
 ========================================
 */
 
 const DATA_URL = "data/articles.json";
 
+
+/*
+========================================
+LOAD ARTICLES
+========================================
+*/
+
 async function loadArticles() {
+
   try {
+
     const response = await fetch(DATA_URL);
 
     if (!response.ok) {
-      throw new Error("Unable to load articles.");
+      throw new Error("Unable to load articles.json");
     }
 
     const articles = await response.json();
@@ -24,13 +33,14 @@ async function loadArticles() {
   } catch (error) {
 
     console.error(
-      "The Game Time content system error:",
+      "The Game Times content system error:",
       error
     );
 
     return [];
 
   }
+
 }
 
 
@@ -55,14 +65,13 @@ function formatDate(dateString) {
 
 }
 
-
 /*
 ========================================
-CREATE ARTICLE CARD
+CREATE NEWS CARD
 ========================================
 */
 
-function createArticleCard(article) {
+function createNewsCard(article) {
 
   const card = document.createElement("a");
 
@@ -70,6 +79,7 @@ function createArticleCard(article) {
 
   card.href =
     `news/article-template.html?slug=${encodeURIComponent(article.slug)}`;
+
 
   const image = article.featuredImage
     ? `
@@ -80,6 +90,7 @@ function createArticleCard(article) {
       >
     `
     : "";
+
 
   card.innerHTML = `
 
@@ -93,19 +104,23 @@ function createArticleCard(article) {
 
     </div>
 
+
     <div class="card-content">
 
       <span class="category">
         ${article.category}
       </span>
 
+
       <h3>
         ${article.title}
       </h3>
 
+
       <p>
         ${article.excerpt}
       </p>
+
 
       <span class="date">
         ${formatDate(article.publishedAt)}
@@ -115,9 +130,117 @@ function createArticleCard(article) {
 
   `;
 
+
   return card;
+
 }
 
+
+/*
+========================================
+CREATE REVIEW CARD
+========================================
+*/
+
+function createReviewCard(article) {
+
+  const card = document.createElement("a");
+
+  card.className = "card review-card";
+
+
+  /*
+  REVIEW PAGE LINK
+  */
+
+  card.href =
+    `news/${article.slug}.html`;
+
+
+  /*
+  REVIEW IMAGE
+  */
+
+  const image = article.featuredImage
+    ? `
+      <img
+        src="${article.featuredImage}"
+        alt="${article.title}"
+        loading="lazy"
+      >
+    `
+    : "";
+
+
+  /*
+  REVIEW SCORE
+  */
+
+  const score =
+    article.score !== undefined
+      ? article.score
+      : "—";
+
+
+  /*
+  REVIEW VERDICT
+  */
+
+  const verdict =
+    article.verdict || "REVIEW";
+
+
+  card.innerHTML = `
+
+    <div class="thumbnail">
+
+      ${image}
+
+      <span class="thumbnail-label">
+        REVIEW
+      </span>
+
+    </div>
+
+
+    <span
+      class="score"
+      aria-label="Review score ${score} out of 10"
+    >
+      ${score}
+    </span>
+
+
+    <div class="card-content">
+
+      <span class="category">
+        REVIEW
+      </span>
+
+
+      <h3>
+        ${article.title}
+      </h3>
+
+
+      <p>
+        ${article.excerpt}
+      </p>
+
+
+      <div class="review-verdict">
+        ${verdict}
+      </div>
+
+
+    </div>
+
+  `;
+
+
+  return card;
+
+}
 
 /*
 ========================================
@@ -132,6 +255,7 @@ function renderLatestNews(articles) {
 
   if (!container) return;
 
+
   const news = articles
     .filter(article => article.type === "news")
     .sort(
@@ -141,12 +265,14 @@ function renderLatestNews(articles) {
     )
     .slice(0, 6);
 
+
   container.innerHTML = "";
+
 
   news.forEach(article => {
 
     container.appendChild(
-      createArticleCard(article)
+      createNewsCard(article)
     );
 
   });
@@ -156,16 +282,17 @@ function renderLatestNews(articles) {
 
 /*
 ========================================
-RENDER REVIEWS
+RENDER LATEST 3 REVIEWS
 ========================================
 */
 
-function renderReviews(articles) {
+function renderLatestReviews(articles) {
 
   const container =
-    document.querySelector("#reviews-grid");
+    document.querySelector("#latest-reviews-grid");
 
   if (!container) return;
+
 
   const reviews = articles
     .filter(article => article.type === "review")
@@ -174,28 +301,30 @@ function renderReviews(articles) {
         new Date(b.publishedAt) -
         new Date(a.publishedAt)
     )
-    .slice(0, 6);
+    .slice(0, 3);
+
 
   container.innerHTML = "";
 
+
+  if (reviews.length === 0) {
+
+    container.innerHTML = `
+      <p class="reviews-loading">
+        No reviews available yet.
+      </p>
+    `;
+
+    return;
+
+  }
+
+
   reviews.forEach(article => {
 
-    const card =
-      createArticleCard(article);
-
-    card.classList.add("review-card");
-
-    const score =
-      document.createElement("span");
-
-    score.className = "score";
-
-    score.textContent =
-      article.score ?? "—";
-
-    card.prepend(score);
-
-    container.appendChild(card);
+    container.appendChild(
+      createReviewCard(article)
+    );
 
   });
 
@@ -204,7 +333,7 @@ function renderReviews(articles) {
 
 /*
 ========================================
-INITIALIZE
+INITIALIZE THE GAME TIMES
 ========================================
 */
 
@@ -213,9 +342,10 @@ async function initializeTheGameTime() {
   const articles =
     await loadArticles();
 
+
   renderLatestNews(articles);
 
-  renderReviews(articles);
+  renderLatestReviews(articles);
 
 }
 
@@ -230,119 +360,3 @@ document.addEventListener(
   "DOMContentLoaded",
   initializeTheGameTime
 );
-
-
-/* =========================
-   ARTICLE DATA LOADER
-========================= */
-
-async function loadArticles() {
-
-  try {
-
-    const response =
-      await fetch("data/articles.json");
-
-    if (!response.ok) {
-      throw new Error("Could not load articles.json");
-    }
-
-    const articles =
-      await response.json();
-
-    renderLatestNews(articles);
-
-  } catch (error) {
-
-    console.error(
-      "The Game Times article loader failed:",
-      error
-    );
-
-  }
-
-}
-
-
-/* =========================
-   RENDER LATEST NEWS
-========================= */
-
-function renderLatestNews(articles) {
-
-  const newsGrid =
-    document.querySelector("#latest-news .grid");
-
-  if (!newsGrid) {
-    return;
-  }
-
-
-  newsGrid.innerHTML = "";
-
-
-  articles.forEach(function (article) {
-
-    const card =
-      document.createElement("a");
-
-    card.className = "card";
-
-    card.href = article.url;
-
-
-    card.innerHTML = `
-
-      <div class="thumbnail">
-
-        <img
-          src="${article.image}"
-          alt="${article.title}"
-          loading="lazy"
-        >
-
-        <span class="thumbnail-label">
-          ${article.category}
-        </span>
-
-      </div>
-
-
-      <div class="card-content">
-
-        <span class="category">
-          ${article.category}
-        </span>
-
-
-        <h3>
-          ${article.title}
-        </h3>
-
-
-        <p>
-          ${article.excerpt}
-        </p>
-
-
-        <span class="date">
-          ${article.date}
-        </span>
-
-      </div>
-
-    `;
-
-
-    newsGrid.appendChild(card);
-
-  });
-
-}
-
-
-/* =========================
-   START ARTICLE SYSTEM
-========================= */
-
-loadArticles();
