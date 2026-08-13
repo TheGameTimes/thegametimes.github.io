@@ -162,5 +162,42 @@
   "updatedAt": "2026-08-13",
   "status": "published",
   "views": 0
+  },
+    {
+    "id": 7,
+    "type": "review",
+    "title": "PRAGMATA Review: Capcom's Weirdest Risk Might Be One of Its Best",
+    "slug": "pragmata-review",
+    "category": "Reviews",
+    "subcategory": "PRAGMATA",
+    "game": "PRAGMATA",
+    "developer": "Capcom",
+    "publisher": "Capcom",
+    "platforms": [
+      "PC",
+      "PS5",
+      "Xbox Series X|S"
+    ],
+    "genre": "Action",
+    "author": "Ariya",
+    "editor": "Lucifer",
+    "featuredImage": "images/articles/pragmata.jpg",
+    "socialImage": "images/articles/pragmata-social.jpg",
+    "excerpt": "PRAGMATA is Capcom taking a genuine risk — a stylish, emotional and mechanically ambitious sci-fi action game that somehow makes you care about two idiots trying to survive the moon together.",
+    "content": "",
+    "pros": [],
+    "cons": [],
+    "verdict": "HIGHLY RECOMMENDED",
+    "score": 9.5,
+    "tags": [
+      "PRAGMATA",
+      "Capcom",
+      "Sci-Fi",
+      "Action"
+    ],
+    "publishedAt": "2026-08-13",
+    "updatedAt": "2026-08-13",
+    "status": "published",
+    "views": 0
   }
 ]
