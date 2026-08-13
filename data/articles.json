@@ -199,5 +199,42 @@
     "updatedAt": "2026-08-13",
     "status": "published",
     "views": 0
-  }
+},
+  {
+  "id": 8,
+  "type": "review",
+  "title": "James Bond: First Light Review",
+  "slug": "james-bond-first-light-review",
+  "category": "Reviews",
+  "subcategory": "James Bond: First Light",
+  "game": "James Bond: First Light",
+  "developer": "IO Interactive",
+  "publisher": "IO Interactive",
+  "platforms": [
+    "PC",
+    "PS5",
+    "Xbox Series X|S"
+  ],
+  "genre": "Action",
+  "author": "Ariya",
+  "editor": "Lucifer",
+  "featuredImage": "images/articles/james-bond-first-light.jpg",
+  "socialImage": "images/articles/james-bond-first-light-social.jpg",
+  "excerpt": "James Bond: First Light delivers a stylish, cinematic Bond adventure that proves 007 still belongs in gaming.",
+  "content": "",
+  "pros": [],
+  "cons": [],
+  "verdict": "HIGHLY RECOMMENDED",
+  "score": 9.0,
+  "tags": [
+    "James Bond",
+    "007",
+    "IO Interactive",
+    "First Light"
+  ],
+  "publishedAt": "2026-08-13",
+  "updatedAt": "2026-08-13",
+  "status": "published",
+  "views": 0
+}
 ]
