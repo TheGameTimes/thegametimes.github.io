@@ -3918,3 +3918,132 @@ footer::before {
   }
 
 }
+
+/* =========================
+   FOLLOW MENU
+========================== */
+
+.follow-menu {
+  position: relative;
+}
+
+.follow-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 15px;
+
+  background: transparent;
+  border: 1px solid #FE0000;
+  border-radius: 4px;
+
+  color: #FE0000;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.follow-button:hover,
+.follow-button[aria-expanded="true"] {
+  background: #FE0000;
+  color: #ffffff;
+  box-shadow: 0 0 18px rgba(254, 0, 0, 0.25);
+}
+
+.follow-arrow {
+  font-size: 11px;
+  transition: transform 0.2s ease;
+}
+
+.follow-button[aria-expanded="true"] .follow-arrow {
+  transform: rotate(180deg);
+}
+
+
+/* =========================
+   FOLLOW PANEL
+========================== */
+
+.follow-panel {
+  position: absolute;
+
+  top: calc(100% + 10px);
+  right: 0;
+
+  width: 210px;
+
+  padding: 10px;
+
+  background: #080a12;
+
+  border: 1px solid rgba(254, 0, 0, 0.45);
+  border-radius: 6px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.55),
+    0 0 25px rgba(254, 0, 0, 0.08);
+
+  z-index: 1000;
+}
+
+.follow-panel[hidden] {
+  display: none;
+}
+
+.follow-panel-title {
+  padding: 10px 10px 12px;
+
+  color: #FE0000;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  margin-bottom: 5px;
+}
+
+.follow-panel a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 11px 10px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  border-radius: 3px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.follow-panel a:hover {
+  background: rgba(254, 0, 0, 0.12);
+  color: #FE0000;
+  padding-left: 14px;
+}
+
+.follow-panel a span:last-child {
+  color: #FE0000;
+  font-size: 13px;
+  }
