@@ -35,247 +35,335 @@
 <body>
 
 
-  <!-- =========================
-       HEADER
-  ========================== -->
+<!-- ========================================
+     HEADER
+======================================== -->
 
-  <header>
+<header>
 
-    <div class="topbar">
+  <div class="topbar">
 
 
-      <!-- LOGO -->
+    <!-- LOGO -->
 
-      <a
-        href="index.html"
-        class="logo"
-        aria-label="The Game Times Home"
+    <a
+      href="index.html"
+      class="logo"
+      aria-label="The Game Times Home"
+    >
+
+      <img
+        src="images/Logo.png"
+        alt="The Game Times"
+        class="logo-img"
       >
 
-        <img
-          src="images/Logo.png"
-          alt="The Game Times"
-          class="logo-img"
-        >
+    </a>
 
+
+    <!-- NAVIGATION -->
+
+    <nav aria-label="Main navigation">
+
+      <a href="index.html">
+        NEWS
       </a>
 
+      <a href="reviews.html">
+        REVIEWS
+      </a>
 
-      <!-- NAVIGATION -->
+      <a href="#">
+        GAMES
+      </a>
 
-      <nav aria-label="Main navigation">
+      <a href="#">
+        FEATURES
+      </a>
 
-        <a href="index.html">
-          NEWS
-        </a>
+      <a href="#">
+        GUIDES
+      </a>
 
-        <a href="#">
-          REVIEWS
-        </a>
-
-        <a href="#">
-          GAMES
-        </a>
-
-        <a href="#">
-          FEATURES
-        </a>
-
-        <a href="#">
-          GUIDES
-        </a>
-
-      </nav>
+    </nav>
 
 
-      <!-- HEADER ACTIONS -->
+    <!-- HEADER ACTIONS -->
 
-      <div class="header-actions">
+    <div class="header-actions">
 
 
-        <!-- SEARCH BUTTON -->
+      <!-- SEARCH -->
+
+      <button
+        class="search-button"
+        type="button"
+        aria-label="Open search"
+        aria-controls="search-panel"
+        aria-expanded="false"
+      >
+
+        <svg
+          class="search-icon"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+
+          <circle
+            cx="11"
+            cy="11"
+            r="6.5"
+          ></circle>
+
+          <line
+            x1="16"
+            y1="16"
+            x2="21"
+            y2="21"
+          ></line>
+
+        </svg>
+
+      </button>
+
+
+      <!-- FOLLOW MENU -->
+
+      <div class="follow-menu">
 
         <button
-          class="search-button"
+          class="follow-button"
           type="button"
-          aria-label="Open search"
-          aria-controls="search-panel"
+          aria-label="Open social links"
+          aria-controls="follow-panel"
           aria-expanded="false"
         >
 
-          <svg
-            class="search-icon"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
+          <span>
+            FOLLOW
+          </span>
 
-            <circle
-              cx="11"
-              cy="11"
-              r="6.5"
-            ></circle>
-
-            <line
-              x1="16"
-              y1="16"
-              x2="21"
-              y2="21"
-            ></line>
-
-          </svg>
+          <span class="follow-arrow">
+            ↓
+          </span>
 
         </button>
 
-<!-- FOLLOW MENU -->
 
-<div class="follow-menu">
+        <div
+          class="follow-panel"
+          id="follow-panel"
+          hidden
+        >
 
-  <button
-    class="follow-button"
-    type="button"
-    aria-label="Open social links"
-    aria-controls="follow-panel"
-    aria-expanded="false"
-  >
-    <span>FOLLOW</span>
-    <span class="follow-arrow">↓</span>
-  </button>
+          <div class="follow-panel-title">
+            FOLLOW THE GAME TIMES
+          </div>
 
-  <div
-    class="follow-panel"
-    id="follow-panel"
-    hidden
-  >
 
-    <div class="follow-panel-title">
-      FOLLOW THE GAME TIMES
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>
+              INSTAGRAM
+            </span>
+
+            <span>
+              ↗
+            </span>
+          </a>
+
+
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>
+              YOUTUBE
+            </span>
+
+            <span>
+              ↗
+            </span>
+          </a>
+
+
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>
+              X
+            </span>
+
+            <span>
+              ↗
+            </span>
+          </a>
+
+
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>
+              TIKTOK
+            </span>
+
+            <span>
+              ↗
+            </span>
+          </a>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <a href="#" target="_blank" rel="noopener noreferrer">
-      <span>INSTAGRAM</span>
-      <span>↗</span>
-    </a>
-
-    <a href="#" target="_blank" rel="noopener noreferrer">
-      <span>YOUTUBE</span>
-      <span>↗</span>
-    </a>
-
-    <a href="#" target="_blank" rel="noopener noreferrer">
-      <span>X</span>
-      <span>↗</span>
-    </a>
-
-    <a href="#" target="_blank" rel="noopener noreferrer">
-          <span>TIKTOK</span>
-    <span>↗</span>
-  </a>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
+  </div>
 
 </header>
 
+  <!-- ========================================
+     SEARCH PANEL
+======================================== -->
 
-  <!-- =========================
-       SEARCH PANEL
-  ========================== -->
+<div
+  class="search-panel"
+  id="search-panel"
+>
+
+  <div class="search-inner">
+
+    <input
+      type="search"
+      id="site-search"
+      placeholder="Search The Game Times..."
+      aria-label="Search The Game Times"
+      autocomplete="off"
+    >
+
+    <button
+      type="button"
+      id="search-submit"
+    >
+      SEARCH
+    </button>
+
+  </div>
+
+</div>
+
+
+
+<!-- ========================================
+     FEATURED STORIES
+======================================== -->
+
+<section
+  class="hero"
+  aria-label="Featured stories"
+>
 
   <div
-    class="search-panel"
-    id="search-panel"
+    class="hero-slider"
+    id="hero-slider"
   >
 
-    <div class="search-inner">
 
-      <input
-        type="search"
-        id="site-search"
-        placeholder="Search The Game Times..."
-        aria-label="Search The Game Times"
-        autocomplete="off"
-      >
+    <!-- DYNAMIC SLIDES -->
+
+    <div id="hero-slides">
+
+      <!--
+        Featured stories are loaded
+        automatically from articles.json
+      -->
+
+    </div>
+
+
+    <!-- CAROUSEL CONTROLS -->
+
+    <div class="hero-controls">
+
+
+      <!-- PREVIOUS -->
 
       <button
+        class="hero-arrow hero-prev"
         type="button"
-        id="search-submit"
+        aria-label="Previous featured story"
       >
-        SEARCH
+        ←
+      </button>
+
+
+      <!-- DOTS -->
+
+      <div
+        class="hero-dots"
+        id="hero-dots"
+      ></div>
+
+
+      <!-- NEXT -->
+
+      <button
+        class="hero-arrow hero-next"
+        type="button"
+        aria-label="Next featured story"
+      >
+        →
       </button>
 
     </div>
 
   </div>
 
+</section>
+
+  <!-- ========================================
+     MAIN CONTENT
+======================================== -->
+
+<main>
 
 
-  <!-- =========================
-       FEATURED STORIES
-  ========================== -->
+  <!-- ======================================
+       LATEST NEWS
+  ======================================= -->
 
-  <section
-    class="hero"
-    aria-label="Featured stories"
-  >
+  <section id="latest-news">
+
+    <div class="section-heading">
+
+      <h2>
+        Latest News
+      </h2>
+
+      <a href="#">
+        VIEW ALL →
+      </a>
+
+    </div>
+
 
     <div
-      class="hero-slider"
-      id="hero-slider"
+      class="grid"
+      id="latest-news-grid"
     >
 
-<!-- =========================
-     DYNAMIC FEATURED SLIDES
-========================== -->
-
-<div id="hero-slides">
-
-  <!-- FEATURED SLIDES WILL BE LOADED FROM articles.json -->
-
-</div>
-
-      <!-- =========================
-           CAROUSEL CONTROLS
-      ========================== -->
-
-      <div class="hero-controls">
-
-
-        <!-- PREVIOUS -->
-
-        <button
-          class="hero-arrow hero-prev"
-          type="button"
-          aria-label="Previous featured story"
-        >
-          ←
-        </button>
-
-
-        <!-- DOTS -->
-
-        <div class="hero-dots" id="hero-dots"></div>
-
-        <!-- NEXT -->
-
-        <button
-          class="hero-arrow hero-next"
-          type="button"
-          aria-label="Next featured story"
-        >
-          →
-        </button>
-
-
-      </div>
+      <!--
+        News cards are loaded
+        automatically from articles.json
+      -->
 
     </div>
 
@@ -283,340 +371,275 @@
 
 
 
-  <!-- =========================
-       MAIN CONTENT
-  ========================== -->
+  <!-- ======================================
+       LATEST REVIEWS
+  ======================================= -->
 
-  <main>
+  <section id="latest-reviews">
 
+    <div class="section-heading">
 
-    <!-- =========================
-         LATEST NEWS
-    ========================== -->
+      <h2>
+        Latest Reviews
+      </h2>
 
-<section id="latest-news">
-
-  <div class="section-heading">
-
-    <h2>
-      Latest News
-    </h2>
-
-    <a href="#">
-      VIEW ALL →
-    </a>
-
-  </div>
-
-
-  <div class="grid" id="latest-news-grid">
-
-    <!-- NEWS CARDS ARE LOADED AUTOMATICALLY -->
-
-  </div>
-
-</section>
-
-    
-<!-- =========================
-     REVIEWS
-========================== -->
-
-<section id="latest-reviews">
-
-  <div class="section-heading">
-
-    <h2>
-      Latest Reviews
-    </h2>
-
-    <a href="reviews.html">
-      ALL REVIEWS →
-    </a>
-
-  </div>
-
-  <div class="grid" id="latest-reviews-grid">
-
-    <!-- REVIEW CARDS ARE LOADED AUTOMATICALLY -->
-
-    <p class="reviews-loading">
-      Loading latest reviews...
-    </p>
-
-  </div>
-
-</section>
-
-
-    <!-- =========================
-         ARIYA'S TAKE
-    ========================== -->
-
-    <section id="ariyas-take">
-
-      <div class="ariya">
-
-        <div class="ariya-label">
-          THE GAME TIMES • OPINION
-        </div>
-
-        <h2>
-          💋 Ariya's Take
-        </h2>
-
-        <p>
-          “Another gaming company announcing a $70 game like
-          my wallet hasn't already suffered enough. Girl, be serious.”
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         TEAM
-    ========================== -->
-
-    <section id="team">
-
-      <div class="section-heading">
-
-        <h2>
-          The Team
-        </h2>
-
-      </div>
-
-
-      <div class="grid">
-
-
-        <!-- LUCIFER -->
-
-        <article class="card">
-
-          <div class="card-content">
-
-            <span class="category">
-              EDITOR-IN-CHIEF
-            </span>
-
-            <h3>
-              Lucifer
-            </h3>
-
-            <p>
-              Oversees The Game Times, editorial direction,
-              publishing standards, stories and the overall
-              voice of the brand.
-            </p>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- ARIYA -->
-
-        <article class="card">
-
-          <div class="card-content">
-
-            <span class="category">
-              WRITER & NARRATOR
-            </span>
-
-            <h3>
-              Ariya
-            </h3>
-
-            <p>
-              Writes stories, delivers narration and brings
-              the distinctive editorial voice of The Game Times.
-            </p>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- SHEESH -->
-
-        <article class="card">
-
-          <div class="card-content">
-
-            <span class="category">
-              SOCIAL MANAGER
-            </span>
-
-            <h3>
-              Sheesh
-            </h3>
-
-            <p>
-              Handles social media, community engagement,
-              publishing and the daily presence of The Game Times.
-            </p>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- ZAIN -->
-
-        <article class="card">
-
-          <div class="card-content">
-
-            <span class="category">
-              EDITOR & GRAPHIC DESIGN
-            </span>
-
-            <h3>
-              Zain
-            </h3>
-
-            <p>
-              Handles visual design, graphics, editing and
-              the overall visual identity of The Game Times.
-            </p>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-  </main>
-
-
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
-  <footer>
-
-    <div class="footer-inner">
-
-
-      <div>
-
-        <div class="footer-brand">
-          THE GAME <span>TIMES</span>
-        </div>
-
-        <div class="footer-text">
-          Gaming News • Reviews • Features • Guides • Opinions
-        </div>
-
-      </div>
-
-
-      <div class="footer-links">
-
-        <a href="#">
-          ABOUT
-        </a>
-
-        <a href="#">
-          CONTACT
-        </a>
-
-        <a href="#">
-          PRIVACY
-        </a>
-
-        <a href="#">
-          TERMS
-        </a>
-
-      </div>
-
+      <a href="reviews.html">
+        ALL REVIEWS →
+      </a>
 
     </div>
 
 
-    <div class="copyright">
+    <div
+      class="grid"
+      id="latest-reviews-grid"
+    >
 
-      © 2026 The Game Times. All rights reserved.
+      <p class="reviews-loading">
+        Loading latest reviews...
+      </p>
 
     </div>
 
-  </footer>
+  </section>
+
+    <!-- ======================================
+       ARIYA'S TAKE
+  ======================================= -->
+
+  <section id="ariyas-take">
+
+    <div class="ariya">
+
+      <div class="ariya-label">
+        THE GAME TIMES • OPINION
+      </div>
+
+      <h2>
+        💋 Ariya's Take
+      </h2>
+
+      <p>
+        “Another gaming company announcing a $70 game like
+        my wallet hasn't already suffered enough. Girl, be serious.”
+      </p>
+
+    </div>
+
+  </section>
 
 
 
-  <!-- =========================
-       JAVASCRIPT
-  ========================== -->
+  <!-- ======================================
+       THE TEAM
+  ======================================= -->
+
+  <section id="team">
+
+    <div class="section-heading">
+
+      <h2>
+        The Team
+      </h2>
+
+    </div>
+
+
+    <div class="grid">
+
+
+      <!-- LUCIFER -->
+
+      <article class="card">
+
+        <div class="card-content">
+
+          <span class="category">
+            EDITOR-IN-CHIEF
+          </span>
+
+          <h3>
+            Lucifer
+          </h3>
+
+          <p>
+            Oversees The Game Times, editorial direction,
+            publishing standards, stories and the overall
+            voice of the brand.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- ARIYA -->
+
+      <article class="card">
+
+        <div class="card-content">
+
+          <span class="category">
+            WRITER & NARRATOR
+          </span>
+
+          <h3>
+            Ariya
+          </h3>
+
+          <p>
+            Writes stories, delivers narration and brings
+            the distinctive editorial voice of The Game Times.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- SHEESH -->
+
+      <article class="card">
+
+        <div class="card-content">
+
+          <span class="category">
+            SOCIAL MANAGER
+          </span>
+
+          <h3>
+            Sheesh
+          </h3>
+
+          <p>
+            Handles social media, community engagement,
+            publishing and the daily presence of The Game Times.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- ZAIN -->
+
+      <article class="card">
+
+        <div class="card-content">
+
+          <span class="category">
+            EDITOR & GRAPHIC DESIGN
+          </span>
+
+          <h3>
+            Zain
+          </h3>
+
+          <p>
+            Handles visual design, graphics, editing and
+            the overall visual identity of The Game Times.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+</main>
+
+  <!-- ========================================
+     FOOTER
+======================================== -->
+
+<footer>
+
+  <div class="footer-inner">
+
+
+    <div>
+
+      <div class="footer-brand">
+        THE GAME <span>TIMES</span>
+      </div>
+
+      <div class="footer-text">
+        Gaming News • Reviews • Features • Guides • Opinions
+      </div>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <a href="#">
+        ABOUT
+      </a>
+
+      <a href="#">
+        CONTACT
+      </a>
+
+      <a href="#">
+        PRIVACY
+      </a>
+
+      <a href="#">
+        TERMS
+      </a>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="copyright">
+
+    © 2026 The Game Times. All rights reserved.
+
+  </div>
+
+</footer>
+
+  <!-- ========================================
+     JAVASCRIPT
+======================================== -->
 
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* =====================================================
+
+  /* ======================================
      SEARCH SYSTEM
-  ===================================================== */
+  ======================================= */
 
-  const searchButton = document.querySelector(".search-button");
-  const searchPanel = document.getElementById("search-panel");
-  const searchInput = document.getElementById("site-search");
-  const searchSubmit = document.getElementById("search-submit");
+  const searchButton =
+    document.querySelector(".search-button");
 
-  const cards = document.querySelectorAll(".grid .card");
+  const searchPanel =
+    document.getElementById("search-panel");
+
+  const searchInput =
+    document.getElementById("site-search");
+
+  const searchSubmit =
+    document.getElementById("search-submit");
 
 
-  /* =========================
-     OPEN / CLOSE SEARCH
-  ========================= */
+  function getSearchCards() {
 
-  searchButton.addEventListener("click", function () {
-
-    const isOpen =
-      searchPanel.classList.contains("active");
-
-    searchPanel.classList.toggle("active");
-
-    searchButton.setAttribute(
-      "aria-expanded",
-      String(!isOpen)
+    return document.querySelectorAll(
+      "#latest-news-grid .card, #latest-reviews-grid .card"
     );
 
-    if (!isOpen) {
+  }
 
-      setTimeout(function () {
-        searchInput.focus();
-      }, 150);
-
-    } else {
-
-      searchInput.value = "";
-
-      cards.forEach(function (card) {
-        card.style.display = "";
-      });
-
-    }
-
-  });
-
-
-  /* =========================
-     SEARCH FUNCTION
-  ========================= */
 
   function performSearch() {
 
@@ -626,14 +649,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .toLowerCase();
 
 
-    if (!query) {
-
-      cards.forEach(function (card) {
-        card.style.display = "";
-      });
-
-      return;
-    }
+    const cards =
+      getSearchCards();
 
 
     cards.forEach(function (card) {
@@ -641,7 +658,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const text =
         card.textContent.toLowerCase();
 
-      if (text.includes(query)) {
+
+      if (!query || text.includes(query)) {
 
         card.style.display = "";
 
@@ -656,116 +674,145 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  /* =========================
-     SEARCH BUTTON
-  ========================= */
+  if (searchButton) {
 
-  searchSubmit.addEventListener(
-    "click",
-    performSearch
-  );
+    searchButton.addEventListener(
+      "click",
+      function () {
 
-
-  /* =========================
-     LIVE SEARCH
-  ========================= */
-
-  searchInput.addEventListener(
-    "input",
-    performSearch
-  );
+        const isOpen =
+          searchPanel.classList.contains("active");
 
 
-  /* =========================
-     ENTER KEY
-  ========================= */
+        searchPanel.classList.toggle("active");
 
-  searchInput.addEventListener(
-    "keydown",
-    function (event) {
-
-      if (event.key === "Enter") {
-
-        event.preventDefault();
-
-        performSearch();
-
-      }
-
-    }
-  );
-
-
-  /* =========================
-     ESCAPE TO CLOSE SEARCH
-  ========================= */
-
-  searchInput.addEventListener(
-    "keydown",
-    function (event) {
-
-      if (event.key === "Escape") {
-
-        searchPanel.classList.remove("active");
 
         searchButton.setAttribute(
           "aria-expanded",
-          "false"
+          String(!isOpen)
         );
 
-        searchInput.value = "";
 
-        cards.forEach(function (card) {
-          card.style.display = "";
-        });
+        if (!isOpen) {
 
-        searchButton.focus();
+          setTimeout(function () {
+
+            searchInput.focus();
+
+          }, 150);
+
+        } else {
+
+          searchInput.value = "";
+
+          performSearch();
+
+        }
 
       }
+    );
 
-    }
-  );
-
-
-
-  /* =====================================================
-   HERO FEATURED STORIES CAROUSEL
-===================================================== */
-
-const heroSlider =
-  document.getElementById("hero-slider");
-
-let heroSlides = [];
-let heroDots = [];
-
-const heroPrev =
-  document.querySelector(".hero-prev");
-
-const heroNext =
-  document.querySelector(".hero-next");
+  }
 
 
-let currentSlide = 0;
+  if (searchInput) {
 
-let autoSlide;
+    searchInput.addEventListener(
+      "input",
+      performSearch
+    );
+
+
+    searchInput.addEventListener(
+      "keydown",
+      function (event) {
+
+        if (event.key === "Enter") {
+
+          event.preventDefault();
+
+          performSearch();
+
+        }
+
+
+        if (event.key === "Escape") {
+
+          searchPanel.classList.remove("active");
+
+          searchButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          searchInput.value = "";
+
+          performSearch();
+
+          searchButton.focus();
+
+        }
+
+      }
+    );
+
+  }
+
+
+  if (searchSubmit) {
+
+    searchSubmit.addEventListener(
+      "click",
+      performSearch
+    );
+
+  }
 
 
 
-  /* =========================
+  /* ======================================
+     HERO CAROUSEL
+  ======================================= */
+
+  const heroSlider =
+    document.getElementById("hero-slider");
+
+  const heroPrev =
+    document.querySelector(".hero-prev");
+
+  const heroNext =
+    document.querySelector(".hero-next");
+
+
+  let heroSlides = [];
+
+  let heroDots = [];
+
+  let currentSlide = 0;
+
+  let autoSlide = null;
+
+
+
+  /* ======================================
      SHOW SLIDE
-  ========================= */
+  ======================================= */
 
   function showSlide(index) {
 
-  if (heroSlides.length === 0) return;
+    if (heroSlides.length === 0) {
+      return;
+    }
 
-  if (index >= heroSlides.length) {
-    index = 0;
-  }
 
-  if (index < 0) {
-    index = heroSlides.length - 1;
-  }
+    if (index >= heroSlides.length) {
+      index = 0;
+    }
+
+
+    if (index < 0) {
+      index = heroSlides.length - 1;
+    }
 
 
     heroSlides.forEach(function (slide) {
@@ -798,41 +845,79 @@ let autoSlide;
 
 
 
-  /* =========================
+  /* ======================================
      NEXT SLIDE
-  ========================= */
+  ======================================= */
 
   function nextSlide() {
 
-    showSlide(currentSlide + 1);
+    showSlide(
+      currentSlide + 1
+    );
 
   }
 
 
 
-  /* =========================
+  /* ======================================
      PREVIOUS SLIDE
-  ========================= */
+  ======================================= */
 
   function previousSlide() {
 
-    showSlide(currentSlide - 1);
+    showSlide(
+      currentSlide - 1
+    );
 
   }
 
 
 
-  /* =========================
+  /* ======================================
+     START AUTO SLIDE
+  ======================================= */
+
+  function startAutoSlide() {
+
+    clearInterval(autoSlide);
+
+
+    if (heroSlides.length <= 1) {
+      return;
+    }
+
+
+    autoSlide =
+      setInterval(
+        nextSlide,
+        6000
+      );
+
+  }
+
+
+
+  /* ======================================
+     RESTART AUTO SLIDE
+  ======================================= */
+
+  function restartAutoSlide() {
+
+    startAutoSlide();
+
+  }
+
+
+
+  /* ======================================
      NEXT BUTTON
-  ========================= */
+  ======================================= */
 
   if (heroNext) {
 
     heroNext.addEventListener(
       "click",
-      function (event) {
-
-        event.preventDefault();
+      function () {
 
         nextSlide();
 
@@ -845,17 +930,15 @@ let autoSlide;
 
 
 
-  /* =========================
+  /* ======================================
      PREVIOUS BUTTON
-  ========================= */
+  ======================================= */
 
   if (heroPrev) {
 
     heroPrev.addEventListener(
       "click",
-      function (event) {
-
-        event.preventDefault();
+      function () {
 
         previousSlide();
 
@@ -867,32 +950,66 @@ let autoSlide;
   }
 
 
-  /* =========================
-     AUTOMATIC SLIDES
-  ========================= */
 
-  function startAutoSlide() {
+  /* ======================================
+     DYNAMIC FEATURED STORIES LOADED
+  ======================================= */
 
-    autoSlide = setInterval(
-      function () {
+  function initializeHeroCarousel() {
 
-        nextSlide();
 
-      },
-      6000
+    heroSlides =
+      Array.from(
+        document.querySelectorAll(
+          ".hero-slide"
+        )
+      );
+
+
+    heroDots =
+      Array.from(
+        document.querySelectorAll(
+          ".hero-dot"
+        )
+      );
+
+
+    currentSlide = 0;
+
+
+    if (heroSlides.length === 0) {
+
+      return;
+
+    }
+
+
+    /* DOTS */
+
+    heroDots.forEach(
+      function (dot, index) {
+
+        dot.addEventListener(
+          "click",
+          function () {
+
+            showSlide(index);
+
+            restartAutoSlide();
+
+          }
+        );
+
+      }
     );
 
-  }
+
+    /* FIRST SLIDE */
+
+    showSlide(0);
 
 
-
-  /* =========================
-     RESTART AUTO SLIDE
-  ========================= */
-
-  function restartAutoSlide() {
-
-    clearInterval(autoSlide);
+    /* AUTO PLAY */
 
     startAutoSlide();
 
@@ -900,9 +1017,20 @@ let autoSlide;
 
 
 
-  /* =========================
-     PAUSE WHEN MOUSE IS OVER
-  ========================= */
+  /* ======================================
+     WAIT FOR MAIN.JS
+  ======================================= */
+
+  document.addEventListener(
+    "featuredStoriesLoaded",
+    initializeHeroCarousel
+  );
+
+
+
+  /* ======================================
+     PAUSE CAROUSEL ON HOVER
+  ======================================= */
 
   if (heroSlider) {
 
@@ -929,15 +1057,19 @@ let autoSlide;
 
 
 
-  /* =========================
+  /* ======================================
      KEYBOARD CONTROLS
-  ========================= */
+  ======================================= */
 
   document.addEventListener(
     "keydown",
     function (event) {
 
-      if (event.key === "ArrowRight") {
+
+      if (
+        event.key === "ArrowRight" &&
+        heroSlides.length > 0
+      ) {
 
         nextSlide();
 
@@ -946,7 +1078,10 @@ let autoSlide;
       }
 
 
-      if (event.key === "ArrowLeft") {
+      if (
+        event.key === "ArrowLeft" &&
+        heroSlides.length > 0
+      ) {
 
         previousSlide();
 
@@ -958,80 +1093,18 @@ let autoSlide;
   );
 
 
-/* =========================
-   LOAD DYNAMIC FEATURED STORIES
-========================= */
-
-function initializeHeroCarousel() {
-
-  heroSlides =
-    document.querySelectorAll(".hero-slide");
-
-  heroDots =
-    document.querySelectorAll(".hero-dot");
-
-
-  if (heroSlides.length === 0) {
-    return;
-  }
-
-
-  currentSlide = 0;
-
-
-  /* =========================
-     DOT NAVIGATION
-  ========================= */
-
-  heroDots.forEach(function (dot, index) {
-
-    dot.addEventListener(
-      "click",
-      function (event) {
-
-        event.preventDefault();
-
-        showSlide(index);
-
-        restartAutoSlide();
-
-      }
-    );
-
-  });
-
-
-  /* =========================
-     START CAROUSEL
-  ========================= */
-
-  showSlide(0);
-
-  startAutoSlide();
-
-}
-
-
-/* =========================
-   WAIT FOR FEATURED STORIES
-========================= */
-
-document.addEventListener(
-  "featuredStoriesLoaded",
-  initializeHeroCarousel
-);
-
 });
-  
-document.addEventListener(
-  "featuredStoriesLoaded",
-  initializeHeroCarousel
-);
 
-});
 </script>
+
+
+<!-- ========================================
+     MAIN CONTENT SYSTEM
+======================================== -->
 
 <script src="js/main.js"></script>
 
+
 </body>
+
 </html>
