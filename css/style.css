@@ -1,10 +1,3 @@
-@font-face {
-  font-family: "Ditty";
-  src: url("../fonts/Ditty.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
   --red: #FE0000;
   --navy: #060F30;
@@ -4366,4 +4359,28 @@ footer::before {
     text-align: center;
   }
 
+}
+
+@font-face {
+  font-family: "Ditty";
+  src: url("../fonts/Ditty.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* =========================
+   DITTY FOOTER FONT
+========================= */
+
+.footer-brand {
+  font-family: "Ditty", Arial, sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.footer-brand span {
+  color: var(--red);
 }
