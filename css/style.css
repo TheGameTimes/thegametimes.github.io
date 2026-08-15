@@ -4384,3 +4384,47 @@ footer::before {
 .footer-brand span {
   color: var(--red);
 }
+
+/* =========================
+   FOOTER AMBIENT MOTION
+========================= */
+
+.site-footer {
+  isolation: isolate;
+}
+
+.site-footer::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(254, 0, 0, 0.10),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(6, 15, 48, 0.35),
+      transparent 30%
+    );
+
+  animation: footerAmbientMove 18s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+@keyframes footerAmbientMove {
+
+  0%,
+  100% {
+    transform: translate3d(-4%, -3%, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(4%, 3%, 0) scale(1.08);
+  }
+
+}
