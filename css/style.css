@@ -311,55 +311,6 @@ nav a:hover::after {
 }
 
 
-/* ACCOUNT BUTTON */
-
-.account-button {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 38px;
-  padding: 0 15px;
-  background: var(--red);
-  color: white;
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  white-space: nowrap;
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
-}
-
-.account-button:hover {
-  background: #D90000;
-  transform: translateY(-1px);
-}
-
-.account-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -120%;
-  width: 70%;
-  height: 100%;
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.25),
-      transparent
-    );
-  transform: skewX(-20deg);
-  transition: left 0.6s ease;
-}
-
-.account-button:hover::after {
-  left: 140%;
-}
-
-
 /* =========================
    SEARCH PANEL
 ========================= */
