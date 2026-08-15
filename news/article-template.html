@@ -504,3 +504,475 @@
 
   </footer>
   
+  <!-- =========================
+       ARTICLE SYSTEM
+  ========================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      async function () {
+
+
+        /*
+        ========================================
+        GET ARTICLE SLUG
+        ========================================
+        */
+
+        const params =
+          new URLSearchParams(
+            window.location.search
+          );
+
+
+        const slug =
+          params.get("slug");
+
+
+        /*
+        ========================================
+        CHECK SLUG
+        ========================================
+        */
+
+        if (!slug) {
+
+          showArticleError(
+            "Article Not Found",
+            "No article was specified."
+          );
+
+          return;
+
+        }
+
+
+        /*
+        ========================================
+        LOAD ARTICLES.JSON
+        ========================================
+        */
+
+        try {
+
+          const response =
+            await fetch(
+              "../data/articles.json"
+            );
+
+
+          if (!response.ok) {
+
+            throw new Error(
+              "Unable to load articles.json"
+            );
+
+          }
+
+
+          const articles =
+            await response.json();
+
+
+          /*
+          ========================================
+          FIND ARTICLE
+          ========================================
+          */
+
+          const article =
+            articles.find(
+              item =>
+                item.slug === slug &&
+                item.status === "published"
+            );
+
+
+          /*
+          ========================================
+          ARTICLE NOT FOUND
+          ========================================
+          */
+
+          if (!article) {
+
+            showArticleError(
+              "Article Not Found",
+              "Sorry, we couldn't find this story."
+            );
+
+            return;
+
+          }
+
+
+          /*
+          ========================================
+          RENDER ARTICLE
+          ========================================
+          */
+
+          renderArticle(article);
+
+
+        } catch (error) {
+
+          console.error(
+            "The Game Times article system error:",
+            error
+          );
+
+
+          showArticleError(
+            "Something Went Wrong",
+            "The article could not be loaded right now."
+          );
+
+        }
+
+      }
+    );
+
+
+
+    /*
+    ========================================
+    RENDER ARTICLE
+    ========================================
+    */
+
+    function renderArticle(article) {
+
+
+      /*
+      ========================================
+      PAGE TITLE
+      ========================================
+      */
+
+      document.title =
+        `${article.title} — The Game Times`;
+
+
+      /*
+      ========================================
+      META DESCRIPTION
+      ========================================
+      */
+
+      const description =
+        document.querySelector(
+          'meta[name="description"]'
+        );
+
+
+      if (description) {
+
+        description.setAttribute(
+          "content",
+          `${article.excerpt} — The Game Times.`
+        );
+
+      }
+
+
+      /*
+      ========================================
+      CATEGORY
+      ========================================
+      */
+
+      const category =
+        document.getElementById(
+          "article-category"
+        );
+
+
+      if (category) {
+
+        category.textContent =
+          `${article.category || "NEWS"} • ${article.subcategory || "GAMING"}`;
+
+      }
+
+
+      /*
+      ========================================
+      TITLE
+      ========================================
+      */
+
+      const title =
+        document.getElementById(
+          "article-title"
+        );
+
+
+      if (title) {
+
+        title.textContent =
+          article.title;
+
+      }
+
+
+      /*
+      ========================================
+      EXCERPT
+      ========================================
+      */
+
+      const excerpt =
+        document.getElementById(
+          "article-excerpt"
+        );
+
+
+      if (excerpt) {
+
+        excerpt.textContent =
+          article.excerpt || "";
+
+      }
+
+
+      /*
+      ========================================
+      AUTHOR
+      ========================================
+      */
+
+      const author =
+        document.getElementById(
+          "article-author"
+        );
+
+
+      if (author) {
+
+        author.textContent =
+          (
+            article.author ||
+            "The Game Times"
+          ).toUpperCase();
+
+      }
+
+
+      /*
+      ========================================
+      DATE
+      ========================================
+      */
+
+      const date =
+        document.getElementById(
+          "article-date"
+        );
+
+
+      if (date && article.publishedAt) {
+
+        date.textContent =
+          formatArticleDate(
+            article.publishedAt
+          );
+
+      }
+
+
+      /*
+      ========================================
+      FEATURE IMAGE
+      ========================================
+      */
+
+      const image =
+        document.getElementById(
+          "article-image"
+        );
+
+
+      if (image && article.featuredImage) {
+
+        let imagePath =
+          article.featuredImage;
+
+
+        /*
+        JSON paths start from website root.
+        Article template is inside /news/.
+        */
+
+        if (
+          !imagePath.startsWith("../") &&
+          !imagePath.startsWith("http")
+        ) {
+
+          imagePath =
+            "../" + imagePath;
+
+        }
+
+
+        image.src =
+          imagePath;
+
+
+        image.alt =
+          article.title;
+
+      }
+
+
+      /*
+      ========================================
+      ARTICLE CONTENT
+      ========================================
+      */
+
+      renderArticleContent(
+        article
+      );
+
+    }
+
+
+
+    /*
+    ========================================
+    FORMAT DATE
+    ========================================
+    */
+
+    function formatArticleDate(
+      dateString
+    ) {
+
+      const date =
+        new Date(dateString);
+
+
+      return date.toLocaleDateString(
+        "en-US",
+        {
+          month: "long",
+          day: "numeric",
+          year: "numeric"
+        }
+      ).toUpperCase();
+
+    }
+
+
+
+    /*
+    ========================================
+    ARTICLE CONTENT
+    ========================================
+    */
+
+    function renderArticleContent(
+      article
+    ) {
+
+      const container =
+        document.getElementById(
+          "article-content"
+        );
+
+
+      if (!container) return;
+
+
+      /*
+      ========================================
+      CONTENT EXISTS
+      ========================================
+      */
+
+      if (
+        article.content &&
+        article.content.trim() !== ""
+      ) {
+
+        container.innerHTML =
+          article.content;
+
+        return;
+
+      }
+
+
+      /*
+      ========================================
+      NO CONTENT YET
+      ========================================
+      */
+
+      container.innerHTML = `
+
+        <p class="article-lead">
+          ${article.excerpt || ""}
+        </p>
+
+
+        <p>
+          This story is currently being prepared
+          by The Game Times.
+        </p>
+
+      `;
+
+    }
+
+
+
+    /*
+    ========================================
+    ARTICLE ERROR
+    ========================================
+    */
+
+    function showArticleError(
+      title,
+      message
+    ) {
+
+      const article =
+        document.getElementById(
+          "article"
+        );
+
+
+      if (!article) return;
+
+
+      article.innerHTML = `
+
+        <header class="article-header">
+
+          <span class="eyebrow">
+            THE GAME TIMES
+          </span>
+
+
+          <h1>
+            ${title}
+          </h1>
+
+
+          <p class="article-dek">
+            ${message}
+          </p>
+
+        </header>
+
+      `;
+
+    }
+
+  </script>
+  
