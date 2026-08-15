@@ -360,3 +360,88 @@ document.addEventListener(
   "DOMContentLoaded",
   initializeTheGameTime
 );
+
+/*
+========================================
+FOLLOW MENU
+========================================
+*/
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const followButton =
+    document.querySelector(".follow-button");
+
+  const followPanel =
+    document.getElementById("follow-panel");
+
+  if (!followButton || !followPanel) return;
+
+
+  followButton.addEventListener("click", function () {
+
+    const isOpen =
+      followButton.getAttribute("aria-expanded") === "true";
+
+
+    followButton.setAttribute(
+      "aria-expanded",
+      String(!isOpen)
+    );
+
+
+    if (isOpen) {
+
+      followPanel.hidden = true;
+
+    } else {
+
+      followPanel.hidden = false;
+
+    }
+
+  });
+
+
+  /*
+  CLOSE WHEN CLICKING OUTSIDE
+  */
+
+  document.addEventListener("click", function (event) {
+
+    if (
+      !event.target.closest(".follow-menu")
+    ) {
+
+      followButton.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      followPanel.hidden = true;
+
+    }
+
+  });
+
+
+  /*
+  CLOSE WITH ESCAPE
+  */
+
+  document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape") {
+
+      followButton.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      followPanel.hidden = true;
+
+    }
+
+  });
+
+});
