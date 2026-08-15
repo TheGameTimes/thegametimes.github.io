@@ -4034,3 +4034,57 @@ footer::before {
   right: 0;
   z-index: 10000;
 }
+
+/* =========================
+   SECTION ACTION BUTTONS
+========================= */
+
+.section-heading a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 38px;
+  padding: 0 15px;
+
+  background: var(--navy);
+  border: 1px solid rgba(254, 0, 0, 0.45);
+
+  color: var(--red);
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.section-heading a:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: white;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 620px) {
+
+  .section-heading {
+    width: 100%;
+  }
+
+  .section-heading a {
+    min-height: 36px;
+    padding: 0 13px;
+  }
+
+}
