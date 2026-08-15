@@ -67,6 +67,132 @@ function formatDate(dateString) {
 
 /*
 ========================================
+CREATE FEATURED STORY
+========================================
+*/
+
+function createFeaturedStory(article, index) {
+
+  const slide = document.createElement("a");
+
+  slide.className =
+    index === 0
+      ? "hero-slide active"
+      : "hero-slide";
+
+  slide.href =
+    `news/article-template.html?slug=${encodeURIComponent(article.slug)}`;
+
+  slide.style.backgroundImage =
+    `url('${article.featuredImage}')`;
+
+  slide.innerHTML = `
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+      <span class="hero-label">
+        🔴 LATEST NEWS
+      </span>
+
+      <h1>
+        ${article.title}
+      </h1>
+
+      <p>
+        ${article.excerpt}
+      </p>
+
+      <div class="hero-meta">
+
+        <span>
+          ${article.subcategory || article.category}
+        </span>
+
+        <span>
+          •
+        </span>
+
+        <span>
+          ${formatDate(article.publishedAt)}
+        </span>
+
+      </div>
+
+    </div>
+
+  `;
+
+  return slide;
+
+}
+
+
+/*
+========================================
+RENDER FEATURED STORIES
+========================================
+*/
+
+function renderFeaturedStories(articles) {
+
+  const container =
+    document.querySelector("#hero-slides");
+
+  const dotsContainer =
+    document.querySelector("#hero-dots");
+
+  if (!container || !dotsContainer) return;
+
+
+  const featured =
+    articles
+      .filter(article =>
+        article.type === "news" &&
+        article.featured === true
+      )
+      .sort(
+        (a, b) =>
+          new Date(b.publishedAt) -
+          new Date(a.publishedAt)
+      );
+
+
+  container.innerHTML = "";
+  dotsContainer.innerHTML = "";
+
+
+  featured.forEach(function (article, index) {
+
+    container.appendChild(
+      createFeaturedStory(article, index)
+    );
+
+
+    const dot =
+      document.createElement("button");
+
+    dot.className =
+      index === 0
+        ? "hero-dot active"
+        : "hero-dot";
+
+    dot.type = "button";
+
+    dot.setAttribute(
+      "aria-label",
+      `Go to story ${index + 1}`
+    );
+
+    dotsContainer.appendChild(dot);
+
+  });
+
+}
+
+/*
+========================================
 CREATE NEWS CARD
 ========================================
 */
