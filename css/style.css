@@ -4390,41 +4390,63 @@ footer::before {
 ========================= */
 
 .site-footer {
-  isolation: isolate;
+  position: relative;
+  overflow: hidden;
 }
 
 .site-footer::after {
   content: "";
   position: absolute;
-  inset: -40%;
-  z-index: -1;
+  width: 700px;
+  height: 700px;
+  top: -300px;
+  right: -250px;
 
-  background:
-    radial-gradient(
-      circle at 20% 30%,
-      rgba(254, 0, 0, 0.10),
-      transparent 25%
-    ),
-    radial-gradient(
-      circle at 80% 70%,
-      rgba(6, 15, 48, 0.35),
-      transparent 30%
-    );
+  background: radial-gradient(
+    circle,
+    rgba(254, 0, 0, 0.18) 0%,
+    rgba(254, 0, 0, 0.08) 25%,
+    transparent 65%
+  );
 
-  animation: footerAmbientMove 18s ease-in-out infinite;
-
+  border-radius: 50%;
   pointer-events: none;
+  z-index: 1;
+
+  animation: footerRedGlow 10s ease-in-out infinite;
 }
 
-@keyframes footerAmbientMove {
+.site-footer .footer-inner,
+.site-footer .footer-bottom {
+  position: relative;
+  z-index: 2;
+}
 
-  0%,
-  100% {
-    transform: translate3d(-4%, -3%, 0) scale(1);
+@keyframes footerRedGlow {
+
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.45;
+  }
+
+  25% {
+    transform: translate3d(-180px, 100px, 0) scale(1.15);
+    opacity: 0.75;
   }
 
   50% {
-    transform: translate3d(4%, 3%, 0) scale(1.08);
+    transform: translate3d(-300px, 220px, 0) scale(0.95);
+    opacity: 0.5;
+  }
+
+  75% {
+    transform: translate3d(-100px, 320px, 0) scale(1.2);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.45;
   }
 
 }
