@@ -12,7 +12,7 @@
 
   <meta
     name="description"
-    content="ARTICLE DESCRIPTION HERE — The Game Times."
+    content="Loading article — The Game Times."
   >
 
   <meta
@@ -21,10 +21,9 @@
   >
 
   <title>
-    ARTICLE TITLE HERE — The Game Times
+    Loading Article — The Game Times
   </title>
 
-  <!-- Main CSS -->
   <link
     rel="stylesheet"
     href="../css/style.css"
@@ -62,7 +61,7 @@
       </a>
 
 
-      <!-- MAIN NAVIGATION -->
+      <!-- NAVIGATION -->
 
       <nav aria-label="Main navigation">
 
@@ -70,7 +69,7 @@
           NEWS
         </a>
 
-        <a href="#">
+        <a href="../reviews.html">
           REVIEWS
         </a>
 
@@ -93,39 +92,159 @@
 
       <div class="header-actions">
 
+
+        <!-- SEARCH -->
+
         <button
           class="search-button"
           type="button"
           aria-label="Search The Game Times"
         >
-          🔍
+
+          <svg
+            class="search-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+
+            <circle
+              cx="11"
+              cy="11"
+              r="6.5"
+            ></circle>
+
+            <line
+              x1="16"
+              y1="16"
+              x2="21"
+              y2="21"
+            ></line>
+
+          </svg>
+
         </button>
 
 
-        <a
-          href="#"
-          class="account-button"
-        >
-          ACCOUNT
-        </a>
+        <!-- FOLLOW -->
+
+        <div class="follow-menu">
+
+          <button
+            class="follow-button"
+            type="button"
+            aria-label="Open social links"
+            aria-controls="follow-panel"
+            aria-expanded="false"
+          >
+
+            <span>
+              FOLLOW
+            </span>
+
+            <span class="follow-arrow">
+              ↓
+            </span>
+
+          </button>
+
+
+          <div
+            class="follow-panel"
+            id="follow-panel"
+            hidden
+          >
+
+            <div class="follow-panel-title">
+              FOLLOW THE GAME TIMES
+            </div>
+
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <span>
+                INSTAGRAM
+              </span>
+
+              <span>
+                ↗
+              </span>
+
+            </a>
+
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <span>
+                YOUTUBE
+              </span>
+
+              <span>
+                ↗
+              </span>
+
+            </a>
+
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <span>
+                X
+              </span>
+
+              <span>
+                ↗
+              </span>
+
+            </a>
+
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <span>
+                TIKTOK
+              </span>
+
+              <span>
+                ↗
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
 
       </div>
-
 
     </div>
 
   </header>
 
-
-
-  <!-- =========================
+    <!-- =========================
        ARTICLE
   ========================== -->
 
   <main class="article-page">
 
 
-    <article class="article">
+    <article class="article" id="article">
 
 
       <!-- =========================
@@ -135,50 +254,44 @@
       <header class="article-header">
 
 
-        <!-- CATEGORY -->
-
-        <span class="eyebrow">
-          NEWS • GAMING
+        <span
+          class="eyebrow"
+          id="article-category"
+        >
+          LOADING...
         </span>
 
 
-        <!-- TITLE -->
-
-        <h1>
-          ARTICLE TITLE HERE
+        <h1 id="article-title">
+          Loading article...
         </h1>
 
 
-        <!-- DESCRIPTION -->
-
-        <p class="article-dek">
-          ARTICLE SHORT DESCRIPTION GOES HERE.
-          Give readers a quick idea of what this story is about.
+        <p
+          class="article-dek"
+          id="article-excerpt"
+        >
+          Please wait while The Game Times loads this story.
         </p>
 
 
-        <!-- META -->
+        <!-- ARTICLE META -->
 
-        <div class="article-meta">
+        <div
+          class="article-meta"
+          id="article-meta"
+        >
 
           <span>
-            BY <strong>ARIYA</strong>
+            BY <strong id="article-author">ARIYA</strong>
           </span>
 
           <span>
             •
           </span>
 
-          <span>
-            AUGUST 12, 2026
-          </span>
-
-          <span>
-            •
-          </span>
-
-          <span>
-            5 MIN READ
+          <span id="article-date">
+            LOADING...
           </span>
 
         </div>
@@ -195,8 +308,9 @@
       <div class="article-image">
 
         <img
-          src="../images/article-image.jpg"
-          alt="ARTICLE IMAGE DESCRIPTION"
+          id="article-image"
+          src="../images/Logo.png"
+          alt="Loading article"
         >
 
       </div>
@@ -204,186 +318,19 @@
 
 
       <!-- =========================
-           ARTICLE BODY
+           ARTICLE CONTENT
       ========================== -->
 
-      <div class="article-content">
-
-
-        <!-- INTRO -->
+      <div
+        class="article-content"
+        id="article-content"
+      >
 
         <p class="article-lead">
-          THIS IS THE INTRODUCTION.
-
-          Start the story with the most important information.
-          Keep it direct, natural and easy to read.
+          Loading article content...
         </p>
-
-
-
-        <!-- PARAGRAPH -->
-
-        <p>
-          This is where the main story begins.
-
-          Write the important information here and explain
-          what happened, who announced it and why gamers
-          should care.
-        </p>
-
-
-
-        <p>
-          Add another paragraph here.
-
-          You can break longer stories into smaller paragraphs
-          to make the article easier to read on mobile.
-        </p>
-
-
-
-        <!-- =========================
-             SUBHEADING
-        ========================== -->
-
-        <h2>
-          WHAT HAPPENED?
-        </h2>
-
-
-        <p>
-          Explain the next important part of the story here.
-
-          Use this section when you need to provide more
-          context, background or additional information.
-        </p>
-
-
-
-        <p>
-          Continue the story here.
-
-          Keep paragraphs relatively short and avoid turning
-          the article into one giant wall of text.
-        </p>
-
-
-
-        <!-- =========================
-             QUOTE
-        ========================== -->
-
-        <blockquote>
-
-          "ADD AN IMPORTANT QUOTE HERE."
-
-          <cite>
-            — SOURCE / PERSON
-          </cite>
-
-        </blockquote>
-
-
-
-        <!-- =========================
-             MORE INFORMATION
-        ========================== -->
-
-        <h2>
-          WHY IT MATTERS
-        </h2>
-
-
-        <p>
-          Explain why this story matters to gamers.
-
-          This is where The Game Times should add context
-          instead of simply repeating the news.
-        </p>
-
-
-
-        <p>
-          Add your analysis, observations or additional
-          information here.
-        </p>
-
-
-
-        <!-- =========================
-             ARIYA'S TAKE
-        ========================== -->
-
-        <div class="article-opinion">
-
-
-          <div class="article-opinion-label">
-            THE GAME TIMES • OPINION
-          </div>
-
-
-          <h2>
-            💋 Ariya's Take
-          </h2>
-
-
-          <p>
-            "THIS IS WHERE ARIYA GIVES HER TAKE.
-
-            Make it opinionated, funny, brutally honest
-            or sarcastic depending on the story."
-          </p>
-
-
-        </div>
-
-
-
-        <!-- =========================
-             CONCLUSION
-        ========================== -->
-
-        <h2>
-          THE BOTTOM LINE
-        </h2>
-
-
-        <p>
-          Finish the article here.
-
-          Summarize the important point and give readers
-          a clear takeaway.
-        </p>
-
 
       </div>
-
-
-
-      <!-- =========================
-           ARTICLE FOOTER
-      ========================== -->
-
-      <footer class="article-footer">
-
-
-        <div class="article-author">
-
-
-          <strong>
-            THE GAME TIMES
-          </strong>
-
-
-          <p>
-            Gaming News • Reviews • Features • Guides • Opinions
-          </p>
-
-
-        </div>
-
-
-      </footer>
 
 
     </article>
@@ -403,60 +350,135 @@
     </div>
 
 
-
   </main>
 
-
-
-  <!-- =========================
-       FOOTER
+    <!-- =========================
+       SITE FOOTER
   ========================== -->
 
-  <footer>
+  <footer class="site-footer">
 
 
     <div class="footer-inner">
 
 
-      <div>
+      <!-- BRAND -->
 
+      <div class="footer-brand-block">
 
-        <div class="footer-brand">
+        <a
+          href="../index.html"
+          class="footer-logo"
+        >
           THE GAME <span>TIMES</span>
+        </a>
+
+
+        <p class="footer-description">
+          Gaming news, reviews, features, guides and
+          unapologetic opinions.
+        </p>
+
+
+        <div class="footer-socials">
+
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            INSTAGRAM
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            YOUTUBE
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X"
+          >
+            X
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+          >
+            TIKTOK
+          </a>
+
         </div>
-
-
-        <div class="footer-text">
-          Gaming News • Reviews • Features • Guides • Opinions
-        </div>
-
 
       </div>
 
 
 
-      <div class="footer-links">
+      <!-- NAVIGATION -->
 
+      <div class="footer-column">
 
-        <a href="#">
-          ABOUT
+        <h3>
+          EXPLORE
+        </h3>
+
+        <a href="../index.html">
+          NEWS
         </a>
 
+        <a href="../reviews.html">
+          REVIEWS
+        </a>
+
+        <a href="#">
+          GAMES
+        </a>
+
+        <a href="#">
+          FEATURES
+        </a>
+
+        <a href="#">
+          GUIDES
+        </a>
+
+      </div>
+
+
+
+      <!-- INFORMATION -->
+
+      <div class="footer-column">
+
+        <h3>
+          THE GAME TIMES
+        </h3>
+
+        <a href="#">
+          ABOUT US
+        </a>
 
         <a href="#">
           CONTACT
         </a>
 
-
         <a href="#">
           PRIVACY
         </a>
 
-
         <a href="#">
           TERMS
         </a>
-
 
       </div>
 
@@ -465,17 +487,20 @@
 
 
 
-    <div class="copyright">
+    <!-- FOOTER BOTTOM -->
 
-      © 2026 The Game Times. All rights reserved.
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 The Game Times
+      </span>
+
+      <span>
+        ALL RIGHTS RESERVED
+      </span>
 
     </div>
 
 
   </footer>
-
-
-
-</body>
-
-</html>
+  
