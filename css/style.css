@@ -4088,3 +4088,275 @@ footer::before {
   }
 
 }
+
+/* =========================
+   PREMIUM FOOTER
+   PORSCHE × CYBERPUNK
+========================= */
+
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  margin-top: 100px;
+  background:
+    linear-gradient(
+      135deg,
+      #080B17 0%,
+      #03050D 55%,
+      #060F30 100%
+    );
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.footer-scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--red),
+      #ffffff,
+      var(--red),
+      transparent
+    );
+  opacity: 0.8;
+  box-shadow: 0 0 18px rgba(254,0,0,0.45);
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: -250px;
+  bottom: -300px;
+  background:
+    radial-gradient(
+      circle,
+      rgba(254,0,0,0.10),
+      transparent 68%
+    );
+  pointer-events: none;
+}
+
+.footer-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: auto;
+  padding: 75px 24px 65px;
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1fr;
+  gap: 60px;
+}
+
+.footer-brand-area {
+  max-width: 440px;
+}
+
+.footer-kicker {
+  margin-bottom: 14px;
+  color: #697289;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+}
+
+.footer-brand {
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.footer-brand span {
+  color: var(--red);
+}
+
+.footer-description {
+  max-width: 390px;
+  margin-top: 20px;
+  color: #858EA3;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.footer-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 25px;
+  padding: 8px 11px;
+  border: 1px solid rgba(255,255,255,0.09);
+  background: rgba(255,255,255,0.025);
+  color: #858EA3;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 10px rgba(254,0,0,0.8);
+  animation: footerStatusPulse 2s ease-in-out infinite;
+}
+
+@keyframes footerStatusPulse {
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-column-title {
+  margin-bottom: 9px;
+  color: white;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+}
+
+.footer-column-title::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 11px;
+  margin-right: 8px;
+  background: var(--red);
+  vertical-align: -1px;
+}
+
+.footer-column a {
+  position: relative;
+  color: #747D92;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer-column a span {
+  color: var(--red);
+  margin-left: 4px;
+}
+
+.footer-column a:hover {
+  color: white;
+  transform: translateX(4px);
+}
+
+.footer-column a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: var(--red);
+  transition: width 0.25s ease;
+}
+
+.footer-column a:hover::after {
+  width: 100%;
+}
+
+.footer-bottom {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: auto;
+  padding: 20px 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  color: #555E73;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.footer-bottom-center {
+  text-align: center;
+}
+
+.footer-bottom-right {
+  text-align: right;
+  color: var(--red);
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+
+
+/* =========================
+   FOOTER MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  .footer-inner {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 45px;
+  }
+
+}
+
+@media (max-width: 620px) {
+
+  .site-footer {
+    margin-top: 70px;
+  }
+
+  .footer-inner {
+    padding: 55px 20px 45px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 25px;
+  }
+
+  .footer-brand-area {
+    grid-column: 1 / -1;
+  }
+
+  .footer-brand {
+    font-size: 34px;
+  }
+
+  .footer-description {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    padding: 18px 20px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-bottom-center,
+  .footer-bottom-right {
+    text-align: center;
+  }
+
+}
