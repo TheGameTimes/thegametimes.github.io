@@ -124,7 +124,7 @@ body::after {
    HEADER
 ========================= */
 
-header {
+header:not(.article-header) {
   position: sticky;
   top: 0;
   z-index: 999;
@@ -137,13 +137,14 @@ header {
     box-shadow 0.3s ease;
 }
 
-header::after {
+header:not(.article-header)::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -1px;
   width: 100%;
   height: 1px;
+
   background:
     linear-gradient(
       90deg,
@@ -151,11 +152,16 @@ header::after {
       rgba(254, 0, 0, 0.55),
       transparent
     );
+
   opacity: 0.45;
-  animation: headerGlow 5s ease-in-out infinite;
+
+  animation:
+    headerGlow 5s ease-in-out infinite;
 }
 
+
 @keyframes headerGlow {
+
   0%,
   100% {
     opacity: 0.25;
@@ -164,16 +170,30 @@ header::after {
   50% {
     opacity: 0.75;
   }
+
 }
 
+
+/* =========================
+   TOPBAR
+========================= */
+
 .topbar {
+
   max-width: 1280px;
+
   min-height: 78px;
+
   margin: auto;
+
   padding: 12px 24px;
+
   display: flex;
+
   align-items: center;
+
   gap: 30px;
+
 }
 
 
