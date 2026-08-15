@@ -347,8 +347,9 @@ async function initializeTheGameTime() {
 
   renderLatestReviews(articles);
 
-}
+  renderFeaturedStories(articles);
 
+}
 
 /*
 ========================================
