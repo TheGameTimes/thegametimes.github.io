@@ -330,6 +330,84 @@ function renderLatestReviews(articles) {
 
 }
 
+/*
+========================================
+FEATURED STORIES
+========================================
+*/
+
+function renderFeaturedStories(articles) {
+
+  const container =
+    document.querySelector("#hero-slides");
+
+  if (!container) return;
+
+  const featured =
+    articles.filter(
+      article => article.featured === true
+    );
+
+  container.innerHTML = "";
+
+  featured.forEach(function (article, index) {
+
+    const slide =
+      document.createElement("a");
+
+    slide.className =
+      "hero-slide" +
+      (index === 0 ? " active" : "");
+
+    slide.href =
+      `news/article-template.html?slug=${encodeURIComponent(article.slug)}`;
+
+    slide.style.backgroundImage =
+      `url('${article.featuredImage}')`;
+
+    slide.innerHTML = `
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+
+        <span class="hero-label">
+          🔴 LATEST NEWS
+        </span>
+
+        <h1>
+          ${article.title}
+        </h1>
+
+        <p>
+          ${article.excerpt}
+        </p>
+
+        <div class="hero-meta">
+
+          <span>
+            ${article.subcategory || article.category}
+          </span>
+
+          <span>
+            •
+          </span>
+
+          <span>
+            ${formatDate(article.publishedAt)}
+          </span>
+
+        </div>
+
+      </div>
+
+    `;
+
+    container.appendChild(slide);
+
+  });
+
+}
 
 /*
 ========================================
