@@ -729,28 +729,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   /* =====================================================
-     HERO FEATURED STORIES CAROUSEL
-  ===================================================== */
+   HERO FEATURED STORIES CAROUSEL
+===================================================== */
 
-  const heroSlider =
-    document.getElementById("hero-slider");
+const heroSlider =
+  document.getElementById("hero-slider");
 
-  const heroSlides =
-    document.querySelectorAll(".hero-slide");
+let heroSlides = [];
+let heroDots = [];
 
-  const heroDots =
-    document.querySelectorAll(".hero-dot");
+const heroPrev =
+  document.querySelector(".hero-prev");
 
-  const heroPrev =
-    document.querySelector(".hero-prev");
-
-  const heroNext =
-    document.querySelector(".hero-next");
+const heroNext =
+  document.querySelector(".hero-next");
 
 
-  let currentSlide = 0;
+let currentSlide = 0;
 
-  let autoSlide;
+let autoSlide;
 
 
 
@@ -760,13 +757,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showSlide(index) {
 
-    if (index >= heroSlides.length) {
-      index = 0;
-    }
+  if (heroSlides.length === 0) return;
 
-    if (index < 0) {
-      index = heroSlides.length - 1;
-    }
+  if (index >= heroSlides.length) {
+    index = 0;
+  }
+
+  if (index < 0) {
+    index = heroSlides.length - 1;
+  }
 
 
     heroSlides.forEach(function (slide) {
@@ -868,30 +867,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-
-  /* =========================
-     DOT NAVIGATION
-  ========================= */
-
-  heroDots.forEach(function (dot, index) {
-
-    dot.addEventListener(
-      "click",
-      function (event) {
-
-        event.preventDefault();
-
-        showSlide(index);
-
-        restartAutoSlide();
-
-      }
-    );
-
-  });
-
-
-
   /* =========================
      AUTOMATIC SLIDES
   ========================= */
@@ -983,24 +958,68 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
 
+/* =========================
+   LOAD DYNAMIC FEATURED STORIES
+========================= */
+
+function initializeHeroCarousel() {
+
+  heroSlides =
+    document.querySelectorAll(".hero-slide");
+
+  heroDots =
+    document.querySelectorAll(".hero-dot");
+
+
+  if (heroSlides.length === 0) {
+    return;
+  }
+
+
+  currentSlide = 0;
+
+
+  /* =========================
+     DOT NAVIGATION
+  ========================= */
+
+  heroDots.forEach(function (dot, index) {
+
+    dot.addEventListener(
+      "click",
+      function (event) {
+
+        event.preventDefault();
+
+        showSlide(index);
+
+        restartAutoSlide();
+
+      }
+    );
+
+  });
+
 
   /* =========================
      START CAROUSEL
   ========================= */
 
-  if (heroSlides.length > 0) {
+  showSlide(0);
 
-    showSlide(0);
+  startAutoSlide();
 
-    startAutoSlide();
+}
 
-  }
+
+/* =========================
+   WAIT FOR FEATURED STORIES
+========================= */
+
+document.addEventListener(
+  "featuredStoriesLoaded",
+  initializeHeroCarousel
+);
 
 });
-
-  </script>
-
-  <script src="js/main.js"></script>
-
-</body>
-</html>
+  
