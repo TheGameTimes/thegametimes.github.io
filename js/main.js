@@ -472,7 +472,11 @@ async function initializeTheGameTime() {
 
   renderLatestReviews(articles);
 
-  renderFeaturedStories(articles);
+    renderFeaturedStories(articles);
+
+  document.dispatchEvent(
+    new Event("featuredStoriesLoaded")
+  );
 
 }
 
