@@ -4985,3 +4985,92 @@ footer .footer-inner::after {
 .search-button:active {
   transform: scale(0.96);
 }
+
+/* =========================
+   TGT SEARCH PANEL
+========================= */
+
+.search-panel {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding-top: 120px;
+
+  background: rgba(6, 15, 48, 0.96);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+
+  z-index: 9999;
+}
+
+
+.search-panel.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.search-panel-inner {
+  display: flex;
+  align-items: center;
+
+  width: min(800px, 90%);
+
+  gap: 15px;
+}
+
+
+#searchInput {
+  flex: 1;
+
+  padding: 20px 22px;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  background: rgba(255,255,255,0.05);
+
+  color: white;
+
+  font-size: 18px;
+
+  outline: none;
+}
+
+
+#searchInput:focus {
+  border-color: #FE0000;
+}
+
+
+#searchClose {
+  padding: 20px 22px;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  background: transparent;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: 700;
+}
+
+
+#searchClose:hover {
+  background: #FE0000;
+}
