@@ -3855,3 +3855,30 @@ footer .footer-inner::after {
 
 }
 
+/* =========================
+   GUIDES PAGE
+========================= */
+
+.guides-page {
+  width: 100%;
+}
+
+
+.guides-page .news-grid {
+  grid-template-columns:
+    repeat(3, 1fr);
+}
+
+
+/* =========================
+   GUIDES PAGE — MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .guides-page .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
