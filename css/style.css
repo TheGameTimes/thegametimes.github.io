@@ -4646,3 +4646,221 @@ footer .footer-inner::after {
   }
 
 }
+
+/* =========================
+   DENSE PARTICLE FIELD
+========================= */
+
+.ambient-particles span {
+  position: absolute;
+
+  display: block;
+
+  width: 2px;
+  height: 2px;
+
+  border-radius: 50%;
+
+  background: #FFFFFF;
+
+  opacity: 0;
+
+  will-change:
+    transform,
+    opacity;
+
+  animation:
+    particleField 9s ease-in-out infinite;
+}
+
+
+/* =========================
+   PARTICLE SIZES
+========================= */
+
+.ambient-particles span:nth-child(3n) {
+  width: 1px;
+  height: 1px;
+}
+
+
+.ambient-particles span:nth-child(5n) {
+  width: 3px;
+  height: 3px;
+}
+
+
+.ambient-particles span:nth-child(7n) {
+  width: 4px;
+  height: 4px;
+
+  opacity: 0.15;
+
+  filter: blur(1px);
+}
+
+
+/* =========================
+   PARTICLE POSITIONS
+========================= */
+
+.ambient-particles span:nth-child(1)  { left: 3%;  top: 12%; }
+.ambient-particles span:nth-child(2)  { left: 9%;  top: 41%; }
+.ambient-particles span:nth-child(3)  { left: 15%; top: 73%; }
+.ambient-particles span:nth-child(4)  { left: 21%; top: 27%; }
+.ambient-particles span:nth-child(5)  { left: 27%; top: 88%; }
+.ambient-particles span:nth-child(6)  { left: 33%; top: 54%; }
+.ambient-particles span:nth-child(7)  { left: 39%; top: 16%; }
+.ambient-particles span:nth-child(8)  { left: 45%; top: 67%; }
+.ambient-particles span:nth-child(9)  { left: 51%; top: 34%; }
+.ambient-particles span:nth-child(10) { left: 57%; top: 82%; }
+
+.ambient-particles span:nth-child(11) { left: 63%; top: 21%; }
+.ambient-particles span:nth-child(12) { left: 69%; top: 58%; }
+.ambient-particles span:nth-child(13) { left: 75%; top: 39%; }
+.ambient-particles span:nth-child(14) { left: 81%; top: 76%; }
+.ambient-particles span:nth-child(15) { left: 87%; top: 14%; }
+.ambient-particles span:nth-child(16) { left: 94%; top: 49%; }
+
+.ambient-particles span:nth-child(17) { left: 6%;  top: 91%; }
+.ambient-particles span:nth-child(18) { left: 12%; top: 58%; }
+.ambient-particles span:nth-child(19) { left: 18%; top: 19%; }
+.ambient-particles span:nth-child(20) { left: 24%; top: 47%; }
+
+.ambient-particles span:nth-child(21) { left: 30%; top: 7%; }
+.ambient-particles span:nth-child(22) { left: 36%; top: 91%; }
+.ambient-particles span:nth-child(23) { left: 42%; top: 42%; }
+.ambient-particles span:nth-child(24) { left: 48%; top: 23%; }
+.ambient-particles span:nth-child(25) { left: 54%; top: 73%; }
+
+.ambient-particles span:nth-child(26) { left: 60%; top: 11%; }
+.ambient-particles span:nth-child(27) { left: 66%; top: 88%; }
+.ambient-particles span:nth-child(28) { left: 72%; top: 52%; }
+.ambient-particles span:nth-child(29) { left: 78%; top: 31%; }
+.ambient-particles span:nth-child(30) { left: 84%; top: 64%; }
+
+.ambient-particles span:nth-child(31) { left: 90%; top: 28%; }
+.ambient-particles span:nth-child(32) { left: 97%; top: 82%; }
+.ambient-particles span:nth-child(33) { left: 8%;  top: 33%; }
+.ambient-particles span:nth-child(34) { left: 16%; top: 84%; }
+.ambient-particles span:nth-child(35) { left: 23%; top: 61%; }
+
+.ambient-particles span:nth-child(36) { left: 31%; top: 38%; }
+.ambient-particles span:nth-child(37) { left: 38%; top: 79%; }
+.ambient-particles span:nth-child(38) { left: 46%; top: 9%; }
+.ambient-particles span:nth-child(39) { left: 53%; top: 57%; }
+.ambient-particles span:nth-child(40) { left: 59%; top: 36%; }
+
+.ambient-particles span:nth-child(41) { left: 67%; top: 7%; }
+.ambient-particles span:nth-child(42) { left: 73%; top: 92%; }
+.ambient-particles span:nth-child(43) { left: 79%; top: 48%; }
+.ambient-particles span:nth-child(44) { left: 86%; top: 86%; }
+.ambient-particles span:nth-child(45) { left: 93%; top: 35%; }
+
+.ambient-particles span:nth-child(46) { left: 4%;  top: 64%; }
+.ambient-particles span:nth-child(47) { left: 20%; top: 6%; }
+.ambient-particles span:nth-child(48) { left: 34%; top: 29%; }
+.ambient-particles span:nth-child(49) { left: 50%; top: 94%; }
+.ambient-particles span:nth-child(50) { left: 65%; top: 43%; }
+
+.ambient-particles span:nth-child(51) { left: 71%; top: 19%; }
+.ambient-particles span:nth-child(52) { left: 77%; top: 71%; }
+.ambient-particles span:nth-child(53) { left: 83%; top: 54%; }
+.ambient-particles span:nth-child(54) { left: 89%; top: 9%; }
+.ambient-particles span:nth-child(55) { left: 96%; top: 59%; }
+
+.ambient-particles span:nth-child(56) { left: 11%; top: 78%; }
+.ambient-particles span:nth-child(57) { left: 26%; top: 14%; }
+.ambient-particles span:nth-child(58) { left: 44%; top: 63%; }
+.ambient-particles span:nth-child(59) { left: 62%; top: 32%; }
+.ambient-particles span:nth-child(60) { left: 91%; top: 74%; }
+
+
+/* =========================
+   NATURAL VARIATION
+========================= */
+
+.ambient-particles span:nth-child(2n) {
+  animation-duration: 13s;
+}
+
+
+.ambient-particles span:nth-child(3n) {
+  animation-duration: 16s;
+}
+
+
+.ambient-particles span:nth-child(5n) {
+  animation-duration: 20s;
+}
+
+
+.ambient-particles span:nth-child(7n) {
+  animation-duration: 24s;
+}
+
+
+.ambient-particles span:nth-child(4n) {
+  animation-delay: 3s;
+}
+
+
+.ambient-particles span:nth-child(6n) {
+  animation-delay: 6s;
+}
+
+
+/* =========================
+   PARTICLE MOTION
+========================= */
+
+@keyframes particleField {
+
+  0% {
+
+    transform:
+      translate3d(0, 35px, 0)
+      scale(0.4);
+
+    opacity: 0;
+
+  }
+
+
+  20% {
+
+    opacity: 0.2;
+
+  }
+
+
+  50% {
+
+    transform:
+      translate3d(45px, -35px, 0)
+      scale(1);
+
+    opacity: 0.65;
+
+  }
+
+
+  75% {
+
+    opacity: 0.25;
+
+  }
+
+
+  100% {
+
+    transform:
+      translate3d(-30px, -90px, 0)
+      scale(0.5);
+
+    opacity: 0;
+
+  }
+
+}
+
