@@ -1840,3 +1840,41 @@ footer .footer-inner::after {
   letter-spacing: 1px;
 }
 
+/* =========================
+   NEW FREE GAMES — MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .free-games-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+
+  .free-game-image {
+    height: 200px;
+  }
+
+
+  .free-game-content {
+    padding: 22px;
+  }
+
+
+  .free-game-content h3 {
+    font-size: 22px;
+  }
+
+
+  .free-game-content p {
+    font-size: 13px;
+  }
+
+
+  .free-game-meta {
+    margin-top: 17px;
+  }
+
+}
+
