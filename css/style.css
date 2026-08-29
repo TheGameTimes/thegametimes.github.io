@@ -4409,3 +4409,240 @@ footer .footer-inner::after {
 
 }
 
+/* =========================
+   AMBIENT LIGHT STREAKS
+========================= */
+
+.ambient-streak {
+  position: absolute;
+
+  width: 38vw;
+  height: 1px;
+
+  opacity: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.45),
+      #FE0000,
+      transparent
+    );
+
+  filter: blur(1px);
+
+  will-change: transform, opacity;
+}
+
+
+/* =========================
+   STREAK ONE
+========================= */
+
+.streak-one {
+
+  top: 18%;
+  left: -40vw;
+
+  transform: rotate(-18deg);
+
+  animation:
+    streakMoveOne 14s linear infinite;
+}
+
+
+/* =========================
+   STREAK TWO
+========================= */
+
+.streak-two {
+
+  top: 42%;
+  left: -45vw;
+
+  opacity: 0.7;
+
+  transform: rotate(12deg);
+
+  animation:
+    streakMoveTwo 19s linear infinite;
+
+  animation-delay: 4s;
+}
+
+
+/* =========================
+   STREAK THREE
+========================= */
+
+.streak-three {
+
+  top: 67%;
+  left: -35vw;
+
+  opacity: 0.55;
+
+  transform: rotate(-8deg);
+
+  animation:
+    streakMoveThree 17s linear infinite;
+
+  animation-delay: 8s;
+}
+
+
+/* =========================
+   STREAK FOUR
+========================= */
+
+.streak-four {
+
+  top: 83%;
+  left: -45vw;
+
+  opacity: 0.4;
+
+  transform: rotate(16deg);
+
+  animation:
+    streakMoveFour 23s linear infinite;
+
+  animation-delay: 11s;
+}
+
+
+/* =========================
+   STREAK ANIMATIONS
+========================= */
+
+@keyframes streakMoveOne {
+
+  0% {
+    transform:
+      translateX(0)
+      rotate(-18deg);
+
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 0.16;
+  }
+
+  88% {
+    opacity: 0;
+  }
+
+  100% {
+    transform:
+      translateX(150vw)
+      rotate(-18deg);
+
+    opacity: 0;
+  }
+
+}
+
+
+@keyframes streakMoveTwo {
+
+  0% {
+    transform:
+      translateX(0)
+      rotate(12deg);
+
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.25;
+  }
+
+  55% {
+    opacity: 0.12;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    transform:
+      translateX(150vw)
+      rotate(12deg);
+
+    opacity: 0;
+  }
+
+}
+
+
+@keyframes streakMoveThree {
+
+  0% {
+    transform:
+      translateX(0)
+      rotate(-8deg);
+
+    opacity: 0;
+  }
+
+  18% {
+    opacity: 0.22;
+  }
+
+  60% {
+    opacity: 0.1;
+  }
+
+  92% {
+    opacity: 0;
+  }
+
+  100% {
+    transform:
+      translateX(150vw)
+      rotate(-8deg);
+
+    opacity: 0;
+  }
+
+}
+
+
+@keyframes streakMoveFour {
+
+  0% {
+    transform:
+      translateX(0)
+      rotate(16deg);
+
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.18;
+  }
+
+  60% {
+    opacity: 0.08;
+  }
+
+  94% {
+    opacity: 0;
+  }
+
+  100% {
+    transform:
+      translateX(150vw)
+      rotate(16deg);
+
+    opacity: 0;
+  }
+
+}
