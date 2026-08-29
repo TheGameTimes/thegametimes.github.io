@@ -1602,3 +1602,241 @@ footer .footer-inner::after {
 
 }
 
+/* =========================
+   NEW FREE GAMES
+========================= */
+
+#free-games {
+  position: relative;
+}
+
+
+.free-games-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+
+/* =========================
+   FREE GAME CARD
+========================= */
+
+.free-game-card {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(6, 15, 48, 0.96),
+      rgba(3, 5, 13, 0.98)
+    );
+
+  border: 1px solid var(--border);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.free-game-card:hover {
+  transform: translateY(-7px);
+
+  border-color:
+    rgba(255, 0, 0, 0.65);
+
+  box-shadow:
+    0 20px 50px
+    rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================
+   GAME IMAGE
+========================= */
+
+.free-game-image {
+  position: relative;
+
+  height: 210px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  color:
+    rgba(255, 255, 255, 0.25);
+
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 3px;
+
+  background:
+    radial-gradient(
+      circle at 70% 25%,
+      rgba(255, 0, 0, 0.18),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      #0B1744,
+      #03050D
+    );
+
+  transition:
+    transform 0.7s ease;
+}
+
+
+.free-game-card:hover .free-game-image {
+  transform: scale(1.04);
+}
+
+
+.free-game-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  top: -130px;
+  right: -80px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 0, 0, 0.20),
+      transparent 68%
+    );
+
+  animation:
+    freeGameGlow 7s ease-in-out infinite;
+}
+
+
+@keyframes freeGameGlow {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.45;
+  }
+
+  50% {
+    transform: translate(-25px, 18px);
+    opacity: 0.85;
+  }
+
+}
+
+
+/* =========================
+   IMAGE LABEL
+========================= */
+
+.free-game-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 35%,
+      rgba(3, 5, 13, 0.9)
+    );
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.free-game-content {
+  padding: 24px;
+}
+
+
+.free-game-content h3 {
+  margin-top: 9px;
+
+  font-size: 23px;
+
+  line-height: 1.12;
+
+  letter-spacing: -0.6px;
+}
+
+
+.free-game-content p {
+  margin-top: 11px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   META
+========================= */
+
+.free-game-meta {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 20px;
+
+  padding-top: 15px;
+
+  border-top:
+    1px solid var(--border);
+
+  color:
+    #626B80;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+.free-badge {
+  padding:
+    5px 9px;
+
+  background:
+    var(--red);
+
+  color:
+    white;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
