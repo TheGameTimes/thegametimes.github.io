@@ -2784,3 +2784,59 @@ footer .footer-inner::after {
     );
 }
 
+/* =========================
+   PLATFORM HUB — MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .platform-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+  }
+
+
+  .platform-card {
+    min-height: 220px;
+
+    padding: 20px;
+  }
+
+
+  .platform-index {
+    top: 15px;
+
+    right: 16px;
+
+    font-size: 24px;
+  }
+
+
+  .platform-content h3 {
+    font-size: 21px;
+  }
+
+
+  .platform-link {
+    margin-top: 15px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .platform-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+
+  .platform-card {
+    min-height: 180px;
+  }
+
+}
+
