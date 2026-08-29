@@ -2168,3 +2168,67 @@ footer .footer-inner::after {
   z-index: 2;
 }
 
+/* =========================
+   GUIDES & HOT TAKES — MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .guides-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    gap: 14px;
+  }
+
+
+  .guide-feature {
+    grid-row: auto;
+
+    min-height: 440px;
+  }
+
+
+  .guide-content {
+    padding: 26px;
+  }
+
+
+  .guide-content h3 {
+    font-size: 31px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .guide-content p {
+    font-size: 14px;
+  }
+
+
+  .guide-card {
+    min-height: 200px;
+
+    padding: 24px;
+  }
+
+
+  .guide-card-top {
+    top: 21px;
+
+    left: 24px;
+    right: 24px;
+  }
+
+
+  .guide-card h3 {
+    font-size: 22px;
+  }
+
+
+  .guide-number {
+    font-size: 25px;
+  }
+
+}
+
