@@ -174,11 +174,12 @@
       <div class="header-actions">
 
         <button
-          type="button"
-          class="search-button"
-          aria-label="Search"
-        >
-          SEARCH
+  type="button"
+  class="search-button"
+  id="searchToggle"
+  aria-label="Search"
+>
+  SEARCH
         </button>
 
         <a
@@ -194,6 +195,31 @@
 
   </header> 
 
+<div
+  class="search-panel"
+  id="searchPanel"
+>
+
+  <div class="search-panel-inner">
+
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="SEARCH TGT..."
+      autocomplete="off"
+    >
+
+    <button
+      type="button"
+      id="searchClose"
+    >
+      CLOSE
+    </button>
+
+  </div>
+
+</div>
+  
   <!-- =========================
        HERO
   ========================== -->
@@ -1165,6 +1191,29 @@
 
     });
 
+const searchToggle =
+  document.getElementById("searchToggle");
+
+const searchPanel =
+  document.getElementById("searchPanel");
+
+const searchClose =
+  document.getElementById("searchClose");
+
+
+searchToggle.addEventListener("click", () => {
+
+  searchPanel.classList.add("active");
+
+});
+
+
+searchClose.addEventListener("click", () => {
+
+  searchPanel.classList.remove("active");
+
+});
+    
   </script>
 
 
