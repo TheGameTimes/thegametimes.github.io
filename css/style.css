@@ -1029,3 +1029,94 @@ header:not(.article-header)::after {
 
 }
 
+/* =========================
+   FOOTER CINEMATIC AMBIENCE
+========================= */
+
+footer {
+  isolation: isolate;
+}
+
+footer .footer-inner,
+footer .footer-system,
+footer .copyright {
+  position: relative;
+  z-index: 3;
+}
+
+
+/* RED ATMOSPHERIC LIGHT */
+
+footer::before {
+  animation:
+    footerRedDrift 9s ease-in-out infinite;
+}
+
+
+@keyframes footerRedDrift {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  25% {
+    transform:
+      translate3d(-35px, 25px, 0)
+      scale(1.08);
+  }
+
+  50% {
+    transform:
+      translate3d(-70px, 5px, 0)
+      scale(1.18);
+  }
+
+  75% {
+    transform:
+      translate3d(-25px, -20px, 0)
+      scale(1.08);
+  }
+
+}
+
+
+/* NAVY ATMOSPHERIC LIGHT */
+
+footer::after {
+  animation:
+    footerBlueDrift 13s ease-in-out infinite;
+}
+
+
+@keyframes footerBlueDrift {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  30% {
+    transform:
+      translate3d(40px, -20px, 0)
+      scale(1.08);
+  }
+
+  60% {
+    transform:
+      translate3d(80px, -45px, 0)
+      scale(1.18);
+  }
+
+  80% {
+    transform:
+      translate3d(25px, -15px, 0)
+      scale(1.08);
+  }
+
+}
+
