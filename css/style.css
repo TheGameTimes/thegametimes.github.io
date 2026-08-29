@@ -4986,3 +4986,99 @@ footer .footer-inner::after {
   transform: scale(0.96);
 }
 
+/* =========================
+   TGT HEADER MOTION
+========================= */
+
+.site-header {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Ambient line underneath header */
+
+.site-header::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 0;
+  left: -30%;
+
+  width: 30%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #FE0000,
+      transparent
+    );
+
+  opacity: 0.7;
+
+  animation:
+    headerLight 8s linear infinite;
+
+  pointer-events: none;
+}
+
+
+@keyframes headerLight {
+
+  0% {
+    left: -30%;
+  }
+
+  100% {
+    left: 130%;
+  }
+
+}
+
+
+/* Navigation */
+
+.main-nav a {
+  position: relative;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.main-nav a:hover {
+  transform: translateY(-1px);
+}
+
+
+/* Small red indicator */
+
+.main-nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -8px;
+
+  width: 0;
+  height: 2px;
+
+  background: #FE0000;
+
+  transform:
+    translateX(-50%);
+
+  transition:
+    width 0.3s ease;
+}
+
+
+.main-nav a:hover::after {
+  width: 100%;
+  }
+
