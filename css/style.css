@@ -3882,3 +3882,305 @@ footer .footer-inner::after {
 
 }
 
+/* =========================
+   TGT AMBIENT MOTION SYSTEM
+========================= */
+
+.ambient-system {
+  position: fixed;
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* =========================
+   AMBIENT LIGHT ORBS
+========================= */
+
+.ambient-orb {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+
+  opacity: 0.18;
+
+  will-change: transform;
+}
+
+
+.orb-one {
+  top: 8%;
+  left: -140px;
+
+  background: #FE0000;
+
+  animation:
+    ambientOrbOne 18s ease-in-out infinite;
+}
+
+
+.orb-two {
+  top: 42%;
+  right: -180px;
+
+  background: #163A9C;
+
+  animation:
+    ambientOrbTwo 23s ease-in-out infinite;
+}
+
+
+.orb-three {
+  bottom: -180px;
+  left: 35%;
+
+  background: #FE0000;
+
+  opacity: 0.10;
+
+  animation:
+    ambientOrbThree 27s ease-in-out infinite;
+}
+
+
+@keyframes ambientOrbOne {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(280px, 180px)
+      scale(1.25);
+  }
+
+}
+
+
+@keyframes ambientOrbTwo {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(-260px, -120px)
+      scale(1.2);
+  }
+
+}
+
+
+@keyframes ambientOrbThree {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0);
+  }
+
+  50% {
+    transform:
+      translate(160px, -180px);
+  }
+
+}
+
+
+/* =========================
+   LIGHT STREAKS
+========================= */
+
+.ambient-line {
+  position: absolute;
+
+  width: 45vw;
+  height: 1px;
+
+  opacity: 0.12;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #FE0000,
+      transparent
+    );
+
+  filter: blur(1px);
+}
+
+
+.line-one {
+  top: 28%;
+  left: -50vw;
+
+  transform: rotate(-12deg);
+
+  animation:
+    ambientLineOne 14s linear infinite;
+}
+
+
+.line-two {
+  top: 68%;
+  left: -60vw;
+
+  opacity: 0.08;
+
+  transform: rotate(9deg);
+
+  animation:
+    ambientLineTwo 19s linear infinite;
+}
+
+
+@keyframes ambientLineOne {
+
+  0% {
+    left: -50vw;
+  }
+
+  100% {
+    left: 120vw;
+  }
+
+}
+
+
+@keyframes ambientLineTwo {
+
+  0% {
+    left: -60vw;
+  }
+
+  100% {
+    left: 120vw;
+  }
+
+}
+
+
+/* =========================
+   FLOATING PARTICLES
+========================= */
+
+.ambient-particles {
+  position: absolute;
+
+  inset: 0;
+}
+
+
+.ambient-particles span {
+  position: absolute;
+
+  width: 2px;
+  height: 2px;
+
+  border-radius: 50%;
+
+  background: #FFFFFF;
+
+  opacity: 0;
+
+  animation:
+    particleFloat 8s ease-in-out infinite;
+}
+
+
+.ambient-particles span:nth-child(1) {
+  left: 12%;
+  top: 24%;
+  animation-delay: 0s;
+}
+
+
+.ambient-particles span:nth-child(2) {
+  left: 28%;
+  top: 62%;
+  animation-delay: 2s;
+}
+
+
+.ambient-particles span:nth-child(3) {
+  left: 45%;
+  top: 18%;
+  animation-delay: 4s;
+}
+
+
+.ambient-particles span:nth-child(4) {
+  left: 63%;
+  top: 48%;
+  animation-delay: 1s;
+}
+
+
+.ambient-particles span:nth-child(5) {
+  left: 76%;
+  top: 27%;
+  animation-delay: 5s;
+}
+
+
+.ambient-particles span:nth-child(6) {
+  left: 88%;
+  top: 70%;
+  animation-delay: 3s;
+}
+
+
+.ambient-particles span:nth-child(7) {
+  left: 36%;
+  top: 82%;
+  animation-delay: 6s;
+}
+
+
+.ambient-particles span:nth-child(8) {
+  left: 56%;
+  top: 88%;
+  animation-delay: 7s;
+}
+
+
+@keyframes particleFloat {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      scale(0.5);
+
+    opacity: 0;
+  }
+
+  50% {
+    transform:
+      translate(25px, -35px)
+      scale(1);
+
+    opacity: 0.45;
+  }
+
+}
+
