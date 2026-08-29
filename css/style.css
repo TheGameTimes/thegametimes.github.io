@@ -3746,3 +3746,85 @@ footer .footer-inner::after {
   letter-spacing: 0.5px;
 }
 
+/* =========================
+   ARTICLE PAGE — MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .article-page {
+    padding: 45px 18px 75px;
+  }
+
+
+  .article-header h1 {
+    font-size: 43px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .article-lead {
+    font-size: 15px;
+
+    line-height: 1.6;
+  }
+
+
+  .article-meta {
+    gap: 14px;
+
+    line-height: 1.5;
+  }
+
+
+  .article-featured-image {
+    min-height: 300px;
+
+    margin-top: 35px;
+  }
+
+
+  .article-layout {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    margin-top: 45px;
+  }
+
+
+  .article-body p {
+    font-size: 15px;
+
+    line-height: 1.8;
+  }
+
+
+  .article-body p:first-child {
+    font-size: 18px;
+  }
+
+
+  .article-body h2 {
+    margin-top: 42px;
+
+    font-size: 27px;
+  }
+
+
+  .article-body blockquote {
+    margin: 35px 0;
+
+    padding: 20px;
+
+    font-size: 17px;
+  }
+
+
+  .article-sidebar {
+    position: static;
+  }
+
+}
+
