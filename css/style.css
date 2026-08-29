@@ -3828,3 +3828,30 @@ footer .footer-inner::after {
 
 }
 
+/* =========================
+   NEWS PAGE
+========================= */
+
+.news-page {
+  width: 100%;
+}
+
+
+.news-page .news-grid {
+  grid-template-columns:
+    repeat(3, 1fr);
+}
+
+
+/* =========================
+   NEWS PAGE — MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .news-page .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
