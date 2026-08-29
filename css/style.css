@@ -5054,25 +5054,28 @@ footer .footer-inner::after {
 }
 
 #searchClose {
-  width: 45px;
-  height: 45px;
+  padding: 0;
 
-  border: 1px solid rgba(255,255,255,0.15);
+  border: none;
 
   background: transparent;
 
-  color: white;
+  color: rgba(255,255,255,0.55);
 
-  font-size: 24px;
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
 
   cursor: pointer;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transition: color 0.2s ease;
 }
 
 #searchClose:hover {
-  background: #FE0000;
-  border-color: #FE0000;
+  background: transparent;
+
+  color: #FE0000;
 }
+
