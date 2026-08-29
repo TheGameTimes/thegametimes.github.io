@@ -2979,3 +2979,30 @@ footer .footer-inner::after {
 
 }
 
+/* =========================
+   REVIEWS PAGE
+========================= */
+
+.reviews-section .reviews-grid {
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+
+.reviews-section .review-card {
+  min-height: 360px;
+}
+
+
+/* =========================
+   REVIEWS PAGE — MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .reviews-section .review-card {
+    min-height: auto;
+  }
+
+}
+
