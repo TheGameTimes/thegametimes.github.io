@@ -4955,3 +4955,34 @@ footer .footer-inner::after {
 
 }
 
+/* =========================
+   TGT BUTTON MOTION
+========================= */
+
+.hero-button,
+.follow-button,
+.section-link,
+.search-button {
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.hero-button:hover,
+.follow-button:hover,
+.section-link:hover,
+.search-button:hover {
+  transform: translateY(-2px);
+}
+
+
+.hero-button:active,
+.follow-button:active,
+.section-link:active,
+.search-button:active {
+  transform: scale(0.96);
+}
+
