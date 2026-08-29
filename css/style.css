@@ -1469,3 +1469,50 @@ footer .footer-inner::after {
   letter-spacing: -0.7px;
 }
 
+/* =========================
+   GAMING ARTICLES — MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .articles-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 14px;
+  }
+
+
+  .article-feature {
+    grid-row: auto;
+    min-height: 440px;
+  }
+
+
+  .article-content {
+    padding: 26px;
+  }
+
+
+  .article-content h3 {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+
+  .article-content p {
+    font-size: 14px;
+  }
+
+
+  .article-small {
+    min-height: 190px;
+    padding: 24px;
+  }
+
+
+  .article-small h3 {
+    font-size: 22px;
+  }
+
+}
+
