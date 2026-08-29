@@ -1073,3 +1073,41 @@
 
 </footer>
     
+  <script>
+
+    const ambientSystem =
+      document.querySelector(".ambient-system");
+
+    window.addEventListener("scroll", () => {
+
+      if (!ambientSystem) return;
+
+      const scrollY = window.scrollY;
+
+      ambientSystem.style.transform =
+        `translateY(${scrollY * -0.025}px)`;
+
+    });
+
+
+    document.addEventListener("mousemove", (event) => {
+
+      if (!ambientSystem) return;
+
+      const x =
+        (event.clientX / window.innerWidth - 0.5) * 12;
+
+      const y =
+        (event.clientY / window.innerHeight - 0.5) * 12;
+
+      ambientSystem.style.transform =
+        `translate(${x}px, ${y}px)`;
+
+    });
+
+  </script>
+
+
+</body>
+
+</html>
