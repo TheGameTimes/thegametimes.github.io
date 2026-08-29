@@ -3402,3 +3402,49 @@ footer .footer-inner::after {
 
   line-height: 2;
 }
+
+/* =========================
+   REVIEW PAGE — MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .review-hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 18px;
+  }
+
+  .review-hero-image {
+    min-height: 320px;
+  }
+
+  .review-hero-content {
+    padding: 10px 0;
+  }
+
+  .review-hero-content h1 {
+    font-size: 44px;
+    letter-spacing: -2px;
+  }
+
+  .review-information {
+    gap: 18px;
+  }
+
+  .review-hero-score {
+    min-height: 150px;
+  }
+
+  .review-article {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 50px 18px 80px;
+  }
+
+  .review-sidebar {
+    position: static;
+  }
+
+}
+
