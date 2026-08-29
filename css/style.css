@@ -4035,4 +4035,154 @@ footer .footer-inner::after {
 
 }
 
-    
+    /* =========================
+   AMBIENT FLOWING SHAPES
+========================= */
+
+.ambient-wave {
+  position: absolute;
+
+  width: 55vw;
+  height: 18vw;
+
+  min-width: 500px;
+  min-height: 160px;
+
+  border-radius: 50%;
+
+  filter: blur(45px);
+
+  opacity: 0.07;
+
+  transform-origin: center;
+
+  will-change: transform;
+
+  mix-blend-mode: screen;
+}
+
+
+.wave-one {
+
+  top: 18%;
+  left: -15%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #FE0000,
+      transparent
+    );
+
+  transform: rotate(-18deg);
+
+  animation:
+    waveDriftOne 20s ease-in-out infinite;
+}
+
+
+.wave-two {
+
+  top: 55%;
+  right: -20%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #274AA8,
+      transparent
+    );
+
+  transform: rotate(15deg);
+
+  animation:
+    waveDriftTwo 26s ease-in-out infinite;
+}
+
+
+.wave-three {
+
+  bottom: 5%;
+  left: 15%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #FE0000,
+      transparent
+    );
+
+  transform: rotate(-8deg);
+
+  opacity: 0.045;
+
+  animation:
+    waveDriftThree 32s ease-in-out infinite;
+}
+
+
+/* =========================
+   WAVE MOVEMENT
+========================= */
+
+@keyframes waveDriftOne {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      rotate(-18deg)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate3d(28vw, 8vh, 0)
+      rotate(-10deg)
+      scale(1.2);
+  }
+
+}
+
+
+@keyframes waveDriftTwo {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      rotate(15deg)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate3d(-30vw, -10vh, 0)
+      rotate(5deg)
+      scale(1.25);
+  }
+
+}
+
+
+@keyframes waveDriftThree {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      rotate(-8deg)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate3d(18vw, -12vh, 0)
+      rotate(5deg)
+      scale(1.18);
+  }
+
+}
