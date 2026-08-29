@@ -1120,3 +1120,113 @@ footer::after {
 
 }
 
+/* =========================
+   FOOTER LIGHT GRID
+========================= */
+
+footer .footer-inner::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -70px -100px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 0, 0, 0.04) 50%,
+      transparent 100%
+    );
+
+  background-size: 220px 100%;
+
+  pointer-events: none;
+
+  opacity: 0.5;
+
+  animation:
+    footerGridMove 12s linear infinite;
+}
+
+
+@keyframes footerGridMove {
+
+  from {
+    transform:
+      translateX(-220px);
+  }
+
+  to {
+    transform:
+      translateX(220px);
+  }
+
+}
+
+
+/* =========================
+   FOOTER TOP LIGHT STREAK
+========================= */
+
+footer {
+  border-top-color:
+    rgba(255, 0, 0, 0.35);
+}
+
+
+footer .footer-inner::after {
+  content: "";
+
+  position: absolute;
+
+  top: -71px;
+  left: -20%;
+
+  width: 40%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 0, 0, 0.9),
+      transparent
+    );
+
+  box-shadow:
+    0 0 10px rgba(255, 0, 0, 0.45);
+
+  pointer-events: none;
+
+  animation:
+    footerStreak 7s linear infinite;
+}
+
+
+@keyframes footerStreak {
+
+  0% {
+    left: -40%;
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+
+}
+
