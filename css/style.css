@@ -146,4 +146,64 @@ a {
     font-size: 19px;
   }
 
+}.search-panel {
+  background: #060F30;
+  color: white;
+
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease;
 }
+
+.search-panel.active {
+  max-height: 120px;
+  opacity: 1;
+}
+
+.search-panel-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 18px 28px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.search-panel input {
+  flex: 1;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+
+  color: white;
+  font-size: 16px;
+
+  padding: 14px 16px;
+  outline: none;
+}
+
+.search-panel input:focus {
+  border-color: #FE0000;
+}
+
+.search-panel input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#searchClose {
+  border: 0;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  }
+
