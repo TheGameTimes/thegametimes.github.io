@@ -76,12 +76,41 @@ a {
 }
 
 .search-button {
-  border: 0;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
   background: transparent;
   color: white;
   cursor: pointer;
-  font-family: inherit;
-  padding: 10px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.search-button svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.search-button:hover {
+  background: #FE0000;
+  border-color: #FE0000;
+  transform: scale(1.05);
+}
+
+.search-button:active {
+  transform: scale(0.95);
 }
 
 .follow-button {
