@@ -1,3 +1,14 @@
 {
-  "items": []
+  "items": [
+    {
+      "id": 1,
+      "type": "news",
+      "title": "GTA VI Gets New Details",
+      "slug": "gta-vi-new-details",
+      "excerpt": "The latest update from Rockstar Games.",
+      "image": "",
+      "date": "2026-09-15",
+      "featured": true
+    }
+  ]
 }
