@@ -16,53 +16,77 @@ fetch("data/content.json")
 
 function renderNews(items) {
 
-  const container = document.getElementById("latestNews");
+  const containers = [
+    document.getElementById("latestNews"),
+    document.getElementById("newsList")
+  ];
 
-  if (!container || items.length === 0) return;
+  containers.forEach(container => {
 
-  container.innerHTML = items
-    .slice(0, 3)
-    .map(item => createCard(item))
-    .join("");
+    if (!container || items.length === 0) return;
+
+    container.innerHTML = items
+      .map(item => createCard(item))
+      .join("");
+
+  });
 }
 
 
 function renderArticles(items) {
 
-  const container = document.getElementById("latestArticles");
+  const containers = [
+    document.getElementById("latestArticles"),
+    document.getElementById("articlesList")
+  ];
 
-  if (!container || items.length === 0) return;
+  containers.forEach(container => {
 
-  container.innerHTML = items
-    .slice(0, 3)
-    .map(item => createCard(item))
-    .join("");
+    if (!container || items.length === 0) return;
+
+    container.innerHTML = items
+      .map(item => createCard(item))
+      .join("");
+
+  });
 }
 
 
 function renderReviews(items) {
 
-  const container = document.getElementById("latestReviews");
+  const containers = [
+    document.getElementById("latestReviews"),
+    document.getElementById("reviewsList")
+  ];
 
-  if (!container || items.length === 0) return;
+  containers.forEach(container => {
 
-  container.innerHTML = items
-    .slice(0, 3)
-    .map(item => createCard(item))
-    .join("");
+    if (!container || items.length === 0) return;
+
+    container.innerHTML = items
+      .map(item => createCard(item))
+      .join("");
+
+  });
 }
 
 
 function renderFreeGames(items) {
 
-  const container = document.getElementById("freeGames");
+  const containers = [
+    document.getElementById("freeGames"),
+    document.getElementById("freeGamesList")
+  ];
 
-  if (!container || items.length === 0) return;
+  containers.forEach(container => {
 
-  container.innerHTML = items
-    .slice(0, 3)
-    .map(item => createCard(item))
-    .join("");
+    if (!container || items.length === 0) return;
+
+    container.innerHTML = items
+      .map(item => createCard(item))
+      .join("");
+
+  });
 }
 
 
